@@ -8,7 +8,9 @@ let geography, content, municipalities, eligible, state, selected = null, viewpo
 let toastTimer, tipTimer, storageWarning = false, dragging = false, pointer = null;
 const map = $('#map'), dialog = $('#dialog');
 
-async function loadJson(path){const response=await fetch(path);if(!response.ok)throw new Error(`No se pudo cargar ${path}`);return response.json();}
+const BUILD_VERSION='20261017-2';
+async function loadJson(path){const sep=path.includes('?')?'&':'?';const response=await fetch(`${path}${sep}v=${BUILD_VERSION}`,{cache:'no-store'});if(!response.ok)throw new Error(`No se pudo cargar ${path}`);return response.json();}
+function assetSrc(p,type){return p?.[type+'Data']||p?.[type]||'';}
 function place(id){ return {...municipalities.get(id),...content[id]}; }
 function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch{if(!storageWarning){storageWarning=true;toast('El navegador no permite guardar. Esta partida durará mientras mantengas la página abierta.');}}}
 function toast(message){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').classList.add('show');toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),4800);}
@@ -51,7 +53,7 @@ function silhouette(id,cls='silhouette'){
  return `<svg class="${cls}" viewBox="${b[0]-pad} ${b[1]-pad} ${b[2]-b[0]+pad*2} ${b[3]-b[1]+pad*2}" aria-hidden="true"><path d="${p.path}"></path></svg>`;
 }
 function symbol(p,type,cls=''){
- return p[type]?`<img class="${cls}" src="${esc(p[type])}" alt="${type==='flag'?'Bandera':'Escudo'} de ${esc(p.name)}">`:`<span class="symbol-pending">${type==='flag'?'Bandera':'Escudo'}<small>Imagen pendiente de verificar</small></span>`;
+ const src=assetSrc(p,type);return src?`<img class="${cls}" src="${esc(src)}" alt="${type==='flag'?'Bandera':'Escudo'} de ${esc(p.name)}" loading="eager" decoding="async">`:`<span class="symbol-pending">${type==='flag'?'Bandera':'Escudo'}<small>Imagen pendiente de verificar</small></span>`;
 }
 function number(value,digits=0){return Number.isFinite(value)?new Intl.NumberFormat('es-ES',{maximumFractionDigits:digits}).format(value):'—';}
 function factLink(url,label='Ver fuente'){return url?`<a class="fact-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`:'';}
@@ -69,7 +71,7 @@ function renderPins(){
     const rect=[x-label.length*labelSize*.27,labelY-labelSize,x+label.length*labelSize*.27,labelY+labelSize*.3];
     const showLabel=(known||selected===id)&&!labels.some(r=>r[0]<rect[2]&&r[2]>rect[0]&&r[1]<rect[3]&&r[3]>rect[1]);
     if(showLabel)labels.push(rect);
-    return `<g class="pin ${known?'':'mystery-pin'}" data-id="${id}" tabindex="0" role="button" aria-label="${esc(label)}${known?', descubierto':', disponible para explorar'}">${origin?`<circle class="origin-halo" cx="${x}" cy="${y}" r="${size*1.28}"></circle>`:''}<circle cx="${x}" cy="${y}" r="${size}"></circle>${known&&p.shield?`<image href="${esc(p.shield)}" x="${x-size*.58}" y="${y-size*.82}" width="${size*1.16}" height="${size*1.64}"></image>`:`<text x="${x}" y="${y+size*.32}" text-anchor="middle" style="font-size:${size}px;stroke:none">${known?'•':'?'}</text>`}${showLabel?`<text x="${x}" y="${labelY}" text-anchor="middle" style="font-size:${labelSize}px;stroke-width:${unit*3}px">${esc(label)}</text>`:''}</g>`;
+    return `<g class="pin ${known?'':'mystery-pin'}" data-id="${id}" tabindex="0" role="button" aria-label="${esc(label)}${known?', descubierto':', disponible para explorar'}">${origin?`<circle class="origin-halo" cx="${x}" cy="${y}" r="${size*1.28}"></circle>`:''}<circle cx="${x}" cy="${y}" r="${size}"></circle>${known&&assetSrc(p,'shield')?`<image href="${esc(assetSrc(p,'shield'))}" x="${x-size*.58}" y="${y-size*.82}" width="${size*1.16}" height="${size*1.64}"></image>`:`<text x="${x}" y="${y+size*.32}" text-anchor="middle" style="font-size:${size}px;stroke:none">${known?'•':'?'}</text>`}${showLabel?`<text x="${x}" y="${labelY}" text-anchor="middle" style="font-size:${labelSize}px;stroke-width:${unit*3}px">${esc(label)}</text>`:''}</g>`;
   }).join('');
   document.querySelectorAll('.province-name').forEach(e=>e.style.display=full?'':'none');
 }
@@ -139,7 +141,7 @@ function renderLesson(){
     `<div class="patron-visual"><span aria-hidden="true">✦</span><h3>${esc(p.patron||'Patronazgo pendiente de contrastar')}</h3><p>${esc(p.festivalLabel||'Celebración local')}<br><strong>${esc(p.festival||'Fecha pendiente de contrastar')}</strong></p></div>${factLink(p.festivalSource||p.sources?.[0],'Fuente de la celebración')}`
   ];
   const titles=['Aquí está '+p.name,'Sus símbolos','Conoce el pueblo','Su celebración'];
-  const text=['Fíjate en su forma y en el lugar que ocupa dentro de Aragón.',p.flag||p.shield?'Observa los símbolos que están documentados para este municipio.':'Todavía no hay símbolos municipales contrastados para mostrar. No usaremos imágenes inventadas.','Una cifra para situarte y un detalle para llevarte contigo.',p.patron||p.festival?'Conoce las celebraciones que hemos podido documentar.':'Seguimos contrastando las fiestas y el patronazgo de este municipio antes de mostrarlos como datos ciertos.'];
+  const text=['Fíjate en su forma y en el lugar que ocupa dentro de Aragón.',assetSrc(p,'flag')||assetSrc(p,'shield')?'Observa los símbolos que están documentados para este municipio.':'Todavía no hay símbolos municipales contrastados para mostrar. No usaremos imágenes inventadas.','Una cifra para situarte y un detalle para llevarte contigo.',p.patron||p.festival?'Conoce las celebraciones que hemos podido documentar.':'Seguimos contrastando las fiestas y el patronazgo de este municipio antes de mostrarlos como datos ciertos.'];
   openDialog(`<div class="dialog-inner"><p class="eyebrow">${session.review?'Volver a conocer':'Conoce'} · ${esc(p.name)}</p><div class="lesson-step" aria-label="Paso ${step+1} de 4">${[0,1,2,3].map(i=>`<i class="${i<=step?'active':''}"></i>`).join('')}</div><h2 id="dialog-title">${esc(titles[step])}</h2><p>${esc(text[step])}</p>${visuals[step]}<div class="button-row">${step>0?'<button class="secondary" data-action="lesson-back">Atrás</button>':''}<button class="primary" data-action="lesson-next">${step===3?'Estoy listo para el reto':'Siguiente'} <span aria-hidden="true">→</span></button></div><p class="subtle" style="text-align:center">${step+1} / 4</p></div>`);
 }
 
@@ -151,11 +153,11 @@ function startQuiz(){
   const p=place(session.id),ids=[session.id,...shuffle(practicePool(state).filter(id=>id!==session.id)).slice(0,3)];
   // Only show a heraldic question when another discovered card offers a real comparison.
   // Otherwise use actual municipal silhouettes; do not fabricate symbols.
-  const kind=(p.flag&&ids.filter(id=>place(id).flag).length>=2)?'flag':(p.shield&&ids.filter(id=>place(id).shield).length>=2)?'shield':'shape';
-  const symbolIds=ids.filter(id=>kind==='shape'||place(id)[kind]);
+  const kind=(assetSrc(p,'flag')&&ids.filter(id=>assetSrc(place(id),'flag')).length>=2)?'flag':(assetSrc(p,'shield')&&ids.filter(id=>assetSrc(place(id),'shield')).length>=2)?'shield':'shape';
+  const symbolIds=ids.filter(id=>kind==='shape'||assetSrc(place(id),kind));
   const symbolic=symbolIds.length>=2?{
     title:kind==='shape'?`¿Cuál es la silueta de ${p.name}?`:`¿Cuál es ${kind==='flag'?'la bandera':'el escudo'} de ${p.name}?`,type:kind==='shape'?'shape':'flag',
-    options:shuffle(symbolIds.map(id=>({id,label:place(id).name,image:kind==='shape'?null:place(id)[kind]}))),answer:session.id,
+    options:shuffle(symbolIds.map(id=>({id,label:place(id).name,image:kind==='shape'?null:assetSrc(place(id),kind)}))),answer:session.id,
     explanation:`Esta es la ${kind==='flag'?'bandera':kind==='shape'?'silueta':'imagen del escudo'} de ${p.name}.`
   }:{title:`¿Dónde está ${p.name}?`,type:'text',options:shuffle(['Teruel','Zaragoza','Huesca']).map(label=>({id:label,label})),answer:p.province,explanation:`${p.name} está en la provincia de ${p.province}.`};
   const patronOptions=ids.filter((id,i)=>place(id).patron&&ids.findIndex(other=>place(other).patron===place(id).patron)===i).map(id=>({id,label:place(id).patron}));
@@ -187,7 +189,7 @@ function finishQuiz(){
 }
 function showSuccess(id,review,origin){
   const p=place(id);
-  openDialog(`<div class="dialog-inner success"><p class="success-tag">${origin?'AQUÍ EMPIEZA TU AVENTURA':review?'UN PUEBLO BIEN RECORDADO':'UN NUEVO LUGAR EN TU MAPA'}</p><div class="success-seal">${p.shield?symbol(p,'shield'):silhouette(id)}</div><h2 id="dialog-title">${esc(p.name)}</h2><p>${origin?'Tu primera carta ya es tuya. Desde aquí podrás explorar los municipios que comparten frontera con tu pueblo.':review?'Has repasado su identidad, su comarca y sus patronos. El repaso no consume descubrimientos.':'Has conseguido su carta y su territorio se ha iluminado. Tu recorrido por Aragón acaba de crecer.'}</p><p><strong>${origin?'Carta de origen · gratuita':review?'3 de 3 respuestas correctas':'Nuevas fronteras desbloqueadas'}</strong></p>${origin?`<button class="secondary" data-action="review" data-id="${id}">Conocer mi municipio</button>`:''}<button class="primary" data-action="success-map">${origin?'Explorar mis alrededores':'Volver a mi mapa'} <span aria-hidden="true">→</span></button></div>`);
+  openDialog(`<div class="dialog-inner success"><p class="success-tag">${origin?'AQUÍ EMPIEZA TU AVENTURA':review?'UN PUEBLO BIEN RECORDADO':'UN NUEVO LUGAR EN TU MAPA'}</p><div class="success-seal">${assetSrc(p,'shield')?symbol(p,'shield'):silhouette(id)}</div><h2 id="dialog-title">${esc(p.name)}</h2><p>${origin?'Tu primera carta ya es tuya. Desde aquí podrás explorar los municipios que comparten frontera con tu pueblo.':review?'Has repasado su identidad, su comarca y sus patronos. El repaso no consume descubrimientos.':'Has conseguido su carta y su territorio se ha iluminado. Tu recorrido por Aragón acaba de crecer.'}</p><p><strong>${origin?'Carta de origen · gratuita':review?'3 de 3 respuestas correctas':'Nuevas fronteras desbloqueadas'}</strong></p>${origin?`<button class="secondary" data-action="review" data-id="${id}">Conocer mi municipio</button>`:''}<button class="primary" data-action="success-map">${origin?'Explorar mis alrededores':'Volver a mi mapa'} <span aria-hidden="true">→</span></button></div>`);
 }
 function settings(){
   openDialog(`<div class="dialog-inner"><p class="eyebrow">Modo de prueba</p><h2 id="dialog-title">Explora sin límite diario.</h2><p>El límite de tres descubrimientos está pausado. Puedes recorrer los ${eligible.size} municipios de Bajo Aragón y Matarraña en una misma partida.</p><div class="separator"></div><p><strong>Tu progreso se guarda en este navegador.</strong></p><button class="text-button" data-action="ask-reset">Elegir otro origen y empezar desde cero</button></div>`);
@@ -262,6 +264,8 @@ window.addEventListener('storage',event=>{
 
 try{
   [geography,content]=await Promise.all([loadJson('map-data.json'),loadJson('pilot-content.json')]);
+  const invalid=Object.entries(content).filter(([id,p])=>!p||!p.name||!Number.isFinite(p.areaKm2)||!Number.isFinite(p.population)||!p.populationYear||!p.singularity);
+  if(invalid.length)throw new Error(`Datos incompletos en ${invalid.map(([id])=>id).join(', ')}`);
   municipalities=new Map(geography.municipalities.map(m=>[m.id,m]));eligible=new Set(Object.keys(content));
   state=freshState();try{state=normalizeState(JSON.parse(localStorage.getItem(STORAGE_KEY)),municipalities,eligible);}catch{}
   $('#pilot-count').textContent=`Bajo Aragón y Matarraña · ${eligible.size} municipios`;
