@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#116d68">
+  <meta name="description" content="Elige tu pueblo, conoce sus símbolos y descubre Aragón municipio a municipio. Explora los 38 municipios del Bajo Aragón y Matarraña.">
+  <title>Aragón, paso a paso</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Aragón, paso a paso, inicio"><span class="brand-mark"><img src="assets/aragon-shield.png" width="330" height="461" alt="Escudo de Aragón" fetchpriority="high"></span><span>Aragón<small>paso a paso</small></span></a>
+    <nav aria-label="Principal"><button id="nav-map" class="nav active">Explorar</button><button id="nav-cards" class="nav">Mis cartas <span id="collection-count">0</span></button></nav>
+    <button id="settings" class="icon-button" aria-label="Opciones de la prueba" title="Opciones de la prueba">⚙</button>
+  </header>
+  <main id="main">
+    <section class="explorer" id="explorer" aria-label="Explorar municipios">
+      <section id="onboarding" class="onboarding" aria-label="Elige tu municipio de origen"><p class="loading">Preparando los municipios…</p></section>
+      <section id="map-panel" class="map-panel" aria-label="Mapa interactivo de Aragón" hidden>
+        <div class="map-top"><span class="map-label"><i></i> TU MAPA DE ARAGÓN</span><span id="daily-badge" class="daily-badge">Primer viaje</span></div>
+        <svg id="map" viewBox="-35 -35 1070 1500" role="group" aria-label="Municipios de Aragón. Selecciona un territorio azul para descubrirlo."><g id="terrain"></g><g id="province-lines"></g><g id="pins"></g></svg>
+        <div class="map-compass" aria-hidden="true"><span>N</span>✧</div>
+        <div class="map-controls"><button id="zoom-in" aria-label="Ampliar mapa">+</button><button id="zoom-out" aria-label="Reducir mapa">−</button><span></span><button id="zoom-region" aria-label="Ver zona de exploración" title="Mi zona">⌖</button><button id="zoom-all" aria-label="Ver todo Aragón" title="Todo Aragón">↗</button></div>
+        <div class="map-bottom"><div class="legend"><span><i class="known"></i>Descubierto</span><span><i class="ready"></i>Por explorar</span><span><i class="unknown"></i>Más adelante</span></div><span class="map-credit">Cartografía: IGEAR · Gobierno de Aragón</span></div>
+        <div class="map-tip" id="map-tip" role="status"></div>
+      </section>
+    </section>
+    <section id="collection" class="collection-page" hidden></section>
+  </main>
+  <footer><span>EXPLORA · <span id="pilot-count">Bajo Aragón</span></span><button id="sources">Fuentes y créditos</button></footer>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div><button class="dialog-close" id="close-dialog" aria-label="Cerrar">×</button></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

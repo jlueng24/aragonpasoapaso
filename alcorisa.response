@@ -1,0 +1,809 @@
+<!doctype html>
+
+<html lang="es-es">
+
+<head>
+	<base href="https://visitbajoaragon.com/es/municipios/alcorisa" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Bajo aragón, Alcañiz, motorland, Buñuel, melocotón de calanda, rutas moteras, " />
+	<meta name="author" content="Super User" />
+	<meta name="x-ua-compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="Página oficial de Turismo del Bajo Aragón donde encontrarás información para tu viaje a la comarca de Buñuel, el tambor o Motorland." />
+	<title>Alcorisa</title>
+	<link href="/templates/visitbajoaragon/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://visitbajoaragon.com/es/component/search/?Itemid=116&amp;format=opensearch" rel="search" title="Buscar Visit Bajo Aragón" type="application/opensearchdescription+xml" />
+	<link href="/modules/mod_giweather/tmpl/css/meteocons_font/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="/modules/mod_giweather/tmpl/css/giweather.css?v=1.3.0" rel="stylesheet" type="text/css" />
+	<link href="/media/plg_system_jcepro/site/css/content.min.css?86aa0286b6232c4a5b58f892ce080277" rel="stylesheet" type="text/css" />
+	<link href="/media/plg_system_jcemediabox/css/jcemediabox.min.css?f646e5445d3791b94e8b9282903afc4f" rel="stylesheet" type="text/css" />
+	<link href="/templates/visitbajoaragon/css/template.css" rel="stylesheet" type="text/css" />
+	<link href="/modules/mod_gear_cookies_notification/assets/css/gearcookies.css" rel="stylesheet" type="text/css" />
+	<link href="/media/mod_falang/css/template.css" rel="stylesheet" type="text/css" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"189eb92a8a59e0988bd49ba45039ff84","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/jui/js/jquery.min.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/modules/mod_giweather/tmpl/js/hammer.min.js" type="text/javascript"></script>
+	<script src="/modules/mod_giweather/tmpl/js/giweather.js?v=1.3.0" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/system/js/core.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/plg_system_jcemediabox/js/jcemediabox.min.js?f646e5445d3791b94e8b9282903afc4f" type="text/javascript"></script>
+	<script src="/templates/visitbajoaragon/js/logic.js" type="text/javascript"></script>
+	<script type="text/javascript">
+var s2s_mobile = '';
+                (function(d){
+                  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+                  p.type = 'text/javascript';
+                  p.async = false;
+                  p.defer = true;
+                  p.src = 'https://visitbajoaragon.com/media/plg_social2s/js/social2s.min.js';
+                  f.parentNode.insertBefore(p, f);
+                }(document));
+            var insert = '0';var insert_position = '0';var insert_element = '';var s2s_checkCookie = '0';var s2s_lang_1tag = 'es_ES';var s2s_lang_2tag = 'es';var s2s_lang_direction = 'lang_directon_right';var s2s_load_scripts_onload = '0';var s2s_context = 'com_content.article';var s2s_debug = '0';var s2s_version = '4.3.54';var s2s_art_mobile_min = '978';var s2s_k2_remove_social = '0';var s2s_sha = '';var s2s_cta_active = '0';var s2s_cta_default = 'twitter';var twitter_b_count_hide = '1';var twitter_b_count = '0';var facebook_count_hide = '1';var facebook_like_count = '0';var facebook_share_count = '0';var facebook_total_count = '0';var pinterest_count_hide = '1';var pinterest_count = '0';var linkedin_count_hide = '1';var linkedin_count = '0';var gplus_b_count_hide = '1';var gplus_b_count = '0';var tumblr_count = '0';var tumblr_count_hide = '0';var vk_b_count_hide = '1';var vk_b_count = '0';var php_full_link = 'https%3A%2F%2Fvisitbajoaragon.com%2Fes%2Fmunicipios%2Falcorisa';var php_title = 'Alcorisa';jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+
+var giw_lazy_load_loaded_module_142={"js":false,"json":false,"alreadyinit":false};
+
+function giw_lazy_load_js_loaded_module_142(){
+	giw_lazy_load_loaded_module_142.js=true;
+	giw_lazy_load_do_init_module_142();
+}
+function giw_lazy_load_json_loaded_module_142(){
+	giw_lazy_load_loaded_module_142.json=true;
+	giw_lazy_load_do_init_module_142();
+}
+function giw_lazy_load_do_init_module_142(){
+	if (giw_lazy_load_loaded_module_142.js && giw_lazy_load_loaded_module_142.json && !giw_lazy_load_loaded_module_142.alreadyinit){
+		giw_lazy_load_loaded_module_142.alreadyinit=true;
+		giw_init_module_142();
+	}
+}
+
+function giw_lazy_load_json_and_js_module_142() {
+	
+	var json_element = document.createElement("script");
+	json_element.src = '/index.php?option=com_giweather&view=smartloader&type=json&filename=giweather&mod_owner=module&mod_id=142&menu_Itemid=116';
+	json_element.onreadystatechange= function () {
+		if (this.readyState == "complete") giw_lazy_load_json_loaded_module_142();
+	}
+	json_element.onload= giw_lazy_load_json_loaded_module_142;		
+	document.body.appendChild(json_element);
+	
+	var js_element = document.createElement("script");
+	js_element.src = '/index.php?option=com_giweather&view=smartloader&type=js&filename=giweather&mod_owner=module&mod_id=142&menu_Itemid=116';
+	js_element.onreadystatechange= function () {
+		if (this.readyState == "complete") giw_lazy_load_js_loaded_module_142();
+	}
+	js_element.onload= giw_lazy_load_js_loaded_module_142;		
+	document.body.appendChild(js_element);
+}
+if (window.addEventListener){
+	window.addEventListener("load", giw_lazy_load_json_and_js_module_142, false);
+}else if (window.attachEvent){
+	window.attachEvent("onload", giw_lazy_load_json_and_js_module_142);
+}else{
+	window.onload = giw_lazy_load_json_and_js_module_142;
+}
+jQuery(document).ready(function(){WfMediabox.init({"base":"\/","theme":"shadow","width":"","height":"","lightbox":0,"shadowbox":0,"icons":1,"overlay":1,"overlay_opacity":0.8,"overlay_color":"#000000","transition_speed":300,"close":2,"labels":{"close":"PLG_SYSTEM_JCEMEDIABOX_LABEL_CLOSE","next":"PLG_SYSTEM_JCEMEDIABOX_LABEL_NEXT","previous":"PLG_SYSTEM_JCEMEDIABOX_LABEL_PREVIOUS","cancel":"PLG_SYSTEM_JCEMEDIABOX_LABEL_CANCEL","numbers":"PLG_SYSTEM_JCEMEDIABOX_LABEL_NUMBERS","numbers_count":"PLG_SYSTEM_JCEMEDIABOX_LABEL_NUMBERS_COUNT","download":"PLG_SYSTEM_JCEMEDIABOX_LABEL_DOWNLOAD"},"swipe":true,"expand_on_click":true,"display_mode":"fit"});});
+	</script>
+	<meta property="og:title" content="Alcorisa"><meta property="og:description" content="Bienvenidos a Alcorisa, pujante y acogedora localidad bajoaragonesa que luce orgullosa los títulos de “Fiel” y “Muy ilustre”, otorgados por Felipe V. Originalmente recibía el nombre de Alkol, que provenía del árabe Al-Kura, en referencia a “las alquerías ”. No está tan claro el origen de su actual topónimo, Alcorisa, aunque parece derivar de “alcor”, en alusión a los numerosos cerros presentes en la zona. En cualquier caso lo..."><meta property="og:site_name" content="Visit Bajo Aragón" /><meta property="og:url"  content="https://visitbajoaragon.com/es/municipios/alcorisa" /><meta property="og:type"  content="website" /><meta property="fb:app_id" content="514279921989553" />
+	<meta property="twitter:card" content="summary"/><meta property="twitter:site" content="@VisitBajoAragon"/><meta property="twitter:title" content="Alcorisa"><meta property="twitter:description" content="Bienvenidos a Alcorisa, pujante y acogedora localidad bajoaragonesa que luce orgullosa los títulos de “Fiel” y “Muy ilustre”, otorgados por Felipe V. Originalmente recibía el nombre de Alkol, que provenía del árabe Al-Kura, en referencia a “las alquerías ”. No está tan claro el origen de su actual topónimo, Alcorisa, aunque parece derivar de “alcor”, en alusión a los numerosos cerros presentes en la zona. En cualquier caso lo...">
+	<link rel="alternate" href="https://visitbajoaragon.com/es/municipios/alcorisa" hreflang="es" />
+	<link rel="alternate" href="https://visitbajoaragon.com/es/municipios/alcorisa"  hreflang="x-default" />
+	<link rel="alternate" href="https://visitbajoaragon.com/fr/municipios/alcorisa" hreflang="fr" />
+	<link rel="alternate" href="https://visitbajoaragon.com/en/municipios/alcorisa" hreflang="en" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0 minimal-ui" />
+	<link rel="apple-touch-icon-precomposed" href="/templates/visitbajoaragon/images/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/templates/visitbajoaragon/images/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/templates/visitbajoaragon/images/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/templates/visitbajoaragon/images/apple-touch-icon-144x144-precomposed.png">
+	<!-- Le HTML5 shim and media query for IE8 support -->
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script type="text/javascript" src="/templates/visitbajoaragon/js/respond.min.js"></script>
+	<![endif]-->
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="site alcorisa " role="document">
+
+<!--[if lt IE 9]> 
+<div class="ie8">
+<![endif]--> 
+
+	<!--menu principal -->
+	<nav class="menu_principal navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/index.php"><img src="/templates/visitbajoaragon/images/logo_svg_bajoaragon.png" onerror="this.src='templates/visitbajoaragon/images/logo_svg_bajoaragon.png'"></a>
+	    </div>
+	    <div id="navbar" class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav">
+	        <li class="tuviaje"><a href="#tuviaje">TU VIAJE</a></li>
+	        <li class="municipios"><a href="#municipios">MUNICIPIOS</a></li>
+	        <li class="temporada"><a href="#temporada">VEN EN MOTO</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <!--<li class="eventos"><a href="#">EVENTOS</a></li>
+	        <li class="buscar"><a href="#">BUSCAR</a></li>-->
+            
+
+
+<div class="mod-languagesnavbar-right ">
+
+    <form name="lang" method="post" action="https://visitbajoaragon.com/es/municipios/alcorisa">
+        	<select class="inputbox" onchange="document.location.replace(this.value);" >
+                                                <option value="/es/municipios/alcorisa" selected="selected">ES</option>
+                                                                <option value="/fr/municipios/alcorisa" >FR</option>
+                                                                <option value="/en/municipios/alcorisa" >EN</option>
+                                    </select>
+    </form>
+
+
+</div>
+
+	      </ul>
+          
+	    </div><!--/.nav-collapse -->
+	  </div>
+	</nav><!--/fin menu principal -->
+
+
+	<div id="bloques">
+
+    	<div class="bloque_entero tuviaje">
+    				<div class="moduletable">
+
+					<h3>RUTAS</h3>
+		
+			<ul class="nav menu">
+<li class="item-109"><a href="/es/rutas/moteras" >Moteras</a></li><li class="item-110"><a href="/es/rutas/senderistas" >Senderos Turísticos </a></li><li class="item-296"><a href="/es/rutas/btt" >Senderos Turísticos BTT</a></li><li class="item-111"><a href="/es/rutas/bovedas-del-frio" >Bóvedas del frío</a></li><li class="item-112"><a href="/es/rutas/iberos" >Íberos</a></li><li class="item-113"><a href="/es/rutas/tambor-y-bombo" >Tambor y bombo</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>NATURALEZA</h3>
+		
+			<ul class="nav menu">
+<li class="item-216 parent"><a href="/es/medioambientales/observatorios-de-aves" >Aves</a></li><li class="item-154"><a href="/es/medioambientales/estanca-y-saladas" >Censo aves Estanca</a></li><li class="item-155"><a href="/es/medioambientales/desierto-de-calanda" >Desierto de Calanda</a></li><li class="item-156"><a href="/es/medioambientales/arboles-singulares" >Árboles singulares</a></li><li class="item-157"><a href="/es/medioambientales/miradores" >Miradores</a></li><li class="item-326"><a href="/es/medioambientales/via-verde-val-de-zafan" >Vía Verde</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>MUSEOS</h3>
+		
+			<ul class="nav menu">
+<li class="item-159"><a href="/es/museos/castillo-calatravo" >Castillo Calatravo</a></li><li class="item-160"><a href="/es/museos/centro-bunuel" >Centro Buñuel</a></li><li class="item-161"><a href="/es/museos/museo-mas-de-las-matas" >Molino harinero y Alfarda</a></li><li class="item-162"><a href="/es/museos/ci-semana-santa" >CI Semana Santa</a></li><li class="item-163"><a href="/es/museos/museo-de-la-escuela" >Museo de la Escuela</a></li><li class="item-165"><a href="/es/museos/otros-museos-y-ci" >Otros Museos y CI</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>CONOCE</h3>
+		
+			<ul class="nav menu">
+<li class="item-174"><a href="/es/conoce/denominaciones-de-origen" >Denominaciones de Origen</a></li><li class="item-175"><a href="/es/conoce/fiestas-y-tradiciones" >Fiestas y Tradiciones</a></li><li class="item-176"><a href="/es/conoce/gastronomia" >Gastronomía</a></li><li class="item-215"><a href="/es/conoce/centro-dinopolis" >Centro Dinópolis </a></li><li class="item-209"><a href="/es/conoce/ciba" >CIBA</a></li><li class="item-310"><a href="/es/conoce/geoparque-maestrazgo" >Geoparque Maestrazgo</a></li></ul>
+
+		</div>
+
+			<div class="moduletable guia_practica">
+
+					<h3>GUÍA PRÁCTICA</h3>
+		
+			<ul class="nav menu">
+<li class="item-103"><a href="/es/guia-practica/mapa-de-turismo" >Mapa de Turismo</a></li><li class="item-104"><a href="/es/guia-practica/oficina-de-turismo" >Oficina de Turismo</a></li><li class="item-105"><a href="/es/guia-practica/alojamientos" >¿Dónde dormir?</a></li><li class="item-106"><a href="/es/guia-practica/restaurantes" >¿Dónde comer?</a></li><li class="item-107"><a href="/es/guia-practica/turismo-activo" >Turismo Activo</a></li><li class="item-198"><a href="/es/guia-practica/como-llegar" >Cómo llegar</a></li></ul>
+
+		</div>
+
+	
+        <div class="estirador"><a class=""><i class="fa fa-bars"></i></a></div>
+    	</div>
+    	<div class="bloque_entero municipios">
+    				<nav class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-185 active deeper parent"><a href="/es/municipios" >Municipios</a><ul class="nav-child unstyled small dropdown-menu"><li class="item-114"><a href="/es/municipios/aguaviva" >Aguaviva</a></li><li class="item-115"><a href="/es/municipios/alcaniz" >Alcañiz</a></li><li class="item-116 current active"><a href="/es/municipios/alcorisa" >Alcorisa</a></li><li class="item-117"><a href="/es/municipios/belmonte" >Belmonte de San José</a></li><li class="item-118"><a href="/es/municipios/berge" >Berge</a></li><li class="item-119"><a href="/es/municipios/calanda" >Calanda</a></li><li class="item-120"><a href="/es/municipios/castelseras" >Castelserás</a></li><li class="item-121"><a href="/es/municipios/foz-calanda" >Foz Calanda</a></li><li class="item-122"><a href="/es/municipios/jaganta" >Jaganta</a></li><li class="item-123"><a href="/es/municipios/la-canada-de-verich" >La Cañada de Verich</a></li><li class="item-124"><a href="/es/municipios/la-cerollera" >La Cerollera</a></li><li class="item-125"><a href="/es/municipios/la-codonera" >La Codoñera</a></li><li class="item-126"><a href="/es/municipios/la-ginebrosa" >La Ginebrosa</a></li><li class="item-127"><a href="/es/municipios/la-mata-de-los-olmos" >La Mata de los Olmos</a></li><li class="item-128"><a href="/es/municipios/las-parras-de-castellote" >Las Parras de Castellote</a></li><li class="item-129"><a href="/es/municipios/mas-de-las-matas" >Mas de las Matas</a></li><li class="item-130"><a href="/es/municipios/olmos" >Los Olmos</a></li><li class="item-131"><a href="/es/municipios/puigmoreno" >Puigmoreno</a></li><li class="item-132"><a href="/es/municipios/seno" >Seno</a></li><li class="item-133"><a href="/es/municipios/torrecilla-de-alcaniz" >Torrecilla de Alcañiz</a></li><li class="item-134"><a href="/es/municipios/torrevelilla" >Torrevelilla</a></li><li class="item-135"><a href="/es/municipios/valdealgorfa" >Valdealgorfa</a></li><li class="item-136"><a href="/es/municipios/valmuel" >Valmuel</a></li></ul></li></ul>
+
+		</nav>
+
+	
+        <div class="estirador"><a class=""><i class="fa fa-bars"></i></a></div>
+    	</div>
+
+    	<div class="bloque_entero temporada">
+            <div class="menu_visual">
+              		<div class="moduletable">
+
+		
+			<noscript id="deferred-styles_visualmenu"><link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/modules/mod_visual_menu/css/visual_menu_base.css"/>
+			</noscript><script>
+				var loadDeferredStyles_visualmenu = function() {
+				var addStylesNode = document.getElementById("deferred-styles_visualmenu");
+				var replacement = document.createElement("div");
+				replacement.innerHTML = addStylesNode.textContent;
+				document.body.appendChild(replacement)
+				addStylesNode.parentElement.removeChild(addStylesNode);
+				};
+				var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+					webkitRequestAnimationFrame || msRequestAnimationFrame;
+				if (raf) raf(function() { window.setTimeout(loadDeferredStyles_visualmenu, 0); });
+				else window.addEventListener('load', loadDeferredStyles_visualmenu);
+			</script><noscript id="deferred-styles_visualmenu_style"><link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/modules/mod_visual_menu/styles/vm_bs4.css"/>
+			</noscript><script>
+				var loadDeferredStyles_visualmenu_style = function() {
+				var addStylesNode = document.getElementById("deferred-styles_visualmenu_style");
+				var replacement = document.createElement("div");
+				replacement.innerHTML = addStylesNode.textContent;
+				document.body.appendChild(replacement)
+				addStylesNode.parentElement.removeChild(addStylesNode);
+				};
+				var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+					webkitRequestAnimationFrame || msRequestAnimationFrame;
+				if (raf) raf(function() { window.setTimeout(loadDeferredStyles_visualmenu_style, 0); });
+				else window.addEventListener('load', loadDeferredStyles_visualmenu_style);
+			</script>
+<style>
+.vm_thumbnail img{
+max-height:250px;
+}.menu_elements_wrapper div.vm_img_wrapper img{
+			    max-width: 100%;
+    			width: 100%;
+    			left: -0%;
+		}
+
+
+</style>
+
+
+<div class="dx_menu_visual_wrapper">
+	<div id="dx_visual_module1" class="dx_visual_module vm_bs  ">
+	<div class="vm_table">
+		
+
+		<!--bucle principal-->
+					
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6vm_featured"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/161-ruta-232">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/FRIO/ruta_232.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/161-ruta-232">Ruta 232</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+							
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/11-ruta-de-los-oasis">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/MOTERAS/Oasis_Rins.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/11-ruta-de-los-oasis">Ruta de los oasis</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+							
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6vm_featured"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/12-ruta-las-bovedas-del-frio">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/FRIO/ruta_bovedas3.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/12-ruta-las-bovedas-del-frio">Ruta Las Bóvedas del Frío</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+							
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/13-ruta-tierra-y-arte">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/MOTERAS/_MG_9257-69.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/13-ruta-tierra-y-arte">Ruta Tierra y arte</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+				
+
+
+
+
+
+
+		 <!--<div class="menu_elements_wrapper vm_tail"></div>-->
+		</div>
+	</div>
+</div>
+
+		</div>
+
+	
+              <div class="estirador"><a class=""><i class="fa fa-bars"></i></a></div>
+            </div>
+    	</div>
+
+    	<div class="bloque_entero eventos">
+    		
+    	</div>
+    	<div class="bloque_entero buscar">
+    				<div class="moduletable">
+
+					<h3>BUSCAR</h3>
+		
+			<div class="search">
+	<form action="/es/municipios/alcorisa" method="post" class="form-inline">
+		<input name="searchword" id="mod-search-searchword" maxlength="200"  class="inputbox search-query form-control" type="text" size="0" value="Buscar..."  onblur="if (this.value=='') this.value='Buscar...';" onfocus="if (this.value=='Buscar...') this.value='';" />		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="116" />
+	</form>
+</div>
+
+		</div>
+
+	
+    	</div>
+
+  </div>
+
+
+	<!--banner portada -->
+	
+
+  <div class="contenidos_wrapper">
+
+
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+
+     <article class="contenido">
+       
+        <!--PREBANNER -->
+               
+        <div id="system-message-container">
+	</div>
+
+        <div class="item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="es-ES" />
+	
+		
+	
+
+	
+		
+			<div class="page-header">
+
+		    				<h2 itemprop="name">
+							Alcorisa					</h2>
+							</div>
+					
+	
+
+
+		
+			
+		
+
+
+
+	<div itemprop="articleBody" class="cuerpo container">
+			<div class="contenidos_cuerpo col-sm-9 col-xs-12">
+			<p><img src="/images/MUNICIPIOS/alcorisa/P4120069.JPG" alt="Alcorisa" class="img100" /></p>
+<h4 style="text-align: justify;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Bienvenidos a <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/presentacion-31/">Alcorisa</a>, pujante y acogedora localidad bajoaragonesa que luce orgullosa los títulos de “Fiel” y “Muy ilustre”, otorgados por Felipe V. Originalmente recibía el nombre de Alkol, que provenía del árabe Al-Kura, en referencia a “las alquerías ”. No está tan claro el origen de su actual topónimo, Alcorisa, aunque parece derivar de “alcor”, en alusión a los numerosos cerros presentes en la zona.</span></span></h4>
+<p style="text-align: justify;">
+<audio src="/images/MUNICIPIOS/COMUN/audios/audiog_Alcorisa.mp3" controls="controls" type="audio/mpeg"></audio>
+ <br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">En cualquier caso lo que si es cierto es que Alcorisa se sitúa en un fértil territorio poblado desde el inicio por diferentes culturas los testimonios más antiguos de los que tenemos noticia se sitúan en los yacimientos de Fila de la Muela, El Morenillo y Mas del Hambre. . El primer asentamiento poblacional rastreado es el poblado íbero del Cabezo de la Guardia, declarado Bien de Interés Cultural en 2001, donde se han localizado fragmentos de cerámica pintada y restos de unas antiguas termas romanas. En la actualidad el yacimiento está incluido en la </span></span><a href="/es/rutas/iberos"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Ruta Íberos</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> en el Bajo Aragón, un interesante producto de turismo arqueológico y cultural basado en la cultura ibérica del área oriental de Aragón.</span></span></p>
+<p style="text-align: justify;"><img src="/images/MUNICIPIOS/alcorisa/alco02.jpg" alt="alcohol02" width="205" height="316" style="margin: 15px; float: right;" /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Tras la reconquista Alcorisa formó parte de la donación que hizo Alfonso II a la Orden de Calatrava (1179) y estaba incluida, en 1263, en el distrito de Alcañiz. La localidad fue creciendo en población y riqueza hasta convertirse a finales del siglo XVI en una población pujante que ansiaba más independencia para poder regir su destino. En 1591 se obtuvo del Rey Felipe III la autonomía necesaria para ejercer la jurisdicción civil en trámites menores pero no fue hasta 1605 cuando, tras varios años de pleitos y recursos, el Rey otorgó a Alcorisa el ansiado título de Villa que como especifica el privilegio real permitido:</span></span></p>
+<blockquote>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">" </span></span><em><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">…que de aquí adelante los vecinos de Alcorisa sean y se entiendan por apartados y eximidos de la villa de Alcañiz en su jurisdicción civil y penal, con sus tierras y términos</span></span></em><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> ”.</span></span></p>
+</blockquote>
+<p style="text-align: justify;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">En la actualidad este hecho histórico en conmemorado por los vecinos de la Villa con la celebración de la denominada&nbsp;</span></span><a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/fiesta-de-la-villa/"><span style="vertical-align: inherit;">Fiesta de la Villa</span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&nbsp;de Alcorisa una multitudinaria recreación histórica de carácter bienal que devuelve al municipio al Siglo de Oro.</span></span></p>
+<p style="text-align: justify;"><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Una de las imágenes que más llama la atención del viajero que llega por vez primera a Alcorisa es la de las poderosas colinas que se recortan sobre uno de los flancos de la población y el silencioso duelo de siglos que estas mantienen con la verticalidad de la torre. campanario de la iglesia parroquial. Es precisamente ese entorno natural tan cercano, bello y cargado de simbolismo, el que recomendamos para iniciar el paseo que probablemente más perdurará en el recuerdo de quienes llegan a Alcorisa.</span></span></p>
+<p style="text-align: justify;"><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">El recorrido por el</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/el-calvario-3/">Monte Calvario</a></span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&nbsp;combina la belleza de un entorno natural plagado de vegetación y pinos que se disfruta a medida que avanzamos por el empedrado camino que conforma el Vía Crucis trazado en el siglo XVI, los peirones y capillas que jalonan el recorrido irán mostrándose al caminante que podrá disfrutar además de tranquilos rincones con vistas a la población y su entorno. Durante el paseo es posible divisar cabras montesas, habitantes del lugar, convertidas ya en parte del atractivo de la visita. Cercanos a la cima del monte encontraremos la&nbsp;</span></span><a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-ermita-del-santo-sepulcro-la-ermita-del-calvario/"><span style="vertical-align: inherit;">ermita del Santo Sepulcro</span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">, uno de los símbolos de Alcorisa, construida en el siglo XVI invita a realizar un sereno descanso antes de continuar el camino que nos llevará a la cima. Una vez arriba y dejando a un lado la ermita de San Juan (SXVII) nos dirigiremos al mirador natural que conforma la peña San Juan para poder disfrutar del magnífico paisaje que se presenta, con la cúpula de la torre de la iglesia en primer plano.</span></span></p>
+<p style="text-align: justify;"><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">El Monte Calvario es, además, el escenario natural donde se viene representando desde hace casi treinta años&nbsp; </span></span><a href="https://www.dramadelacruz.es/"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">“El Drama de la Cru</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">z"</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> que atrae a Alcorisa a millas de personas el día de Viernes Santo convertido ya en una de las referencias no solo de la Semana Santa Alcorisana sino también de la Ruta del Tambor y el Bombo en el Bajo Aragón. Los bien escogidos escenarios naturales dotan a la representación de un realismo que, unido a la calidad y entrega de los actores, hace que creyentes y paganos se sobrecojan año tras año con cada una de sus escenas.</span></span></p>
+<p style="text-align: justify;"><br /><img src="/images/MUNICIPIOS/alcorisa/alco03.jpg" alt="alco03" width="206" height="313" style="margin: 15px; float: left;" /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Una vez se ha descendido y como continuación a la visita hay que situarse en la escalinata de de&nbsp;</span></span><a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-iglesia-parroquial-de-santa-maria-la-mayor-2/"><span style="vertical-align: inherit;">La Iglesia de Santa María La Mayor</span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&nbsp;para disfrutar de la belleza de su fachada barroca y la monumentalidad de la&nbsp;</span></span><a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-torre-campanario-de-la-iglesia-parroquial-2/"><span style="vertical-align: inherit;">torre campanario</span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> (S XVIII) de reminiscencias mudéjares, conjunto que fue declarado bien de Interés Cultural en el año 2002.</span></span></p>
+<p style="text-align: justify;"><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Tras la visita al conjunto que conforman la refrescante “fuente de los tres chorros” (SXVIII) y los lavaderos, aún hoy en día en uso, y en los que todavía es posible ver a señoras lavando la ropa a la antigua usanza, el recorrido proseguirá callejeando por un casco antiguo que mantiene el trazado medieval y en el que encontraremos hornacinas y pequeñas capillas en honor a los Santos que dan nombre a las calles y donde conviven ejemplos de la arquitectura popular aragonesa, comercios y, como no, acogedores rincones. Mención especial merece la Plaza de los Arcos, escenario de tantos acontecimientos históricos.</span></span></p>
+<p style="text-align: justify;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Finalizaremos la visita al casco urbano en la&nbsp;</span></span><a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-antigua-iglesia-de-san-sebastian-centro-de-interpretacion-de-la-semana-santa/"><span style="vertical-align: inherit;">iglesia de San Sebastián</span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> (S.XVIII) totalmente rehabilitada y que en la actualidad acoge el Centro de Interpretación de la Semana Santa, el&nbsp;</span></span><a href="https://www.museodelaescuela.com/museo.html"><span style="vertical-align: inherit;">Museo de la escuela rural </span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">y el centro de visitantes de la Ruta de los Iberos.</span></span></p>
+<p style="text-align: justify;"><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">El centro de Interpretación de la </span></span><a href="https://rutadeltamborybombo.com/"><span style="vertical-align: inherit;">Semana Santa</span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> permite, gracias a una efectista proyección multimedia ya la cálida locución, conocer la Semana Santa alcorisana; su origen, sus sonidos, sus tradiciones. En un momento determinado el audiovisual deja la pantalla para integrar a quien lo ve en la realidad que lo rodea mostrando los Pasos, las túnicas de las cofradías, la misma iglesia… el efecto es magistral e inolvidable.</span></span></p>
+<p style="text-align: justify;"><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">En el piso superior, se encuentra el fascinante </span></span><a href="/es/museos/museo-de-la-escuela"><span style="vertical-align: inherit;">Museo de la Escuel</span><span style="vertical-align: inherit;">a</span><span style="vertical-align: inherit;"> </span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">que nos permitirá realizar un emocionante viaje a los días escolares de nuestra infancia: pupitres, mapamundis que permiten apreciar que el tiempo pasa y todo cambia, libros, aquella leche en polvo, trabajos manuales. , los primeros ordenadores… En una de las salas accederemos al interior de una bien ambientada escuela de postguerra que esconde algunas sorpresas para descubrir. Por último el museo ofrece la posibilidad de obtener un recuerdo inolvidable repitiendo la fotografía que nos hicieron hace décadas en nuestros primeros días de colegio: la bata azul o rosa, para todas las tallas; la esfera terrestre, el busto de la Santa Infancia y detrás el mapa de España… interesante ¿verdad?.</span></span></p>
+<p style="text-align: justify;"><br /><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Otro agradable paseo por Alcorisa se podrá realizar recorriendo el recientemente concluido Parque Fluvial del Guadalopillo, que incluye además del magnífico y soleado parque un andador con carril bici que discurre por la ribera del Guadalopillo hasta llegar, pasando por la zona de descanso de las Calderuelas, a las piscinas municipales, recuperando para el pueblo unos espacios naturales que han sido muy bien aceptados por sus habitantes.</span></span></p>
+<p><img src="/images/MUNICIPIOS/alcorisa/P4120073.JPG" alt="P4120073" width="168" height="224" />&nbsp;<img src="/images/MUNICIPIOS/alcorisa/P5140063.JPG" alt="P5140063" width="168" height="224" />&nbsp;<img src="/images/MUNICIPIOS/alcorisa/PB120120.JPG" alt="PB120120" width="168" height="224" />&nbsp;<img src="/images/MUNICIPIOS/alcorisa/P5140062.JPG" alt="P5140062" width="168" height="224" /></p>
+<p style="text-align: justify;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Los amantes del senderismo y la bicicleta disfrutarán en Alcorisa con el sendero de pequeño recorrido que une la población con el cercano <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/el-embalse-de-gallipuen/">embalse de Gallipuén</a> o el muy interesante recorrido que permite descubrir las abandonadas y nunca utilizadas estaciones de ferrocarril, puentes y apeaderos que dejaron en nuestro término municipal el fracasado proyecto que se planteó durante la Dictadura del General Primo de Rivera de construir una línea de ferrocarril que uniese Teruel y Cataluña.</span></span></p>
+<p style="text-align: justify;">Junto a la antigua estación de ferrocarril de la población se instaló en 2023 la <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/disonancia-sin-destino/">escultura Disonancia</a> sin destino, integrante del proyecto ARMONATURA impulsado desde la Comarca del Bajo Aragón.</p>
+<p>&nbsp;</p>
+<p style="text-align: justify;"><strong>CALENDARIO DE FIESTAS Y TRADICIONES</strong></p>
+<p style="text-align: justify;">El ciclo festivo de Alcorisa comienza cada año con la festividad de&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/san-sebastian/">San Sebastián</a>, una celebración marcada por las hogueras y la devoción al mártir protector contra las epidemias. Le sigue&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/la-candelaria/">La Candelaria</a>, que se celebra el 2 de&nbsp;febrero. Al día siguiente, se conmemora&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/san-blas/">San Blas</a>, protector de la garganta, cuyo roscón bendecido es una tradición muy arraigada.</p>
+<p style="text-align: justify;">Poco después,&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/santa-agueda-3/">Santa Águeda</a>&nbsp;toma protagonismo, una jornada en la que las mujeres de Alcorisa se organizan para rendir homenaje a su santa patrona. Más adelante, la&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/semana-santa-fiesta-de-interes-turistico-internacional/">Semana Santa</a>&nbsp;se convierte en uno de los momentos más intensos y emotivos del calendario, con sus procesiones solemnes y su carácter participativo. En este contexto se representa el&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/drama-de-la-cruz/">Drama de la Cruz</a>, una impresionante recreación teatral de la pasión de Cristo que atrae a numerosos visitantes.</p>
+<p style="text-align: justify;">Con la llegada de la primavera, se celebra&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/san-jorge-2/">San Jorge</a>, patrón de Aragón, con actividades culturales y recreativas. Poco después tienen lugar las&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/fiestas-de-primavera/">Fiestas de Primavera</a>, una manifestación alegre del renacer del campo y de la convivencia vecinal. También en primavera se celebra la&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/santa-cruz-bendicion-de-terminos/">Santa Cruz y la bendición de términos</a>, una tradición que invoca la protección sobre los campos y cosechas del término municipal.</p>
+<p style="text-align: justify;">Durante el mismo periodo, se honra a&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/san-pascual-baylon/">San Pascual Baylón</a>, celebrado en el barrio dedicado a este santo. Le sigue&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/san-bernabe/">San Bernabé</a>, con actos litúrgicos y populares.</p>
+<p style="text-align: justify;">Septiembre trae la celebración de las&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/fiestas-patronales-en-honor-a-la-exaltacion-de-la-santa-cruz-y-el-sepulcro-glorioso/">Fiestas Patronales en honor a la Exaltación de la Cruz y el Sepulcro Glorioso,</a> que constituyen el momento culminante del año festivo. Durante estas fiestas tiene lugar también la<br />tradicional&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/romeria-subida-al-calvario/">Subida al Calvario</a>, una romería que aúna espiritualidad y sentimiento colectivo.</p>
+<p style="text-align: justify;">El ciclo festivo termina con la <a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/fiesta-de-la-villa/">Fiesta de la Villa</a>, una jornada de identidad local que recuerda la concesión del título de villa a Alcorisa y que traslada a la población al año 1605. Generalmente es un evento bienal, si bien en 2023 se<br />recuperó tras cuatro años sin celebrarse.</p>
+<p>&nbsp;</p>
+<p><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ENLACES RECOMENDADOS&nbsp;</span></span></strong></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Más información</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">&nbsp;sobre el Patrimonio de Alcorisa.</span></span></p>
+<p><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=alcorisa&amp;_catalogo=artistico_monumental"><strong>Catálogo Artístico y Monumental. CAMCBA</strong></a></p>
+<p><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=alcorisa&amp;_catalogo=fiestas_tradiciones"><strong>Catálogo Fiestas y Tradiciones.&nbsp;CAMCBA</strong></a></p>
+<p><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=alcorisa&amp;_catalogo=paisajistico_medioam"><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Catálogo Paisajístico y Medioambiental</span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">.&nbsp;CAMCBA</span></span></strong></a></p>
+<p><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=alcorisa&amp;_catalogo=patrimonio_musical"><strong>Catálogo Musical.&nbsp;CAMCBA</strong></a></p>
+<p><a href="https://www.catalogoculturalbajoaragon.es/filtrado/filtrado-artistico-y-monumental/?_comarca=bajo-aragon&amp;_poblacion=alcorisa&amp;_catalogo=historico_bio"><strong>Catálogo Histórico y Biográfico.&nbsp;CAMCBA</strong></a></p>
+<p><a href="https://www.youtube.com/watch?v=Sxmj2m5o7e8" target="_blank" rel="noopener" class="leermas_video"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">20 pueblos 20 citas</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"> . Fiesta de la Villa.&nbsp;</span></span></p> 			    <div class="s2s_supra_contenedor lang_directon_right s2smodern  align_center  s2s_balloon_bottom " ><input name="social2s_url" type="hidden" class="social2s_url" value="https://visitbajoaragon.com/es/municipios/alcorisa" /><div class="s2s_contenedor s2s_fill_mobile s2s_no_text s2s-btn-split"><div class="s2s_twitter s2s_twitter_own s2s_btn s2s-btn-xs ">
+			<a class="s2s_icon"><i class="s2sfo fo-twitter"></i>   </a>
+			<div class="globo s2s_globo_closed s2s_twitter_iframe">
+				<div class="s2s_flecha"></div><div class="s2s_div_btn_twitter"><a class="s2s_a_btn s2s_btn_twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?text=Alcorisa&url=https://visitbajoaragon.com/es/municipios/alcorisa&via=VisitBajoAragon">
+						<i class="s2sfo fo-twitter"></i> <span>Twittear</span></a></div></div>
+		</div><div class="s2s_facebook s2s_btn s2s-btn-xs " >
+			<a class="s2s_icon"><i class="s2sfo fo-facebook"></i>   </a>
+				<div class="globo s2s_globo_closed s2s_facebook_iframe">
+					<div class="s2s_flecha"></div><div class="fb-share-button"
+						data-layout="button_count" 
+						data-href="https://visitbajoaragon.com/es/municipios/alcorisa" 
+						data-size="small" 
+					>
+						<a target="_blank" href="https://visitbajoaragon.com/es/municipios/alcorisa" class="fb-xfbml-parse-ignore">Share</a>
+					</div></div>
+			</div><div class="s2s_pinterest s2s_btn s2s-btn-xs "><a class="s2s_icon"><i class="s2sfo fo-pinterest"></i>   </a><div class="globo s2s_globo_closed s2s_pinterest_iframe">
+					<div class="s2s_flecha"></div>
+					<a aria-label="pinterest" href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fvisitbajoaragon.com%2Fes%2Fmunicipios%2Falcorisa&amp;description=Alcorisa" data-pin-do="buttonBookmark" 
+					 
+					data-pin-color="red" 
+					 
+					data-pin-tall="true" data-pin-sticky="false"></a> </div>
+			</div><div class="s2s_linkedin s2s_btn s2s-btn-xs " ><a class="s2s_icon"><i class="s2sfo fo-linkedin"></i>   </a><div class="globo s2s_globo_closed s2s_linkedin_iframe">
+						<div class="s2s_flecha"></div>
+						
+						<script type="IN/Share"  data-url="https://visitbajoaragon.com/es/municipios/alcorisa"></script><a 
+			target="_blank" 
+			href="https://www.linkedin.com/shareArticle?url=https://visitbajoaragon.com/es/municipios/alcorisa" 
+			class="btn s2s_linkedin_fallback s2s_hide">
+			<i class="s2sfo fo-linkedin"></i>Share</a></div></div><div class="s2s_tumblr s2s_btn s2s-btn-xs " lang="es"><a class="s2s_icon"><i class="s2sfo fo-tumblr"></i>   </a>
+				<div class="globo s2s_globo_closed s2s_tumblr_iframe">
+					<div class="s2s_flecha"></div>
+					<a class="tumblr-share-button" aria-label="tumblr"
+					data-locale="es_ES" 
+					data-href="https://visitbajoaragon.com/es/municipios/alcorisa" 
+					data-color="blue" 
+					data-notes="right"
+					href="https://embed.tumblr.com/share"></a></div></div></div></div><noscript id="deferred-styles_s2s_basecss">
+                          <link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/media/plg_social2s/css/behavior/s2smodern.css"/>
+                        </noscript><script>
+                          var loadDeferredStyles_s2s_basecss = function() {
+                            var addStylesNode = document.getElementById("deferred-styles_s2s_basecss");
+                            var replacement = document.createElement("div");
+                            replacement.innerHTML = addStylesNode.textContent;
+                            document.body.appendChild(replacement)
+                            addStylesNode.parentElement.removeChild(addStylesNode);
+                          };
+                          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                              webkitRequestAnimationFrame || msRequestAnimationFrame;
+                          if (raf) raf(function() { window.setTimeout(loadDeferredStyles_s2s_basecss,50); });
+                          else window.addEventListener('load', loadDeferredStyles_s2s_basecss);
+                        </script><noscript id="deferred-styles_s2s_style">
+                          <link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/media/plg_social2s/css/styles/icon_colour.css"/>
+                        </noscript><script>
+                          var loadDeferredStyles_s2s_style = function() {
+                            var addStylesNode = document.getElementById("deferred-styles_s2s_style");
+                            var replacement = document.createElement("div");
+                            replacement.innerHTML = addStylesNode.textContent;
+                            document.body.appendChild(replacement)
+                            addStylesNode.parentElement.removeChild(addStylesNode);
+                          };
+                          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                              webkitRequestAnimationFrame || msRequestAnimationFrame;
+                          if (raf) raf(function() { window.setTimeout(loadDeferredStyles_s2s_style, 100); });
+                          else window.addEventListener('load', loadDeferredStyles_s2s_style);
+                        </script><noscript id="deferred-styles_s2s_font">
+                          <link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/media/plg_social2s/css/s2sfont.min.css"/>
+                        </noscript><script>
+                          var loadDeferredStyles_s2s_font = function() {
+                            var addStylesNode = document.getElementById("deferred-styles_s2s_font");
+                            var replacement = document.createElement("div");
+                            replacement.innerHTML = addStylesNode.textContent;
+                            document.body.appendChild(replacement)
+                            addStylesNode.parentElement.removeChild(addStylesNode);
+                          };
+                          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                              webkitRequestAnimationFrame || msRequestAnimationFrame;
+                          if (raf) raf(function() { window.setTimeout(loadDeferredStyles_s2s_font, 150); });
+                          else window.addEventListener('load', loadDeferredStyles_s2s_font);
+                        </script>		</div>
+
+	    <nav class="derecha col-sm-3 col-xs-12  hidden-xs">
+
+	    	<div class="derecha_wrapper">
+
+						<div class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-153 parent"><a data-toggle="dropdown" href="#rutas_medioambientales" >MEDIOAMBIENTALES <i class="fa fa-caret-down"></i></a></li><li class="item-158 parent"><a data-toggle="dropdown" href="#rutas_medioambientales" >MUSEOS <i class="fa fa-caret-down"></i></a></li><li class="item-102 parent"><a data-toggle="dropdown" href="#guia_practica" >GUÍA PRÁCTICA <i class="fa fa-caret-down"></i></a></li><li class="item-108 parent"><a href="/es/rutas" >RUTAS</a></li><li class="item-173 parent"><a href="/es/conoce" >CONOCE</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-185 active deeper parent"><a href="/es/municipios" >Municipios</a><ul class="nav-child unstyled small dropdown-menu"><li class="item-114"><a href="/es/municipios/aguaviva" >Aguaviva</a></li><li class="item-115"><a href="/es/municipios/alcaniz" >Alcañiz</a></li><li class="item-116 current active"><a href="/es/municipios/alcorisa" >Alcorisa</a></li><li class="item-117"><a href="/es/municipios/belmonte" >Belmonte de San José</a></li><li class="item-118"><a href="/es/municipios/berge" >Berge</a></li><li class="item-119"><a href="/es/municipios/calanda" >Calanda</a></li><li class="item-120"><a href="/es/municipios/castelseras" >Castelserás</a></li><li class="item-121"><a href="/es/municipios/foz-calanda" >Foz Calanda</a></li><li class="item-122"><a href="/es/municipios/jaganta" >Jaganta</a></li><li class="item-123"><a href="/es/municipios/la-canada-de-verich" >La Cañada de Verich</a></li><li class="item-124"><a href="/es/municipios/la-cerollera" >La Cerollera</a></li><li class="item-125"><a href="/es/municipios/la-codonera" >La Codoñera</a></li><li class="item-126"><a href="/es/municipios/la-ginebrosa" >La Ginebrosa</a></li><li class="item-127"><a href="/es/municipios/la-mata-de-los-olmos" >La Mata de los Olmos</a></li><li class="item-128"><a href="/es/municipios/las-parras-de-castellote" >Las Parras de Castellote</a></li><li class="item-129"><a href="/es/municipios/mas-de-las-matas" >Mas de las Matas</a></li><li class="item-130"><a href="/es/municipios/olmos" >Los Olmos</a></li><li class="item-131"><a href="/es/municipios/puigmoreno" >Puigmoreno</a></li><li class="item-132"><a href="/es/municipios/seno" >Seno</a></li><li class="item-133"><a href="/es/municipios/torrecilla-de-alcaniz" >Torrecilla de Alcañiz</a></li><li class="item-134"><a href="/es/municipios/torrevelilla" >Torrevelilla</a></li><li class="item-135"><a href="/es/municipios/valdealgorfa" >Valdealgorfa</a></li><li class="item-136"><a href="/es/municipios/valmuel" >Valmuel</a></li></ul></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>Síguenos en...</h3>
+		
+			
+
+<div class="custom"  >
+	<div class="col-xs-6 col-sm-6"><a href="https://twitter.com/VisitBajoAragon" target="_blank" rel="noopener" style="font-size: 8rem;"><i class="fa fa-twitter-square"></i></a></div>
+<div class="col-xs-6 col-sm-6"><a href="https://www.facebook.com/vibrabajoaragon" target="_blank" rel="noopener" style="font-size: 8rem; color: #3a5795;"><i class="fa fa-facebook-square"></i></a></div>
+<div class="clearfix">&nbsp;</div></div>
+
+		</div>
+
+			<div class="moduletable">
+
+		
+			<!-- mod_giweather 1.3.0  j 3.10 -->
+<noscript><div class="alert">giWeather needs Javascript.</div></noscript>
+<div style="display:none;">giweather joomla module</div>
+<div id="giweather-module-142" class="giweather light giw-small" style="margin: 0 auto;max-width:475px"><div class="giweather-widget giw-loading"  style="background-color: #fcfcfc;">	
+</div>
+
+<div class="giw-copyright"><a style="text-decoration:none !important;color: #bababa; float: right !important;" href="http://openweathermap.org/" target="_blank">OpenWeatherMap</a><div style="clear:both;"></div></div></div>
+		</div>
+
+			        <div class="breadcrumbs visible-xs">
+		          <jdoc:include type="modules" name="breadcrumbs" style="html5" />
+		        </div>
+		    </div>
+      	</nav>
+    
+	</div> <!-- fin de articleBody -->
+
+
+
+
+
+	
+						
+
+
+</div><div><a title="Faboba : Cr&eacute;ation de composantJoomla" style="font-size: 8px;; visibility: visible;display:inline;" href="http://www.faboba.com" target="_blank">FaLang translation system by Faboba</a></div>
+       
+        <!--visual_menu -->
+        
+          <!--banner portada -->
+        
+      </article>
+
+  </div><!--/fin content_wrapper -->
+
+
+
+  <footer class="footer">
+  
+    <div class="social">
+
+      <div class="instagram col-sm-8 col-xs-12">
+        
+      </div>
+
+      <div class="twitter col-sm-4 col-xs-12">
+        
+      </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="datos_contacto">
+      <div class="logo_footer col-sm-3 col-xs-12">
+          <img src="/templates/visitbajoaragon/images/logo_footer.svg" alt="comarca Bajo Aragon" onerror="this.src='templates/visitbajoaragon/images/logo_footer.svg.png'">
+        		<div class="moduletable">
+
+					<h3>¿Quiénes somos?</h3>
+		
+			
+
+<div class="custom"  >
+	<p>Somos una comarca de Arag&oacute;n que tenemos como objetivo difundir los valores tur&iacute;sticos de los 20 municipios que componen su territorio.</p></div>
+
+		</div>
+
+	
+      </div>
+
+      <div class="contacto col-sm-3 col-xs-12">
+        		<div class="moduletable">
+
+		
+			
+
+<div class="custom"  >
+	<p style="text-align: center;"><strong>COMARCA del BAJO ARAGÓN</strong><br />Calle Mayor, 22 · 44600 <br />Alcañiz (Teruel)<br /><span style="line-height: 1.42857;"><i class="fa fa-phone " ></i> &nbsp;978 834 386<br /><br /></span></p>
+<p style="text-align: center;"><span id="cloak0993ae8f1613ffa90d2e2ff55abc960a">Esta dirección de correo electrónico está siendo protegida contra los robots de spam. Necesita tener JavaScript habilitado para poder verlo.</span><script type='text/javascript'>
+				document.getElementById('cloak0993ae8f1613ffa90d2e2ff55abc960a').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy0993ae8f1613ffa90d2e2ff55abc960a = 't&#117;r&#105;sm&#111;' + '&#64;';
+				addy0993ae8f1613ffa90d2e2ff55abc960a = addy0993ae8f1613ffa90d2e2ff55abc960a + 'b&#97;j&#111;&#97;r&#97;g&#111;n' + '&#46;' + '&#101;s?s&#117;bj&#101;ct=C&#111;nt&#97;ct&#111;%20d&#101;sd&#101;%20v&#105;s&#105;tb&#97;j&#111;&#97;r&#97;g&#111;n' + '&#46;' + 'c&#111;m';
+				var addy_text0993ae8f1613ffa90d2e2ff55abc960a = 't&#117;r&#105;sm&#111;' + '&#64;' + 'b&#97;j&#111;&#97;r&#97;g&#111;n' + '&#46;' + '&#101;s';document.getElementById('cloak0993ae8f1613ffa90d2e2ff55abc960a').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy0993ae8f1613ffa90d2e2ff55abc960a + '\'>'+addy_text0993ae8f1613ffa90d2e2ff55abc960a+'<\/a>';
+		</script></p>
+<p>&nbsp;</p></div>
+
+		</div>
+
+	
+      </div>
+      <div class="legal col-sm-3 col-xs-12">
+        		<div class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-188"><a href="/es/aviso-legal" >Aviso legal</a></li><li class="item-189"><a href="/es/aviso-legal-2" >Política de privacidad</a></li><li class="item-190"><a href="/es/politica-de-cookies" >Política de cookies</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+		
+			<!--googleoff: all-->
+	<!-- Template Default bootstrap -->
+	<div class="gear cookie bottom white blue ">
+	    
+		<!-- BG color -->
+		<div class='gear cookie-bg white'></div>
+	    
+		<h2>Esta web usa cookies</h2>
+	     
+		<p>Las cookies son necesarias para ofrecerte una mejor experiencia de usuario												<a href="/es/municipios/alcorisa/2-uncategorised/1-lorem-ipsum">Leer más</a>
+									</p>
+	    
+		<div class="btn btn-primary gear accept blue">Entendido</div>
+	    
+	</div>
+	
+	
+<!--googleon: all-->
+
+
+	
+	<script type="text/javascript">
+	    jQuery(document).ready(function () { 
+		
+			function setCookie(c_name,value,exdays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/";
+				document.cookie=c_name + "=" + c_value;
+			}
+			
+			function readCookie(name) {
+				var nameEQ = name + "=";
+				var gear = document.cookie.split(';');
+				for(var i=0;i < gear.length;i++) {
+					var c = gear[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+						if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+					}
+				return null;
+			}
+		    
+			var $gear_cookie = jQuery('.gear.cookie');
+			var $gear_infoaccept = jQuery('.gear.accept');
+			var gearcookies = readCookie('gearcookies');
+	
+			if(!(gearcookies == "yes")){
+			
+				$gear_cookie.delay(1000).slideDown('fast'); 
+	
+				$gear_infoaccept.click(function(){
+					setCookie("gearcookies","yes",365);
+					jQuery.post('https://visitbajoaragon.com/es/municipios/alcorisa', 'set_cookie=1', function(){});
+					$gear_cookie.slideUp('slow');
+				});
+			} 
+	    });
+	</script>
+
+
+		</div>
+
+	
+      </div>
+       <div class="copyright col-sm-3 col-xs-12">
+        		<div class="moduletable">
+
+		
+			
+
+<div class="custom"  >
+	<p><img src="/images/graficos/tecnologias/tecnologias_html5.png" alt="tecnologias html5" /><br /><img src="/images/graficos/tecnologias/tecnologias_dibuxo.png" alt="tecnologias dibuxo" width="88" height="41" /></p></div>
+
+		</div>
+
+	
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+          <img class="img-responsive" src="/images/graficos/logo_entidades.jpg" alt="entidades">
+    </div>
+      
+  
+
+  </footer>
+
+
+
+
+<!--[if lt IE 9]> 
+</div>
+<![endif]--> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48465972-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+<!-- Facebook Pixel Code -->
+
+<script>
+
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1764413303870437'); // Insert your pixel ID here.
+
+fbq('track', 'PageView');
+
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+
+src="https://www.facebook.com/tr?id=1764413303870437&ev=PageView&noscript=1"
+
+/></noscript>
+
+<!-- DO NOT MODIFY -->
+
+<!-- End Facebook Pixel Code -->
+  
+  
+  
+  
+  
+</body>
+
+</html>

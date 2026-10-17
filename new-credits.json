@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Escudo de Calanda (Teruel)",
+    "source": "https://commons.wikimedia.org/wiki/File:Escudo_de_Calanda_(Teruel).svg",
+    "author": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localFile": "assets/calanda-shield.png",
+    "changes": "Miniatura PNG generada por Wikimedia Commons; sin otras modificaciones."
+  },
+  {
+    "name": "Escudo de Torre de Arcas (Teruel)",
+    "source": "https://commons.wikimedia.org/wiki/File:Escudo_de_Torre_de_Arcas_(Teruel).svg",
+    "author": "",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localFile": "assets/torre-arcas-shield.png",
+    "changes": "Miniatura PNG generada por Wikimedia Commons; sin otras modificaciones."
+  },
+  {
+    "name": "Bandera de Alcorisa",
+    "source": "https://commons.wikimedia.org/wiki/File:Bandera_de_Alcorisa.svg",
+    "author": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "localFile": "assets/alcorisa-flag.png",
+    "changes": "Miniatura PNG generada por Wikimedia Commons; sin otras modificaciones."
+  },
+  {
+    "name": "Bandera de La Cerollera",
+    "source": "https://commons.wikimedia.org/wiki/File:Bandera_de_La_Cerollera.svg",
+    "author": "Ecelan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localFile": "assets/cerollera-flag.png",
+    "changes": "Miniatura PNG generada por Wikimedia Commons; sin otras modificaciones."
+  },
+  {
+    "name": "Escudo de Alcorisa",
+    "source": "https://commons.wikimedia.org/wiki/File:Escudo_de_Alcorisa.svg",
+    "author": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "localFile": "assets/alcorisa-shield.png",
+    "changes": "Miniatura PNG generada por Wikimedia Commons; sin otras modificaciones."
+  },
+  {
+    "name": "Escudo de La Cerollera",
+    "source": "https://commons.wikimedia.org/wiki/File:Escudo_de_La_Cerollera.svg",
+    "author": "Ecelan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "localFile": "assets/cerollera-shield.png",
+    "changes": "Miniatura PNG generada por Wikimedia Commons; sin otras modificaciones."
+  },
+  {
+    "name": "Escudo de Mas de las Matas",
+    "source": "https://commons.wikimedia.org/wiki/File:Escudo_de_Mas_de_las_Matas.svg",
+    "author": "",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "localFile": "assets/mas-matas-shield.png",
+    "changes": "Miniatura PNG generada por Wikimedia Commons; sin otras modificaciones."
+  }
+]

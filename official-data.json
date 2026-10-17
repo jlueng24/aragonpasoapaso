@@ -1,0 +1,1605 @@
+{
+  "retrieved": "2026-10-16",
+  "areaSource": "https://icearagon.aragon.es/portal/wfs.jsp",
+  "populationSource": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/2899?tip=AM&nult=1",
+  "areas": {
+    "44118": 80.15,
+    "44004": 42.17,
+    "44014": 121.25,
+    "44051": 112.31,
+    "44061": 10.87,
+    "44077": 33.77,
+    "44107": 37.89,
+    "44145": 30,
+    "44223": 34.3,
+    "44230": 33.46,
+    "44147": 86.32,
+    "44040": 42.65,
+    "44013": 472.4,
+    "44178": 42.16,
+    "44241": 46.96,
+    "44225": 19.47,
+    "44068": 31.54,
+    "44245": 16.02,
+    "44146": 23.73,
+    "44114": 39.03,
+    "44194": 35.64,
+    "44141": 15.63,
+    "44038": 33.99,
+    "44108": 39.51,
+    "44049": 81.39,
+    "44086": 52.63,
+    "44179": 83.39,
+    "44037": 96.99,
+    "44105": 32.66,
+    "44173": 43.99,
+    "44027": 34.26,
+    "44187": 21.39,
+    "44221": 26.78,
+    "44212": 17.86,
+    "44154": 79.3,
+    "44246": 124.16,
+    "44247": 41.87,
+    "44080": 20.98
+  },
+  "population": [
+    {
+      "COD": "DPOP19732",
+      "Nombre": "Aguaviva. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7354,
+          "T3_Variable": "Municipios",
+          "Nombre": "Aguaviva",
+          "Codigo": "44004"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 562.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19759",
+      "Nombre": "Alcañiz. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7360,
+          "T3_Variable": "Municipios",
+          "Nombre": "Alcañiz",
+          "Codigo": "44013"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 16505.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19762",
+      "Nombre": "Alcorisa. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7361,
+          "T3_Variable": "Municipios",
+          "Nombre": "Alcorisa",
+          "Codigo": "44014"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 3243.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19798",
+      "Nombre": "Arens de Lledó. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7368,
+          "T3_Variable": "Municipios",
+          "Nombre": "Arens de Lledó",
+          "Codigo": "44027"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 181.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19825",
+      "Nombre": "Beceite. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7377,
+          "T3_Variable": "Municipios",
+          "Nombre": "Beceite",
+          "Codigo": "44037"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 572.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19828",
+      "Nombre": "Belmonte de San José. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7378,
+          "T3_Variable": "Municipios",
+          "Nombre": "Belmonte de San José",
+          "Codigo": "44038"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 114.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19834",
+      "Nombre": "Berge. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7380,
+          "T3_Variable": "Municipios",
+          "Nombre": "Berge",
+          "Codigo": "44040"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 218.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19861",
+      "Nombre": "Calaceite. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7389,
+          "T3_Variable": "Municipios",
+          "Nombre": "Calaceite",
+          "Codigo": "44049"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 961.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19867",
+      "Nombre": "Calanda. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7391,
+          "T3_Variable": "Municipios",
+          "Nombre": "Calanda",
+          "Codigo": "44051"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 3745.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19891",
+      "Nombre": "Cañada de Verich, La. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7399,
+          "T3_Variable": "Municipios",
+          "Nombre": "Cañada de Verich, La",
+          "Codigo": "44061"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 72.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19912",
+      "Nombre": "Castelserás. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7406,
+          "T3_Variable": "Municipios",
+          "Nombre": "Castelserás",
+          "Codigo": "44068"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 804.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19930",
+      "Nombre": "Cerollera, La. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7412,
+          "T3_Variable": "Municipios",
+          "Nombre": "Cerollera, La",
+          "Codigo": "44077"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 77.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19933",
+      "Nombre": "Codoñera, La. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7413,
+          "T3_Variable": "Municipios",
+          "Nombre": "Codoñera, La",
+          "Codigo": "44080"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 312.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19945",
+      "Nombre": "Cretas. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7417,
+          "T3_Variable": "Municipios",
+          "Nombre": "Cretas",
+          "Codigo": "44086"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 559.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19990",
+      "Nombre": "Fórnoles. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7432,
+          "T3_Variable": "Municipios",
+          "Nombre": "Fórnoles",
+          "Codigo": "44105"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 71.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19996",
+      "Nombre": "Foz-Calanda. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7434,
+          "T3_Variable": "Municipios",
+          "Nombre": "Foz-Calanda",
+          "Codigo": "44107"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 272.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP19999",
+      "Nombre": "Fresneda, La. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7435,
+          "T3_Variable": "Municipios",
+          "Nombre": "Fresneda, La",
+          "Codigo": "44108"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 459.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20017",
+      "Nombre": "Fuentespalda. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7438,
+          "T3_Variable": "Municipios",
+          "Nombre": "Fuentespalda",
+          "Codigo": "44114"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 305.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20029",
+      "Nombre": "Ginebrosa, La. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7441,
+          "T3_Variable": "Municipios",
+          "Nombre": "Ginebrosa, La",
+          "Codigo": "44118"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 188.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20089",
+      "Nombre": "Lledó. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7454,
+          "T3_Variable": "Municipios",
+          "Nombre": "Lledó",
+          "Codigo": "44141"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 150.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20101",
+      "Nombre": "Mas de las Matas. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7456,
+          "T3_Variable": "Municipios",
+          "Nombre": "Mas de las Matas",
+          "Codigo": "44145"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 1230.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20104",
+      "Nombre": "Mata de los Olmos, La. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 980,
+          "T3_Variable": "Municipios",
+          "Nombre": "Mata de los Olmos, La",
+          "Codigo": "44146"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 255.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20107",
+      "Nombre": "Mazaleón. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7457,
+          "T3_Variable": "Municipios",
+          "Nombre": "Mazaleón",
+          "Codigo": "44147"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 474.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20128",
+      "Nombre": "Monroyo. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7461,
+          "T3_Variable": "Municipios",
+          "Nombre": "Monroyo",
+          "Codigo": "44154"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 324.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20176",
+      "Nombre": "Olmos, Los. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 989,
+          "T3_Variable": "Municipios",
+          "Nombre": "Olmos, Los",
+          "Codigo": "44173"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 111.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20191",
+      "Nombre": "Parras de Castellote, Las. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 991,
+          "T3_Variable": "Municipios",
+          "Nombre": "Parras de Castellote, Las",
+          "Codigo": "44178"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 61.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20194",
+      "Nombre": "Peñarroya de Tastavins. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7475,
+          "T3_Variable": "Municipios",
+          "Nombre": "Peñarroya de Tastavins",
+          "Codigo": "44179"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 467.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20215",
+      "Nombre": "Portellada, La. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 994,
+          "T3_Variable": "Municipios",
+          "Nombre": "Portellada, La",
+          "Codigo": "44187"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 249.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20233",
+      "Nombre": "Ráfales. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7483,
+          "T3_Variable": "Municipios",
+          "Nombre": "Ráfales",
+          "Codigo": "44194"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 149.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20284",
+      "Nombre": "Seno. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7492,
+          "T3_Variable": "Municipios",
+          "Nombre": "Seno",
+          "Codigo": "44212"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 39.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20314",
+      "Nombre": "Torre de Arcas. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7498,
+          "T3_Variable": "Municipios",
+          "Nombre": "Torre de Arcas",
+          "Codigo": "44223"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 76.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20320",
+      "Nombre": "Torre del Compte. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 1008,
+          "T3_Variable": "Municipios",
+          "Nombre": "Torre del Compte",
+          "Codigo": "44225"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 120.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20308",
+      "Nombre": "Torrecilla de Alcañiz. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7497,
+          "T3_Variable": "Municipios",
+          "Nombre": "Torrecilla de Alcañiz",
+          "Codigo": "44221"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 436.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20335",
+      "Nombre": "Torrevelilla. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7502,
+          "T3_Variable": "Municipios",
+          "Nombre": "Torrevelilla",
+          "Codigo": "44230"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 161.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20365",
+      "Nombre": "Valdealgorfa. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7508,
+          "T3_Variable": "Municipios",
+          "Nombre": "Valdealgorfa",
+          "Codigo": "44241"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 581.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20374",
+      "Nombre": "Valdeltormo. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 1016,
+          "T3_Variable": "Municipios",
+          "Nombre": "Valdeltormo",
+          "Codigo": "44245"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 304.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20377",
+      "Nombre": "Valderrobres. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 7510,
+          "T3_Variable": "Municipios",
+          "Nombre": "Valderrobres",
+          "Codigo": "44246"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 2555.0
+        }
+      ]
+    },
+    {
+      "COD": "DPOP20380",
+      "Nombre": "Valjunquera. Total. Total habitantes. Personas. ",
+      "T3_Unidad": "Personas",
+      "T3_Escala": " ",
+      "MetaData": [
+        {
+          "Id": 1017,
+          "T3_Variable": "Municipios",
+          "Nombre": "Valjunquera",
+          "Codigo": "44247"
+        },
+        {
+          "Id": 451,
+          "T3_Variable": "Sexo",
+          "Nombre": "Total",
+          "Codigo": "0"
+        },
+        {
+          "Id": 8677,
+          "T3_Variable": "Tamaño de los municipios",
+          "Nombre": "Total habitantes",
+          "Codigo": "0"
+        },
+        {
+          "Id": 20258,
+          "T3_Variable": "Tipo de dato",
+          "Nombre": "Personas",
+          "Codigo": ""
+        }
+      ],
+      "Data": [
+        {
+          "Fecha": "2025-01-01T00:00:00.000+01:00",
+          "T3_TipoDato": "Definitivo",
+          "T3_Periodo": "A",
+          "Anyo": 2025,
+          "Valor": 336.0
+        }
+      ]
+    }
+  ]
+}

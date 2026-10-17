@@ -1,0 +1,797 @@
+<!doctype html>
+
+<html lang="es-es">
+
+<head>
+	<base href="https://visitbajoaragon.com/es/municipios/mas-de-las-matas" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Bajo aragón, Alcañiz, motorland, Buñuel, melocotón de calanda, rutas moteras, " />
+	<meta name="author" content="Super User" />
+	<meta name="x-ua-compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="Página oficial de Turismo del Bajo Aragón donde encontrarás información para tu viaje a la comarca de Buñuel, el tambor o Motorland." />
+	<title>Mas de las Matas</title>
+	<link href="/templates/visitbajoaragon/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://visitbajoaragon.com/es/component/search/?Itemid=129&amp;format=opensearch" rel="search" title="Buscar Visit Bajo Aragón" type="application/opensearchdescription+xml" />
+	<link href="/modules/mod_giweather/tmpl/css/meteocons_font/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="/modules/mod_giweather/tmpl/css/giweather.css?v=1.3.0" rel="stylesheet" type="text/css" />
+	<link href="/media/plg_system_jcepro/site/css/content.min.css?86aa0286b6232c4a5b58f892ce080277" rel="stylesheet" type="text/css" />
+	<link href="/media/plg_system_jcemediabox/css/jcemediabox.min.css?f646e5445d3791b94e8b9282903afc4f" rel="stylesheet" type="text/css" />
+	<link href="/templates/visitbajoaragon/css/template.css" rel="stylesheet" type="text/css" />
+	<link href="/modules/mod_gear_cookies_notification/assets/css/gearcookies.css" rel="stylesheet" type="text/css" />
+	<link href="/media/mod_falang/css/template.css" rel="stylesheet" type="text/css" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"081ac9b82541f2adc799f62577dfd2e8","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/jui/js/jquery.min.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/modules/mod_giweather/tmpl/js/hammer.min.js" type="text/javascript"></script>
+	<script src="/modules/mod_giweather/tmpl/js/giweather.js?v=1.3.0" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/system/js/core.js?83a57258ff92165147648387c30599a4" type="text/javascript"></script>
+	<script src="/media/plg_system_jcemediabox/js/jcemediabox.min.js?f646e5445d3791b94e8b9282903afc4f" type="text/javascript"></script>
+	<script src="/templates/visitbajoaragon/js/logic.js" type="text/javascript"></script>
+	<script type="text/javascript">
+var s2s_mobile = '';
+                (function(d){
+                  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+                  p.type = 'text/javascript';
+                  p.async = false;
+                  p.defer = true;
+                  p.src = 'https://visitbajoaragon.com/media/plg_social2s/js/social2s.min.js';
+                  f.parentNode.insertBefore(p, f);
+                }(document));
+            var insert = '0';var insert_position = '0';var insert_element = '';var s2s_checkCookie = '0';var s2s_lang_1tag = 'es_ES';var s2s_lang_2tag = 'es';var s2s_lang_direction = 'lang_directon_right';var s2s_load_scripts_onload = '0';var s2s_context = 'com_content.article';var s2s_debug = '0';var s2s_version = '4.3.54';var s2s_art_mobile_min = '978';var s2s_k2_remove_social = '0';var s2s_sha = '';var s2s_cta_active = '0';var s2s_cta_default = 'twitter';var twitter_b_count_hide = '1';var twitter_b_count = '0';var facebook_count_hide = '1';var facebook_like_count = '0';var facebook_share_count = '0';var facebook_total_count = '0';var pinterest_count_hide = '1';var pinterest_count = '0';var linkedin_count_hide = '1';var linkedin_count = '0';var gplus_b_count_hide = '1';var gplus_b_count = '0';var tumblr_count = '0';var tumblr_count_hide = '0';var vk_b_count_hide = '1';var vk_b_count = '0';var php_full_link = 'https%3A%2F%2Fvisitbajoaragon.com%2Fes%2Fmunicipios%2Fmas-de-las-matas';var php_title = 'Mas%20de%20las%20Matas';jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+
+var giw_lazy_load_loaded_module_142={"js":false,"json":false,"alreadyinit":false};
+
+function giw_lazy_load_js_loaded_module_142(){
+	giw_lazy_load_loaded_module_142.js=true;
+	giw_lazy_load_do_init_module_142();
+}
+function giw_lazy_load_json_loaded_module_142(){
+	giw_lazy_load_loaded_module_142.json=true;
+	giw_lazy_load_do_init_module_142();
+}
+function giw_lazy_load_do_init_module_142(){
+	if (giw_lazy_load_loaded_module_142.js && giw_lazy_load_loaded_module_142.json && !giw_lazy_load_loaded_module_142.alreadyinit){
+		giw_lazy_load_loaded_module_142.alreadyinit=true;
+		giw_init_module_142();
+	}
+}
+
+function giw_lazy_load_json_and_js_module_142() {
+	
+	var json_element = document.createElement("script");
+	json_element.src = '/index.php?option=com_giweather&view=smartloader&type=json&filename=giweather&mod_owner=module&mod_id=142&menu_Itemid=129';
+	json_element.onreadystatechange= function () {
+		if (this.readyState == "complete") giw_lazy_load_json_loaded_module_142();
+	}
+	json_element.onload= giw_lazy_load_json_loaded_module_142;		
+	document.body.appendChild(json_element);
+	
+	var js_element = document.createElement("script");
+	js_element.src = '/index.php?option=com_giweather&view=smartloader&type=js&filename=giweather&mod_owner=module&mod_id=142&menu_Itemid=129';
+	js_element.onreadystatechange= function () {
+		if (this.readyState == "complete") giw_lazy_load_js_loaded_module_142();
+	}
+	js_element.onload= giw_lazy_load_js_loaded_module_142;		
+	document.body.appendChild(js_element);
+}
+if (window.addEventListener){
+	window.addEventListener("load", giw_lazy_load_json_and_js_module_142, false);
+}else if (window.attachEvent){
+	window.attachEvent("onload", giw_lazy_load_json_and_js_module_142);
+}else{
+	window.onload = giw_lazy_load_json_and_js_module_142;
+}
+jQuery(document).ready(function(){WfMediabox.init({"base":"\/","theme":"shadow","width":"","height":"","lightbox":0,"shadowbox":0,"icons":1,"overlay":1,"overlay_opacity":0.8,"overlay_color":"#000000","transition_speed":300,"close":2,"labels":{"close":"PLG_SYSTEM_JCEMEDIABOX_LABEL_CLOSE","next":"PLG_SYSTEM_JCEMEDIABOX_LABEL_NEXT","previous":"PLG_SYSTEM_JCEMEDIABOX_LABEL_PREVIOUS","cancel":"PLG_SYSTEM_JCEMEDIABOX_LABEL_CANCEL","numbers":"PLG_SYSTEM_JCEMEDIABOX_LABEL_NUMBERS","numbers_count":"PLG_SYSTEM_JCEMEDIABOX_LABEL_NUMBERS_COUNT","download":"PLG_SYSTEM_JCEMEDIABOX_LABEL_DOWNLOAD"},"swipe":true,"expand_on_click":true,"display_mode":"fit"});});
+	</script>
+	<meta property="og:title" content="Mas de las Matas"><meta property="og:description" content="Bienvenidos a Mas de las Matas, localidad del Bajo Aragón, situada junto al río Guadalope, a 34 kilómetros de Alcañiz.Su topónimo deriva del asentamiento o “mas” de la familia Mata. La documentación da constancia de la existencia del mas de dos hermanos llamados Mateu y Jayme La Mata, hacia 1460, en el lugar en el que se asienta la población actual.Son numerosos los yacimientos que se han rastreado en el..."><meta property="og:site_name" content="Visit Bajo Aragón" /><meta property="og:url"  content="https://visitbajoaragon.com/es/municipios/mas-de-las-matas" /><meta property="og:type"  content="website" /><meta property="fb:app_id" content="514279921989553" />
+	<meta property="twitter:card" content="summary"/><meta property="twitter:site" content="@VisitBajoAragon"/><meta property="twitter:title" content="Mas de las Matas"><meta property="twitter:description" content="Bienvenidos a Mas de las Matas, localidad del Bajo Aragón, situada junto al río Guadalope, a 34 kilómetros de Alcañiz.Su topónimo deriva del asentamiento o “mas” de la familia Mata. La documentación da constancia de la existencia del mas de dos hermanos llamados Mateu y Jayme La Mata, hacia 1460, en el lugar en el que se asienta la población actual.Son numerosos los yacimientos que se han rastreado en el...">
+	<link rel="alternate" href="https://visitbajoaragon.com/es/municipios/mas-de-las-matas" hreflang="es" />
+	<link rel="alternate" href="https://visitbajoaragon.com/es/municipios/mas-de-las-matas"  hreflang="x-default" />
+	<link rel="alternate" href="https://visitbajoaragon.com/fr/municipios/mas-de-las-matas" hreflang="fr" />
+	<link rel="alternate" href="https://visitbajoaragon.com/en/municipios/mas-de-las-matas" hreflang="en" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0 minimal-ui" />
+	<link rel="apple-touch-icon-precomposed" href="/templates/visitbajoaragon/images/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/templates/visitbajoaragon/images/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/templates/visitbajoaragon/images/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/templates/visitbajoaragon/images/apple-touch-icon-144x144-precomposed.png">
+	<!-- Le HTML5 shim and media query for IE8 support -->
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script type="text/javascript" src="/templates/visitbajoaragon/js/respond.min.js"></script>
+	<![endif]-->
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="site mas-de-las-matas " role="document">
+
+<!--[if lt IE 9]> 
+<div class="ie8">
+<![endif]--> 
+
+	<!--menu principal -->
+	<nav class="menu_principal navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/index.php"><img src="/templates/visitbajoaragon/images/logo_svg_bajoaragon.png" onerror="this.src='templates/visitbajoaragon/images/logo_svg_bajoaragon.png'"></a>
+	    </div>
+	    <div id="navbar" class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav">
+	        <li class="tuviaje"><a href="#tuviaje">TU VIAJE</a></li>
+	        <li class="municipios"><a href="#municipios">MUNICIPIOS</a></li>
+	        <li class="temporada"><a href="#temporada">VEN EN MOTO</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <!--<li class="eventos"><a href="#">EVENTOS</a></li>
+	        <li class="buscar"><a href="#">BUSCAR</a></li>-->
+            
+
+
+<div class="mod-languagesnavbar-right ">
+
+    <form name="lang" method="post" action="https://visitbajoaragon.com/es/municipios/mas-de-las-matas">
+        	<select class="inputbox" onchange="document.location.replace(this.value);" >
+                                                <option value="/es/municipios/mas-de-las-matas" selected="selected">ES</option>
+                                                                <option value="/fr/municipios/mas-de-las-matas" >FR</option>
+                                                                <option value="/en/municipios/mas-de-las-matas" >EN</option>
+                                    </select>
+    </form>
+
+
+</div>
+
+	      </ul>
+          
+	    </div><!--/.nav-collapse -->
+	  </div>
+	</nav><!--/fin menu principal -->
+
+
+	<div id="bloques">
+
+    	<div class="bloque_entero tuviaje">
+    				<div class="moduletable">
+
+					<h3>RUTAS</h3>
+		
+			<ul class="nav menu">
+<li class="item-109"><a href="/es/rutas/moteras" >Moteras</a></li><li class="item-110"><a href="/es/rutas/senderistas" >Senderos Turísticos </a></li><li class="item-296"><a href="/es/rutas/btt" >Senderos Turísticos BTT</a></li><li class="item-111"><a href="/es/rutas/bovedas-del-frio" >Bóvedas del frío</a></li><li class="item-112"><a href="/es/rutas/iberos" >Íberos</a></li><li class="item-113"><a href="/es/rutas/tambor-y-bombo" >Tambor y bombo</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>NATURALEZA</h3>
+		
+			<ul class="nav menu">
+<li class="item-216 parent"><a href="/es/medioambientales/observatorios-de-aves" >Aves</a></li><li class="item-154"><a href="/es/medioambientales/estanca-y-saladas" >Censo aves Estanca</a></li><li class="item-155"><a href="/es/medioambientales/desierto-de-calanda" >Desierto de Calanda</a></li><li class="item-156"><a href="/es/medioambientales/arboles-singulares" >Árboles singulares</a></li><li class="item-157"><a href="/es/medioambientales/miradores" >Miradores</a></li><li class="item-326"><a href="/es/medioambientales/via-verde-val-de-zafan" >Vía Verde</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>MUSEOS</h3>
+		
+			<ul class="nav menu">
+<li class="item-159"><a href="/es/museos/castillo-calatravo" >Castillo Calatravo</a></li><li class="item-160"><a href="/es/museos/centro-bunuel" >Centro Buñuel</a></li><li class="item-161"><a href="/es/museos/museo-mas-de-las-matas" >Molino harinero y Alfarda</a></li><li class="item-162"><a href="/es/museos/ci-semana-santa" >CI Semana Santa</a></li><li class="item-163"><a href="/es/museos/museo-de-la-escuela" >Museo de la Escuela</a></li><li class="item-165"><a href="/es/museos/otros-museos-y-ci" >Otros Museos y CI</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>CONOCE</h3>
+		
+			<ul class="nav menu">
+<li class="item-174"><a href="/es/conoce/denominaciones-de-origen" >Denominaciones de Origen</a></li><li class="item-175"><a href="/es/conoce/fiestas-y-tradiciones" >Fiestas y Tradiciones</a></li><li class="item-176"><a href="/es/conoce/gastronomia" >Gastronomía</a></li><li class="item-215"><a href="/es/conoce/centro-dinopolis" >Centro Dinópolis </a></li><li class="item-209"><a href="/es/conoce/ciba" >CIBA</a></li><li class="item-310"><a href="/es/conoce/geoparque-maestrazgo" >Geoparque Maestrazgo</a></li></ul>
+
+		</div>
+
+			<div class="moduletable guia_practica">
+
+					<h3>GUÍA PRÁCTICA</h3>
+		
+			<ul class="nav menu">
+<li class="item-103"><a href="/es/guia-practica/mapa-de-turismo" >Mapa de Turismo</a></li><li class="item-104"><a href="/es/guia-practica/oficina-de-turismo" >Oficina de Turismo</a></li><li class="item-105"><a href="/es/guia-practica/alojamientos" >¿Dónde dormir?</a></li><li class="item-106"><a href="/es/guia-practica/restaurantes" >¿Dónde comer?</a></li><li class="item-107"><a href="/es/guia-practica/turismo-activo" >Turismo Activo</a></li><li class="item-198"><a href="/es/guia-practica/como-llegar" >Cómo llegar</a></li></ul>
+
+		</div>
+
+	
+        <div class="estirador"><a class=""><i class="fa fa-bars"></i></a></div>
+    	</div>
+    	<div class="bloque_entero municipios">
+    				<nav class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-185 active deeper parent"><a href="/es/municipios" >Municipios</a><ul class="nav-child unstyled small dropdown-menu"><li class="item-114"><a href="/es/municipios/aguaviva" >Aguaviva</a></li><li class="item-115"><a href="/es/municipios/alcaniz" >Alcañiz</a></li><li class="item-116"><a href="/es/municipios/alcorisa" >Alcorisa</a></li><li class="item-117"><a href="/es/municipios/belmonte" >Belmonte de San José</a></li><li class="item-118"><a href="/es/municipios/berge" >Berge</a></li><li class="item-119"><a href="/es/municipios/calanda" >Calanda</a></li><li class="item-120"><a href="/es/municipios/castelseras" >Castelserás</a></li><li class="item-121"><a href="/es/municipios/foz-calanda" >Foz Calanda</a></li><li class="item-122"><a href="/es/municipios/jaganta" >Jaganta</a></li><li class="item-123"><a href="/es/municipios/la-canada-de-verich" >La Cañada de Verich</a></li><li class="item-124"><a href="/es/municipios/la-cerollera" >La Cerollera</a></li><li class="item-125"><a href="/es/municipios/la-codonera" >La Codoñera</a></li><li class="item-126"><a href="/es/municipios/la-ginebrosa" >La Ginebrosa</a></li><li class="item-127"><a href="/es/municipios/la-mata-de-los-olmos" >La Mata de los Olmos</a></li><li class="item-128"><a href="/es/municipios/las-parras-de-castellote" >Las Parras de Castellote</a></li><li class="item-129 current active"><a href="/es/municipios/mas-de-las-matas" >Mas de las Matas</a></li><li class="item-130"><a href="/es/municipios/olmos" >Los Olmos</a></li><li class="item-131"><a href="/es/municipios/puigmoreno" >Puigmoreno</a></li><li class="item-132"><a href="/es/municipios/seno" >Seno</a></li><li class="item-133"><a href="/es/municipios/torrecilla-de-alcaniz" >Torrecilla de Alcañiz</a></li><li class="item-134"><a href="/es/municipios/torrevelilla" >Torrevelilla</a></li><li class="item-135"><a href="/es/municipios/valdealgorfa" >Valdealgorfa</a></li><li class="item-136"><a href="/es/municipios/valmuel" >Valmuel</a></li></ul></li></ul>
+
+		</nav>
+
+	
+        <div class="estirador"><a class=""><i class="fa fa-bars"></i></a></div>
+    	</div>
+
+    	<div class="bloque_entero temporada">
+            <div class="menu_visual">
+              		<div class="moduletable">
+
+		
+			<noscript id="deferred-styles_visualmenu"><link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/modules/mod_visual_menu/css/visual_menu_base.css"/>
+			</noscript><script>
+				var loadDeferredStyles_visualmenu = function() {
+				var addStylesNode = document.getElementById("deferred-styles_visualmenu");
+				var replacement = document.createElement("div");
+				replacement.innerHTML = addStylesNode.textContent;
+				document.body.appendChild(replacement)
+				addStylesNode.parentElement.removeChild(addStylesNode);
+				};
+				var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+					webkitRequestAnimationFrame || msRequestAnimationFrame;
+				if (raf) raf(function() { window.setTimeout(loadDeferredStyles_visualmenu, 0); });
+				else window.addEventListener('load', loadDeferredStyles_visualmenu);
+			</script><noscript id="deferred-styles_visualmenu_style"><link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/modules/mod_visual_menu/styles/vm_bs4.css"/>
+			</noscript><script>
+				var loadDeferredStyles_visualmenu_style = function() {
+				var addStylesNode = document.getElementById("deferred-styles_visualmenu_style");
+				var replacement = document.createElement("div");
+				replacement.innerHTML = addStylesNode.textContent;
+				document.body.appendChild(replacement)
+				addStylesNode.parentElement.removeChild(addStylesNode);
+				};
+				var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+					webkitRequestAnimationFrame || msRequestAnimationFrame;
+				if (raf) raf(function() { window.setTimeout(loadDeferredStyles_visualmenu_style, 0); });
+				else window.addEventListener('load', loadDeferredStyles_visualmenu_style);
+			</script>
+<style>
+.vm_thumbnail img{
+max-height:250px;
+}.menu_elements_wrapper div.vm_img_wrapper img{
+			    max-width: 100%;
+    			width: 100%;
+    			left: -0%;
+		}
+
+
+</style>
+
+
+<div class="dx_menu_visual_wrapper">
+	<div id="dx_visual_module1" class="dx_visual_module vm_bs  ">
+	<div class="vm_table">
+		
+
+		<!--bucle principal-->
+					
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6vm_featured"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/161-ruta-232">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/FRIO/ruta_232.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/161-ruta-232">Ruta 232</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+							
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/11-ruta-de-los-oasis">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/MOTERAS/Oasis_Rins.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/11-ruta-de-los-oasis">Ruta de los oasis</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+							
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6vm_featured"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/12-ruta-las-bovedas-del-frio">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/FRIO/ruta_bovedas3.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/12-ruta-las-bovedas-del-frio">Ruta Las Bóvedas del Frío</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+							
+			<div class=" menu_elements_wrapper col-lg-2 col-md-3 col-sm-4 col-6"><div class="vm_thumbnail img_pos_top">					<div class="vm_img_wrapper">
+						<a class="vm_picture_a" href="/es/rutas/moteras/13-ruta-tierra-y-arte">						<picture class="vm_picture">
+																 <img class="vm_img" src="/images/RUTAS/MOTERAS/_MG_9257-69.jpg" alt=""/>
+														</picture>
+						</a>					</div>
+				<div class="vm_menu_data"><div class="vm_menu_header"><div class="vm_menu_title"><h5 class="vm_title"><a class="vm_a" href="/es/rutas/moteras/13-ruta-tierra-y-arte">Ruta Tierra y arte</a></h5></div></div><div class="vm_menu_body"></div><div class="vm_menu_footer"></div></div>				
+			</div>
+
+
+		</div>
+				
+
+
+
+
+
+
+		 <!--<div class="menu_elements_wrapper vm_tail"></div>-->
+		</div>
+	</div>
+</div>
+
+		</div>
+
+	
+              <div class="estirador"><a class=""><i class="fa fa-bars"></i></a></div>
+            </div>
+    	</div>
+
+    	<div class="bloque_entero eventos">
+    		
+    	</div>
+    	<div class="bloque_entero buscar">
+    				<div class="moduletable">
+
+					<h3>BUSCAR</h3>
+		
+			<div class="search">
+	<form action="/es/municipios/mas-de-las-matas" method="post" class="form-inline">
+		<input name="searchword" id="mod-search-searchword" maxlength="200"  class="inputbox search-query form-control" type="text" size="0" value="Buscar..."  onblur="if (this.value=='') this.value='Buscar...';" onfocus="if (this.value=='Buscar...') this.value='';" />		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="129" />
+	</form>
+</div>
+
+		</div>
+
+	
+    	</div>
+
+  </div>
+
+
+	<!--banner portada -->
+	
+
+  <div class="contenidos_wrapper">
+
+
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+
+     <article class="contenido">
+       
+        <!--PREBANNER -->
+               
+        <div id="system-message-container">
+	</div>
+
+        <div class="item-page" itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="es-ES" />
+	
+		
+	
+
+	
+		
+			<div class="page-header">
+
+		    				<h2 itemprop="name">
+							Mas de las Matas					</h2>
+							</div>
+					
+	
+
+
+		
+			
+		
+
+
+
+	<div itemprop="articleBody" class="cuerpo container">
+			<div class="contenidos_cuerpo col-sm-9 col-xs-12">
+			<p style="text-align: justify;"><img src="/images/MUNICIPIOS/masmatas/mas01.jpg" alt="mas01" class="img100" /></p>
+<h4 style="text-align: justify;">Bienvenidos a <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/presentacion-45/">Mas de las Matas</a>, localidad del Bajo Aragón, situada junto al río Guadalope, a 34 kilómetros de Alcañiz.</h4>
+<h4 style="text-align: justify;">
+<audio src="/images/MUNICIPIOS/COMUN/audios/audiog_Mas_de_las_Matas.mp3" controls="controls" style="color: #555555; font-size: 14px; line-height: 1.42857;" type="audio/mpeg"></audio>
+</h4>
+<p style="text-align: justify;">Su topónimo deriva del asentamiento o “mas” de la familia Mata. La documentación da constancia de la existencia del mas de dos hermanos llamados Mateu y Jayme La Mata, hacia 1460, en el lugar en el que se asienta la población actual.</p>
+<p style="text-align: justify;">Son numerosos los yacimientos que se han rastreado en el municipio, gracias a los cuales se puede dibujar una clara línea cronológica de los diferentes pobladores de la zona, desde el Paleolítico hasta la Edad Media.</p>
+<p style="text-align: justify;"><img src="/images/MUNICIPIOS/masmatas/ESCALERA_MAS.jpg" alt="ESCALERA MAS" width="350" height="263" style="margin: 15px; float: left;" />El origen del núcleo que hoy conocemos, se sitúa en el poblamiento de Kamarón, ubicado en la colina de Santa Flora, que recibe su nombre en el Medievo, pero que se arraiga desde época ibera, romana y musulmana. El castillo de Kamarón es reconquistado en el siglo XII, reinando Alfonso II, y pasa a formar parte de la encomienda de Castellote, administrada por la&nbsp;orden del Temple y posteriormente por la sanjuanista.</p>
+<p style="text-align: justify;">Mas de las Matas no se configura como población hasta el siglo XVI, y depende de La Ginebrosa hasta que obtiene su autonomía por una Concordia en 1611. Históricamente, cabe destacar otros dos hechos acaecidos en la población. En primer lugar el asentamiento del general Espartero en 1839, durante la primera guerra carlista. Y en segundo lugar, la experiencia revolucionaria y colectivizadora que se desarrolló en el Bajo Aragón durante la guerra civil. En pleno auge de la villa, durante el siglo XVIII, se construye el edificio más emblemático de la localidad, la&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-iglesia-parroquial-de-san-juan-bautista/">iglesia parroquial de la Degollación de San Juan Bautista</a>. De estilo barroco, presenta tres naves, cubiertas con bóveda de medio cañón y cúpula en el crucero. Al interior se observa una sencilla decoración resultado de la reconstrucción llevada a cabo tras el incendio de la iglesia durante la guerra civil. Su magnífica <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-portada-de-la-iglesia-parroquial-2/">portada</a>, flanqueada por columnas salomónicas, y su grandiosa&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-torre-campanario-de-la-iglesia-parroquial-4/">torre</a>&nbsp;de ladrillo de sesenta y cuatro metros y medio de altura, completan la configuración de este bello templo. Completan su patrimonio religioso las <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-ermita-de-santa-flora/">ermitas de Santa Flora,</a> de principios del siglo XVIII y en la que recientemente se ha instalado un mirador que permite disfrutar de unas magníficas vistas, al que podemos acceder a través del&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/el-calvario-de-la-ermita-de-santa-flora/">calvario</a>. La de&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-ermita-de-santa-barbara-8/">Santa Bárbara</a>, desafortunadamente en ruinas.</p>
+<p style="text-align: justify;">En el casco urbano de Mas de las Matas podemos encontrar otros edificios de gran interés, como la&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-casa-consistorial-la-casa-de-la-villa/">Casa Consistorial</a>, de mediados del siglo XVII, con lonja de piedra sillar y arcos de medio punto en el piso inferior, y balcón corrido en el superior. Asimismo, son dignas de mención, <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-casa-zarate-casa-solariega-de-la-calle-mayor-no-10/">la Casa Zárate</a>, originalmente casa de mosén Diego Sanz, construida en el siglo XVII, o <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/la-casa-feliu-museo-mas-de-las-matas-subsede-de-dinopolis/">la Casa Feliú</a>, edificada en el siglo XVIII. Ésta última, alberga el Museo Mas de las Matas, subsede de Dinópolis, creado por el Grupo de Estudios Masinos, y&nbsp;en el que se exponen fondos arqueológicos y Artes Plásticas.</p>
+<p style="text-align: justify;"><img src="/images/MUNICIPIOS/masmatas/mas04.jpg" alt="mas04" width="144" height="224" />&nbsp;<img src="/images/MUNICIPIOS/masmatas/mas06.jpg" alt="mas06" width="147" height="224" />&nbsp;<img src="/images/MUNICIPIOS/masmatas/mas09.jpg" alt="mas09" width="147" height="224" />&nbsp;<img src="/images/MUNICIPIOS/masmatas/mas08.jpg" alt="mas08" width="149" height="224" />&nbsp;&nbsp;<img src="/images/MUNICIPIOS/masmatas/mas05.jpg" alt="mas05" width="149" height="228" /></p>
+<p style="text-align: justify;">Finalmente, también destaca el patrimonio hidráulico de la villa, que se inicia con el sistema de riegos musulmán del siglo VIII que atraviesa la población. En el siglo XVIII se construye la Acequia Mayor, de la que se nutren los numerosos lavaderos que salpican las calles del casco urbano, como el de las Lunas o el <a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/el-lavadero-publico-del-brazal/">lavadero del&nbsp;Brazal</a>. Por su parte, el&nbsp;<a href="https://www.catalogoculturalbajoaragon.es/artistico_monumental/el-antiguo-molino-harinero-de-mas-de-las-matas/">molino harinero</a>, actualmente restaurado, constituye uno de los puntos de visita obligada en Mas de las Matas, ejemplo de la transición entre los sistemas tradicionales de molienda y las fábricas harineras industriales.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><strong>Ciclo Festivo de&nbsp;Mas de las Matas</strong></p>
+<p style="text-align: justify;">En invierno se celebra la<a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/san-antonio-abad-san-anton-y-san-sebastian/"> fiesta dedicada a San Antonio Abad (San Antón) y San Sebastián</a>. Se&nbsp;lleva a cabo en torno al 17 de enero. Son numerosos los actos que se programan. Pueden&nbsp;destacarse, la Hoguera, la Procesión del Pan Bendito, la Mochiganga y la Llega.</p>
+<p style="text-align: justify;">En pleno verano, a finales de agosto, tienen lugar las <a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/fiestas-patronales-en-honor-a-san-juan-bautista/">Fiestas de agosto dedicadas a San&nbsp;Agustín</a>. Durante ellas la alegría inunda las calles de la población.</p>
+<p style="text-align: justify;">Ya en otoño, Mas de las Matas tiene otra cita festiva, en este caso alrededor de una recreación&nbsp;histórica, <a href="https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/regreso-del-comendador/">el Regreso del Comendador</a>. Durante esos días la población retrocede a su pasado&nbsp;del siglo XVII y XVIII.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">Más información de la población:</p>
+<p><a href="http://www.masdelasmatas.com/biblioteca/" target="_blank" rel="noopener noreferrer">Biblioteca</a></p>
+<p><a href="http://www.masdelasmatas.com/gigantes/" target="_blank" rel="noopener noreferrer">Gigantes</a></p>
+<p><a href="http://www.masdelasmatas.com/dulzaineros/" target="_blank" rel="noopener noreferrer">Dulzaineros</a></p>
+<p>&nbsp;</p>
+<p><strong>ENLACES RECOMENDADOS</strong></p>
+<p><a href="https://www.youtube.com/watch?v=us90Rhw7Q0Q" target="_blank" rel="noopener noreferrer" class="leermas_video">20 pueblos 20 citas</a> El Regreso del Comendador.</p>
+<p>Más información&nbsp;sobre el Patrimonio de Mas de las Matas</p>
+<p><strong><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=mas-de-las-matas&amp;_catalogo=artistico_monumental">Catálogo Artístico y Monumental. CAMCBA</a><br /><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=mas-de-las-matas&amp;_catalogo=fiestas_tradiciones">Catálogo Fiestas y Tradiciones. CAMCBA</a><br /><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=mas-de-las-matas&amp;_catalogo=paisajistico_medioam">Catálogo Paisajístico y Medioambiental. CAMCBA</a><br /><a href="https://www.catalogoculturalbajoaragon.es/filtrado/?_comarca=bajo-aragon&amp;_poblacion=mas-de-las-matas&amp;_catalogo=patrimonio_musical">Catálogo Musical. CAMCBA</a><br /><a href="https://www.catalogoculturalbajoaragon.es/filtrado/filtrado-artistico-y-monumental/?_comarca=bajo-aragon&amp;_poblacion=mas-de-las-matas&amp;_catalogo=historico_bio">Catálogo Histórico y Biográfico. CAMCBA</a></strong><a href="https://www.catalogoculturalbajoaragon.es/filtrado/filtrado-artistico-y-monumental/?_comarca=bajo-aragon&amp;_poblacion=mas-de-las-matas&amp;_catalogo=historico_bio"></a></p> 			    <div class="s2s_supra_contenedor lang_directon_right s2smodern  align_center  s2s_balloon_bottom " ><input name="social2s_url" type="hidden" class="social2s_url" value="https://visitbajoaragon.com/es/municipios/mas-de-las-matas" /><div class="s2s_contenedor s2s_fill_mobile s2s_no_text s2s-btn-split"><div class="s2s_twitter s2s_twitter_own s2s_btn s2s-btn-xs ">
+			<a class="s2s_icon"><i class="s2sfo fo-twitter"></i>   </a>
+			<div class="globo s2s_globo_closed s2s_twitter_iframe">
+				<div class="s2s_flecha"></div><div class="s2s_div_btn_twitter"><a class="s2s_a_btn s2s_btn_twitter" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?text=Mas%20de%20las%20Matas&url=https://visitbajoaragon.com/es/municipios/mas-de-las-matas&via=VisitBajoAragon">
+						<i class="s2sfo fo-twitter"></i> <span>Twittear</span></a></div></div>
+		</div><div class="s2s_facebook s2s_btn s2s-btn-xs " >
+			<a class="s2s_icon"><i class="s2sfo fo-facebook"></i>   </a>
+				<div class="globo s2s_globo_closed s2s_facebook_iframe">
+					<div class="s2s_flecha"></div><div class="fb-share-button"
+						data-layout="button_count" 
+						data-href="https://visitbajoaragon.com/es/municipios/mas-de-las-matas" 
+						data-size="small" 
+					>
+						<a target="_blank" href="https://visitbajoaragon.com/es/municipios/mas-de-las-matas" class="fb-xfbml-parse-ignore">Share</a>
+					</div></div>
+			</div><div class="s2s_pinterest s2s_btn s2s-btn-xs "><a class="s2s_icon"><i class="s2sfo fo-pinterest"></i>   </a><div class="globo s2s_globo_closed s2s_pinterest_iframe">
+					<div class="s2s_flecha"></div>
+					<a aria-label="pinterest" href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fvisitbajoaragon.com%2Fes%2Fmunicipios%2Fmas-de-las-matas&amp;description=Mas%20de%20las%20Matas" data-pin-do="buttonBookmark" 
+					 
+					data-pin-color="red" 
+					 
+					data-pin-tall="true" data-pin-sticky="false"></a> </div>
+			</div><div class="s2s_linkedin s2s_btn s2s-btn-xs " ><a class="s2s_icon"><i class="s2sfo fo-linkedin"></i>   </a><div class="globo s2s_globo_closed s2s_linkedin_iframe">
+						<div class="s2s_flecha"></div>
+						
+						<script type="IN/Share"  data-url="https://visitbajoaragon.com/es/municipios/mas-de-las-matas"></script><a 
+			target="_blank" 
+			href="https://www.linkedin.com/shareArticle?url=https://visitbajoaragon.com/es/municipios/mas-de-las-matas" 
+			class="btn s2s_linkedin_fallback s2s_hide">
+			<i class="s2sfo fo-linkedin"></i>Share</a></div></div><div class="s2s_tumblr s2s_btn s2s-btn-xs " lang="es"><a class="s2s_icon"><i class="s2sfo fo-tumblr"></i>   </a>
+				<div class="globo s2s_globo_closed s2s_tumblr_iframe">
+					<div class="s2s_flecha"></div>
+					<a class="tumblr-share-button" aria-label="tumblr"
+					data-locale="es_ES" 
+					data-href="https://visitbajoaragon.com/es/municipios/mas-de-las-matas" 
+					data-color="blue" 
+					data-notes="right"
+					href="https://embed.tumblr.com/share"></a></div></div></div></div><noscript id="deferred-styles_s2s_basecss">
+                          <link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/media/plg_social2s/css/behavior/s2smodern.css"/>
+                        </noscript><script>
+                          var loadDeferredStyles_s2s_basecss = function() {
+                            var addStylesNode = document.getElementById("deferred-styles_s2s_basecss");
+                            var replacement = document.createElement("div");
+                            replacement.innerHTML = addStylesNode.textContent;
+                            document.body.appendChild(replacement)
+                            addStylesNode.parentElement.removeChild(addStylesNode);
+                          };
+                          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                              webkitRequestAnimationFrame || msRequestAnimationFrame;
+                          if (raf) raf(function() { window.setTimeout(loadDeferredStyles_s2s_basecss,50); });
+                          else window.addEventListener('load', loadDeferredStyles_s2s_basecss);
+                        </script><noscript id="deferred-styles_s2s_style">
+                          <link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/media/plg_social2s/css/styles/icon_colour.css"/>
+                        </noscript><script>
+                          var loadDeferredStyles_s2s_style = function() {
+                            var addStylesNode = document.getElementById("deferred-styles_s2s_style");
+                            var replacement = document.createElement("div");
+                            replacement.innerHTML = addStylesNode.textContent;
+                            document.body.appendChild(replacement)
+                            addStylesNode.parentElement.removeChild(addStylesNode);
+                          };
+                          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                              webkitRequestAnimationFrame || msRequestAnimationFrame;
+                          if (raf) raf(function() { window.setTimeout(loadDeferredStyles_s2s_style, 100); });
+                          else window.addEventListener('load', loadDeferredStyles_s2s_style);
+                        </script><noscript id="deferred-styles_s2s_font">
+                          <link rel="stylesheet" type="text/css" href="https://visitbajoaragon.com/media/plg_social2s/css/s2sfont.min.css"/>
+                        </noscript><script>
+                          var loadDeferredStyles_s2s_font = function() {
+                            var addStylesNode = document.getElementById("deferred-styles_s2s_font");
+                            var replacement = document.createElement("div");
+                            replacement.innerHTML = addStylesNode.textContent;
+                            document.body.appendChild(replacement)
+                            addStylesNode.parentElement.removeChild(addStylesNode);
+                          };
+                          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                              webkitRequestAnimationFrame || msRequestAnimationFrame;
+                          if (raf) raf(function() { window.setTimeout(loadDeferredStyles_s2s_font, 150); });
+                          else window.addEventListener('load', loadDeferredStyles_s2s_font);
+                        </script>		</div>
+
+	    <nav class="derecha col-sm-3 col-xs-12  hidden-xs">
+
+	    	<div class="derecha_wrapper">
+
+						<div class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-153 parent"><a data-toggle="dropdown" href="#rutas_medioambientales" >MEDIOAMBIENTALES <i class="fa fa-caret-down"></i></a></li><li class="item-158 parent"><a data-toggle="dropdown" href="#rutas_medioambientales" >MUSEOS <i class="fa fa-caret-down"></i></a></li><li class="item-102 parent"><a data-toggle="dropdown" href="#guia_practica" >GUÍA PRÁCTICA <i class="fa fa-caret-down"></i></a></li><li class="item-108 parent"><a href="/es/rutas" >RUTAS</a></li><li class="item-173 parent"><a href="/es/conoce" >CONOCE</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-185 active deeper parent"><a href="/es/municipios" >Municipios</a><ul class="nav-child unstyled small dropdown-menu"><li class="item-114"><a href="/es/municipios/aguaviva" >Aguaviva</a></li><li class="item-115"><a href="/es/municipios/alcaniz" >Alcañiz</a></li><li class="item-116"><a href="/es/municipios/alcorisa" >Alcorisa</a></li><li class="item-117"><a href="/es/municipios/belmonte" >Belmonte de San José</a></li><li class="item-118"><a href="/es/municipios/berge" >Berge</a></li><li class="item-119"><a href="/es/municipios/calanda" >Calanda</a></li><li class="item-120"><a href="/es/municipios/castelseras" >Castelserás</a></li><li class="item-121"><a href="/es/municipios/foz-calanda" >Foz Calanda</a></li><li class="item-122"><a href="/es/municipios/jaganta" >Jaganta</a></li><li class="item-123"><a href="/es/municipios/la-canada-de-verich" >La Cañada de Verich</a></li><li class="item-124"><a href="/es/municipios/la-cerollera" >La Cerollera</a></li><li class="item-125"><a href="/es/municipios/la-codonera" >La Codoñera</a></li><li class="item-126"><a href="/es/municipios/la-ginebrosa" >La Ginebrosa</a></li><li class="item-127"><a href="/es/municipios/la-mata-de-los-olmos" >La Mata de los Olmos</a></li><li class="item-128"><a href="/es/municipios/las-parras-de-castellote" >Las Parras de Castellote</a></li><li class="item-129 current active"><a href="/es/municipios/mas-de-las-matas" >Mas de las Matas</a></li><li class="item-130"><a href="/es/municipios/olmos" >Los Olmos</a></li><li class="item-131"><a href="/es/municipios/puigmoreno" >Puigmoreno</a></li><li class="item-132"><a href="/es/municipios/seno" >Seno</a></li><li class="item-133"><a href="/es/municipios/torrecilla-de-alcaniz" >Torrecilla de Alcañiz</a></li><li class="item-134"><a href="/es/municipios/torrevelilla" >Torrevelilla</a></li><li class="item-135"><a href="/es/municipios/valdealgorfa" >Valdealgorfa</a></li><li class="item-136"><a href="/es/municipios/valmuel" >Valmuel</a></li></ul></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+					<h3>Síguenos en...</h3>
+		
+			
+
+<div class="custom"  >
+	<div class="col-xs-6 col-sm-6"><a href="https://twitter.com/VisitBajoAragon" target="_blank" rel="noopener" style="font-size: 8rem;"><i class="fa fa-twitter-square"></i></a></div>
+<div class="col-xs-6 col-sm-6"><a href="https://www.facebook.com/vibrabajoaragon" target="_blank" rel="noopener" style="font-size: 8rem; color: #3a5795;"><i class="fa fa-facebook-square"></i></a></div>
+<div class="clearfix">&nbsp;</div></div>
+
+		</div>
+
+			<div class="moduletable">
+
+		
+			<!-- mod_giweather 1.3.0  j 3.10 -->
+<noscript><div class="alert">giWeather needs Javascript.</div></noscript>
+<div style="display:none;">giweather joomla module</div>
+<div id="giweather-module-142" class="giweather light giw-small" style="margin: 0 auto;max-width:475px"><div class="giweather-widget giw-loading"  style="background-color: #fcfcfc;">	
+</div>
+
+<div class="giw-copyright"><a style="text-decoration:none !important;color: #bababa; float: right !important;" href="http://openweathermap.org/" target="_blank">OpenWeatherMap</a><div style="clear:both;"></div></div></div>
+		</div>
+
+			        <div class="breadcrumbs visible-xs">
+		          <jdoc:include type="modules" name="breadcrumbs" style="html5" />
+		        </div>
+		    </div>
+      	</nav>
+    
+	</div> <!-- fin de articleBody -->
+
+
+
+
+
+	
+						
+
+
+</div><div><a title="Faboba : Cr&eacute;ation de composantJoomla" style="font-size: 8px;; visibility: visible;display:inline;" href="http://www.faboba.com" target="_blank">FaLang translation system by Faboba</a></div>
+       
+        <!--visual_menu -->
+        
+          <!--banner portada -->
+        
+      </article>
+
+  </div><!--/fin content_wrapper -->
+
+
+
+  <footer class="footer">
+  
+    <div class="social">
+
+      <div class="instagram col-sm-8 col-xs-12">
+        
+      </div>
+
+      <div class="twitter col-sm-4 col-xs-12">
+        
+      </div>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="datos_contacto">
+      <div class="logo_footer col-sm-3 col-xs-12">
+          <img src="/templates/visitbajoaragon/images/logo_footer.svg" alt="comarca Bajo Aragon" onerror="this.src='templates/visitbajoaragon/images/logo_footer.svg.png'">
+        		<div class="moduletable">
+
+					<h3>¿Quiénes somos?</h3>
+		
+			
+
+<div class="custom"  >
+	<p>Somos una comarca de Arag&oacute;n que tenemos como objetivo difundir los valores tur&iacute;sticos de los 20 municipios que componen su territorio.</p></div>
+
+		</div>
+
+	
+      </div>
+
+      <div class="contacto col-sm-3 col-xs-12">
+        		<div class="moduletable">
+
+		
+			
+
+<div class="custom"  >
+	<p style="text-align: center;"><strong>COMARCA del BAJO ARAGÓN</strong><br />Calle Mayor, 22 · 44600 <br />Alcañiz (Teruel)<br /><span style="line-height: 1.42857;"><i class="fa fa-phone " ></i> &nbsp;978 834 386<br /><br /></span></p>
+<p style="text-align: center;"><span id="cloak70f215671f20a73b2521bf4dec668333">Esta dirección de correo electrónico está siendo protegida contra los robots de spam. Necesita tener JavaScript habilitado para poder verlo.</span><script type='text/javascript'>
+				document.getElementById('cloak70f215671f20a73b2521bf4dec668333').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy70f215671f20a73b2521bf4dec668333 = 't&#117;r&#105;sm&#111;' + '&#64;';
+				addy70f215671f20a73b2521bf4dec668333 = addy70f215671f20a73b2521bf4dec668333 + 'b&#97;j&#111;&#97;r&#97;g&#111;n' + '&#46;' + '&#101;s?s&#117;bj&#101;ct=C&#111;nt&#97;ct&#111;%20d&#101;sd&#101;%20v&#105;s&#105;tb&#97;j&#111;&#97;r&#97;g&#111;n' + '&#46;' + 'c&#111;m';
+				var addy_text70f215671f20a73b2521bf4dec668333 = 't&#117;r&#105;sm&#111;' + '&#64;' + 'b&#97;j&#111;&#97;r&#97;g&#111;n' + '&#46;' + '&#101;s';document.getElementById('cloak70f215671f20a73b2521bf4dec668333').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy70f215671f20a73b2521bf4dec668333 + '\'>'+addy_text70f215671f20a73b2521bf4dec668333+'<\/a>';
+		</script></p>
+<p>&nbsp;</p></div>
+
+		</div>
+
+	
+      </div>
+      <div class="legal col-sm-3 col-xs-12">
+        		<div class="moduletable">
+
+		
+			<ul class="nav menu">
+<li class="item-188"><a href="/es/aviso-legal" >Aviso legal</a></li><li class="item-189"><a href="/es/aviso-legal-2" >Política de privacidad</a></li><li class="item-190"><a href="/es/politica-de-cookies" >Política de cookies</a></li></ul>
+
+		</div>
+
+			<div class="moduletable">
+
+		
+			<!--googleoff: all-->
+	<!-- Template Default bootstrap -->
+	<div class="gear cookie bottom white blue ">
+	    
+		<!-- BG color -->
+		<div class='gear cookie-bg white'></div>
+	    
+		<h2>Esta web usa cookies</h2>
+	     
+		<p>Las cookies son necesarias para ofrecerte una mejor experiencia de usuario												<a href="/es/municipios/mas-de-las-matas/2-uncategorised/1-lorem-ipsum">Leer más</a>
+									</p>
+	    
+		<div class="btn btn-primary gear accept blue">Entendido</div>
+	    
+	</div>
+	
+	
+<!--googleon: all-->
+
+
+	
+	<script type="text/javascript">
+	    jQuery(document).ready(function () { 
+		
+			function setCookie(c_name,value,exdays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/";
+				document.cookie=c_name + "=" + c_value;
+			}
+			
+			function readCookie(name) {
+				var nameEQ = name + "=";
+				var gear = document.cookie.split(';');
+				for(var i=0;i < gear.length;i++) {
+					var c = gear[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+						if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+					}
+				return null;
+			}
+		    
+			var $gear_cookie = jQuery('.gear.cookie');
+			var $gear_infoaccept = jQuery('.gear.accept');
+			var gearcookies = readCookie('gearcookies');
+	
+			if(!(gearcookies == "yes")){
+			
+				$gear_cookie.delay(1000).slideDown('fast'); 
+	
+				$gear_infoaccept.click(function(){
+					setCookie("gearcookies","yes",365);
+					jQuery.post('https://visitbajoaragon.com/es/municipios/mas-de-las-matas', 'set_cookie=1', function(){});
+					$gear_cookie.slideUp('slow');
+				});
+			} 
+	    });
+	</script>
+
+
+		</div>
+
+	
+      </div>
+       <div class="copyright col-sm-3 col-xs-12">
+        		<div class="moduletable">
+
+		
+			
+
+<div class="custom"  >
+	<p><img src="/images/graficos/tecnologias/tecnologias_html5.png" alt="tecnologias html5" /><br /><img src="/images/graficos/tecnologias/tecnologias_dibuxo.png" alt="tecnologias dibuxo" width="88" height="41" /></p></div>
+
+		</div>
+
+	
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+          <img class="img-responsive" src="/images/graficos/logo_entidades.jpg" alt="entidades">
+    </div>
+      
+  
+
+  </footer>
+
+
+
+
+<!--[if lt IE 9]> 
+</div>
+<![endif]--> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48465972-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+<!-- Facebook Pixel Code -->
+
+<script>
+
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1764413303870437'); // Insert your pixel ID here.
+
+fbq('track', 'PageView');
+
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+
+src="https://www.facebook.com/tr?id=1764413303870437&ev=PageView&noscript=1"
+
+/></noscript>
+
+<!-- DO NOT MODIFY -->
+
+<!-- End Facebook Pixel Code -->
+  
+  
+  
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{
+  "44118": {
+    "name": "La Ginebrosa",
+    "patron": "San Bartolomé y Santa María Magdalena",
+    "festival": "Semana del 24 y 25 de agosto",
+    "sources": [
+      "https://visitbajoaragon.com/es/municipios/la-ginebrosa",
+      "https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/fiestas-patronales-en-honor-a-san-bartolome-y-santa-maria-magdalena/"
+    ],
+    "flag": "assets/ginebrosa-flag.png",
+    "festivalLabel": "Celebración local",
+    "shield": "assets/ginebrosa-shield.png"
+  },
+  "44004": {
+    "name": "Aguaviva",
+    "patron": "San Lorenzo",
+    "festival": "Agosto",
+    "sources": [
+      "https://visitbajoaragon.com/es/municipios/aguaviva"
+    ],
+    "flag": "assets/aguaviva-flag.png",
+    "festivalLabel": "Celebración local",
+    "shield": "assets/aguaviva-shield.png"
+  },
+  "44107": {
+    "name": "Foz-Calanda",
+    "patron": "San Pablo",
+    "festival": "Principios de agosto",
+    "sources": [
+      "https://visitbajoaragon.com/es/municipios/foz-calanda"
+    ],
+    "flag": "assets/foz-calanda-flag.png",
+    "festivalLabel": "Celebración local",
+    "shield": "assets/foz-calanda-shield.png"
+  },
+  "44230": {
+    "name": "Torrevelilla",
+    "patron": "Santa Quiteria; San Joaquín y San Marcos",
+    "festival": "En torno al 22 de mayo y en agosto",
+    "sources": [
+      "https://visitbajoaragon.com/es/municipios/torrevelilla",
+      "https://www.catalogoculturalbajoaragon.es/fiestas_tradiciones/santa-quiteria/"
+    ],
+    "flag": "assets/torrevelilla-flag.png",
+    "festivalLabel": "Celebración local",
+    "shield": "assets/torrevelilla-shield.png"
+  }
+}

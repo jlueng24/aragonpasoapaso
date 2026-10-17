@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	SERVICIOS WEB &shy; ICEARAGON
+	</title>
+	<link rel="shortcut icon" href="i/favicon.ico" type="image/x-icon">
+	<meta name="dcterms.creator" content="GOBIERNO DE ARAGON" />
+	<meta name="geo.placename" content="Zaragoza, Spain" />
+	<meta name="keywords" content="SITAR, CINTA, IDE, ICEARAGON, SDI, informacion, information, servicios, services, visores, viewers, catalogo, catalogue, atlas, descargas, download, cartoteca, map archive, ARAGEA, GNSS, red, antenas, GPS, contenidos, cartografia, cartography, mapas, maps, planos, metadatos, metadata, datos geograficos, geodata" />
+	<meta name="dcterms.title" content="ICEARAGON: Infraestructura de Conocimiento Espacial de Aragon" />
+	<meta name="description" content="ICEARAGON: Infraestructura de Conocimiento Espacial de Aragon" />
+	<meta name="dcterms.extent" content="global" />
+	<meta name="dcterms.type" content="Document" />
+	<meta name="robots" content="all" />
+	<meta name="revisit-after" content="3 days" />
+	<meta name="designer" content="Idearium Consultores SL - www.idearium-consultores.com" />
+	<meta name="author" content="© Gobierno de Aragón - www.aragon.es" />
+
+	<base href="/portal/">
+
+	<script>
+		var lang = "es";
+		function enviaAEstatico() {
+			if (location.href.indexOf("static=t") == -1) {
+				location.href = location.href + "?static=t";
+			}
+		}
+
+		var staticTimeout = window.setTimeout("enviaAEstatico()", 8000);
+	</script>
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E3WMMGFS6E"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E3WMMGFS6E');
+</script>
+
+	<link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="styles/idearagon.css" rel="stylesheet" media="screen" type="text/css" />
+
+	<!--[if gte IE 9]>
+	<link href="styles/idearagon_responsive.css" rel="stylesheet" media="screen" type="text/css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<link href="styles/idearagon_ie.css" rel="stylesheet" media="screen" type="text/css" />
+	<![endif]-->
+
+	<!--[if !IE]> -->
+	<link href="styles/idearagon_responsive.css" rel="stylesheet" media="screen" type="text/css" />
+	<!-- <![endif]-->
+
+	<link href="/lib/responsiveslides/styles/portalIDEAragon/responsiveslides.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="/lib/responsiveslides/styles/portalIDEAragon/responsiveslides_themes.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="styles/print.css" rel="stylesheet" media="print" type="text/css" />
+
+	<script src="/lib/jquery/jquery-1.8.3.min.js"></script>
+	<script src="ext/jquery/s3slider.js"></script>
+	<script src="ext/jquery/image_change.js"></script>
+	<!--[if lt IE 7.]>
+	<script defer src="ext/png/pngfix.js"></script>
+	<![endif]-->
+
+	<script src="js/tabs.js"></script>
+<script src="/lib/responsiveslides/responsiveslides.min.js"></script>
+<script src="js/common.js"></script>
+
+<!--[if lt IE 9]>
+<script src="ext/html5shiv.js"></script>
+<![endif]-->
+<script>
+	function activateItems() {
+	}
+
+	function activateLogo(){
+	}
+</script>
+</head>
+<body>
+<div id="content">
+	<div id="content_int">
+		<header>
+<div id="head">
+	<div class="i_i" id="headLeft">
+		<div id="logoDGA">
+			<a href="https://www.aragon.es" target="_blank"><img src="i/logo_gob.png" width="130" height="28" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></a>
+		</div>
+	</div>
+	<div class="d_d" id="headRight">
+		<div id="lang">
+			<ul>
+				<li class="active"><a href="/portal/">ESP</a></li>
+				<li>&nbsp;|&nbsp;</li>
+				<li><a href="/portal/en">ENG</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div id="redesSociales">
+			<ul>
+				<li><a href="//icearagon.aragon.es/datosdescarga/descarga.php?file=documentacion/web/manual-portal-idearagon.pdf"><img src="i/ayuda_mini.png" width="15" height="15" alt="Ayuda" title="Ayuda" /></a></li>
+				<li><a href="https://twitter.com/IGEAR_Aragon"><img src="i/twitter.png" width="15" height="15" alt="Canal Twitter" title="Canal Twitter" /></a></li>
+				<li><a href="javascript:openLoginForm()" title="Login"><img id="imgLogin" width="15" height="15" src="/lib/IDEAragon/themes/default/images/login.png" alt="Login" title="Login">		
+					</a>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+	<div class="c">
+		<div id="banner">
+			<a href="/portal/" target="_blank"><img src="i/bannerIcearagon.png" width="164" height="21" alt="ICEARAGON" title="ICEARAGON" /></a>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+</header>
+<div id="menu" class="fondoMenu5">
+			<ul class="i_i" id="menuWrapper">
+				<li>
+					<div id="logo">
+	<img id="logoFinal" src="i/logoIcearagon.png" usemap="#logoMap" alt="Logotipo ICEARAGON"/>
+</div>
+<map name="logoMap">
+	<area shape="poly" coords="0,131,71,0,83,108" href="javascript:activateMenuItem(0);" alt="ICEARAGON" title="ICEARAGON" onmouseover="javascript:activateMenuItem(0);" />
+	<area shape="poly" coords="71,0,83,108,167,24" href="javascript:activateMenuItem(1);" alt="GEOINFORMACI&Oacute;N" title="GEOINFORMACI&Oacute;N" onmouseover="javascript:activateMenuItem(1);" />
+	<area shape="poly" coords="167,24,83,108,144,169" href="javascript:activateMenuItem(2);" alt="SERVICIOS WEB" title="SERVICIOS WEB" onmouseover="javascript:activateMenuItem(2);" />
+	<area shape="poly" coords="83,108,144,169,72,239" href="javascript:activateMenuItem(3);" alt="APLICACIONES" title="APLICACIONES" onmouseover="javascript:activateMenuItem(3);" />
+	<area shape="poly" coords="83,108,72,239,0,131" href="javascript:activateMenuItem(4);" alt="IGEAR" title="IGEAR" onmouseover="javascript:activateMenuItem(4);" />
+</map>
+</li>
+				<li id="navigationZone" class="fondoMenu5">
+
+						<div id="navegacionPrincipal">
+				<div id="cabecera">
+					<div id="titlePortal">ICEARAGON</div><div id="subtitlePortal">INFRAESTRUCTURA DE CONOCIMIENTO ESPACIAL DE ARAG&Oacute;N</div>
+				</div>
+				<div class="clear"></div>
+				<nav>
+				<ul class="i_i">
+					<li><a id="menu0" href="/" title="ICEARAGON" onmouseover="javascript:activateMenuItem(0);">ICEARAGON</a></li>
+					<li><a id="menu1" href="geoinformacion.jsp" title="GEOINFORMACI&Oacute;N" onmouseover="javascript:activateMenuItem(1);">GEOINFORMACI&Oacute;N</a></li>
+					<li><a id="menu2" href="servicios.jsp" title="SERVICIOS WEB" onmouseover="javascript:activateMenuItem(2);">SERVICIOS WEB</a></li>
+					<li><a id="menu3" href="aplicaciones.jsp" title="APLICACIONES" onmouseover="javascript:activateMenuItem(3);">APLICACIONES</a></li>
+					<li><a id="menu4" href=" http://igear.aragon.es" title="IGEAR" onmouseover="javascript:activateMenuItem(4);">IGEAR</a></li>
+				</ul>
+				</nav>
+			</div>
+			<img class="i_i" id="separadorMenu" src="i/menuSeparator.png" alt="Separador Menu"/>
+			<div id="navegacionSecundaria" class="i_i">
+				<div id="navegacionSecundaria0" class="oculto">
+				<nav>
+					<ul class="i_i">
+						<li><a class="mnu0_0" href="presentacion.jsp" title="PRESENTACI&Oacute;N">PRESENTACI&Oacute;N</a></li>
+						<li><a class="mnu0_1" href="definicion.jsp" title="DEFINICI&Oacute;N">DEFINICI&Oacute;N</a></li>
+						<li><a class="mnu0_2" href="objetivo.jsp" title="OBJETIVO">OBJETIVO</a></li>
+						<li><a class="mnu0_3" href="componentes.jsp" title="COMPONENTES">COMPONENTES</a></li>
+						<li><a class="mnu0_4" href="elementos.jsp" title="ELEMENTOS">ELEMENTOS</a></li>
+						<li><a class="mnu0_5" href="arquitectura.jsp" title="ARQUITECTURA">ARQUITECTURA</a></li>
+						<!-- <li><a class="mnu0_6" href="documentacion.jsp" title="DOCUMENTACI&Oacute;N">DOCUMENTACI&Oacute;N</a></li> -->
+						<li><a class="mnu0_6" href="https://icearagon.aragon.es/API" title="API">API</a></li>
+					</ul>
+<ul class="d_d">
+							<li><a class="mnu0_7" href="https://encuestas2.aragon.es/index.php/295896?lang=es" title="ENCUESTA CALIDAD">ENCUESTA CALIDAD</a></li>
+						</ul>
+						
+				</nav>
+				</div>
+				<div id="navegacionSecundaria1" class="oculto">
+				<nav>
+					<ul class="i_i">
+						<li><a class="mnu1_0" href="directorio_ig.jsp" title="DIRECTORIO DE INFORMACIÓN GEOGRÁFICA">DIRECTORIO DE IG</a></li>
+						<li><a class="mnu1_1" href="geodatos.jsp" title="GEODATOS">GEODATOS</a></li>
+						<li><a class="mnu1_2" href="metadatos.jsp" title="METADATOS">METADATOS</a></li>
+						<li><a class="mnu1_3" href="geoservicios.jsp" title="SERVICIOS">SERVICIOS</a></li>
+						<li><a class="mnu1_4" href="calidad.jsp" title="CALIDAD">CALIDAD</a></li>
+						<li><a class="mnu1_5" href="ig_for_all.jsp" title="INFORMACIÓN GEOGRÁFICA PARA TODOS">GEOGRAFÍA PARA TODOS</a></li>
+					</ul>
+				</nav>
+				</div>
+				<div id="navegacionSecundaria2" class="oculto">
+				<nav>
+					<ul class="i_i">
+						<li><a class="mnu2_0" href="directorio_ws.jsp" title="DIRECTORIO DE SERVICIOS">DIRECTORIO DE SERVICIOS</a></li>
+						<li><a class="mnu2_1" href="wms.jsp" title="WMS">WMS</a></li>
+						<li><a class="mnu2_2" href="csw.jsp" title="CSW">CSW</a></li>
+						<li><a class="mnu2_3" href="wfs.jsp" title="WFS">WFS</a></li>
+						<li><a class="mnu2_4" href="wfsg.jsp" title="WFS-G">WFS-G</a></li>
+						<li><a class="mnu2_5" href="wcs.jsp" title="WCS">WCS</a></li>
+						<li><a class="mnu2_6" href="wmts.jsp" title="WMTS">WMTS</a></li>
+					</ul>
+				</nav>
+				</div>
+				<div id="navegacionSecundaria3" class="oculto">
+				<nav>
+					<ul class="i_i" id="bx_slider_navSec3">
+						<li class="i_i">
+							<ul>
+								<li><a class="mnu3_0" href="visores.jsp" title="VISORES GEOGR&Aacute;FICOS">VISORES GEOGR&Aacute;FICOS</a></li>
+								<li><a class="mnu3_1" href="//icearagon.aragon.es/tab2map" title="TABLA A MAPA">TABLA A MAPA</a></li>
+								<!--<li><a class="mnu3_3" href="//icearagon.aragon.es/buscador" title="BUSCADOR GEOGR&Aacute;FICO">BUSCADOR GEOGR&Aacute;FICO</a></li>-->
+								<li><a class="mnu3_3" href="gazetteer.jsp" title="TOPONIMIA">TOPONIMIA</a></li>
+								<li><a class="mnu3_4" href="//icearagon.aragon.es/descargas" title="DESCARGAS">DESCARGAS</a></li>
+								<li><a class="mnu3_5" href="aragea.jsp" title="RED ARAGEA">RED ARAGEA</a></li>
+								<li><a class="mnu3_8" href="//icearagon.aragon.es/geojuegos" title="GEOJUEGOS">GEOJUEGOS</a></li>
+								<li><a class="mnu3_13" href="tematicas.jsp" title="TEM&Aacute;TICAS">TEM&Aacute;TICAS</a></li>
+							</ul>
+						</li>
+						<li class="i_i">
+							<ul>
+								<li><a class="mnu3_7" href="atlas.jsp" title="ATLAS DE ARAG&Oacute;N">ATLAS</a></li>
+								<li><a class="mnu3_9" href="sita.jsp" title="SISTEMA DE INDICADORES TERRITORIALES DE ARAG&Oacute;N">SITA</a></li>
+								<li><a class="mnu3_2" href="catalogos.jsp" title="CAT&Aacute;LOGOS">CAT&Aacute;LOGOS</a></li>
+								<li><a class="mnu3_10" href="msd.jsp" title="MAPA SINT&Eacute;TICO DE DESARROLLO TERRITORIAL">MSD</a></li>
+								<li><a class="mnu3_6" href="rca.jsp" title="REGISTRO CARTOGR&Aacute;FICO">REGISTRO CARTOGR&Aacute;FICO</a></li>
+								<li><a class="mnu3_11" href="paisaje.jsp" title="MAPAS DE PAISAJE DE ARAG&Oacute;N">MAPAS DE PAISAJE</a></li>
+								<li><a class="mnu3_12" href="//icearagon.aragon.es/dondeVivo" title="D&Oacute;NDE VIVO">D&Oacute;NDE VIVO</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<div id="navSec3">
+						<ul class="i_i">
+							<li><a class="mnu3_0" href="visores.jsp" title="VISORES GEOGR&Aacute;FICOS">VISORES GEOGR&Aacute;FICOS</a></li>
+							<li><a class="mnu3_1" href="//icearagon.aragon.es/tab2map" title="TABLA A MAPA">TABLA A MAPA</a></li>
+							<!--<li><a class="mnu3_3" href="//icearagon.aragon.es/buscador" title="BUSCADOR GEOGR&Aacute;FICO">BUSCADOR GEOGR&Aacute;FICO</a></li>-->
+							<li><a class="mnu3_3" href="gazetteer.jsp" title="TOPONIMIA">TOPONIMIA</a></li>
+							<li><a class="mnu3_4" href="//icearagon.aragon.es/descargas" title="DESCARGAS">DESCARGAS</a></li>
+							<li><a class="mnu3_5" href="aragea.jsp" title="RED ARAGEA">RED ARAGEA</a></li>
+							<li><a class="mnu3_8" href="//icearagon.aragon.es/geojuegos" title="GEOJUEGOS">GEOJUEGOS</a></li>
+							<li><a class="mnu3_13" href="tematicas.jsp" title="TEM&Aacute;TICAS">TEM&Aacute;TICAS</a></li>
+						</ul>
+						<ul class="d_d">
+							<li><a class="mnu3_7" href="atlas.jsp" title="ATLAS DE ARAG&Oacute;N">ATLAS</a></li>
+							<li><a class="mnu3_9" href="sita.jsp" title="SISTEMA DE INDICADORES TERRITORIALES DE ARAG&Oacute;N">SITA</a></li>
+							<li><a class="mnu3_2" href="catalogos.jsp" title="CAT&Aacute;LOGOS">CAT&Aacute;LOGOS</a></li>
+							<li><a class="mnu3_10" href="msd.jsp" title="MAPA SINT&Eacute;TICO DE DESARROLLO TERRITORIAL">MSD</a></li>
+							<li><a class="mnu3_6" href="rca.jsp" title="REGISTRO CARTOGR&Aacute;FICO">REGISTRO CARTOGR&Aacute;FICO</a></li>
+							<li><a class="mnu3_11" href="paisaje.jsp" title="MAPAS DE PAISAJE DE ARAG&Oacute;N">MAPAS DE PAISAJE</a></li>
+							<li><a class="mnu3_12" href="//icearagon.aragon.es/dondeVivo" title="D&Oacute;NDE VIVO">D&Oacute;NDE VIVO</a></li>
+							<!-- <li><a class="mnu3_12" href="rjt.jsp" title="VISOR DEL R&Eacute;GIMEN JUR&Iacute;DICO DEL TERRITORIO">RJT</a></li> -->
+						</ul>
+					</div>
+				</nav>
+				</div>
+				<div id="navegacionSecundaria4" class="navegacionSecundaria oculto">
+				<nav>
+					<ul class="i_i">
+						<li><a class="mnu4_0" href="https://www.aragon.es/gobierno/igear/conoce-el-igear" title="PRESENTACIÓN">PRESENTACIÓN</a></li>
+						<li><a class="mnu4_1" href="https://www.aragon.es/gobierno/igear/publicaciones" title="PUBLICACIONES">PUBLICACIONES</a></li>
+						<li><a class="mnu4_2" href="https://www.aragon.es/-/instituto-geografico-de-aragon-igear-biblioteca-hemeroteca" title="BIBLIOTECA Y HEMEROTECA">BIBLIOTECA Y HEMEROTECA</a></li>
+						<li><a class="mnu4_3" href="https://www.aragon.es/gobierno/igear/areas-de-trabajo" title="PROYECTOS Y EVENTOS">PROYECTOS Y EVENTOS</a></li>
+						<!-- <li><a class="mnu4_5" href="https://www.aragon.es/-/instituto-geografico-de-aragon-igear-proyectos" title="PROYECTOS">PROYECTOS</a></li>		-->
+						<li><a class="mnu4_6" href="https://www.aragon.es/gobierno/igear/conoce-el-igear/sistema-cartografico-de-aragon" title="SISTEMA CARTOGRÁFICO">SISTEMA CARTOGRÁFICO</a></li>			
+					</ul>
+					<ul class="d_d">
+						<li><a class="mnu4_7" href="https://www.aragon.es/gobierno/igear/planes-y-estrategias" title="PIGAR 2025-2028">PIGAR 2025-2028</a></li>
+						<li><a class="mnu4_8" href="https://www.aragon.es/gobierno/igear/rrss-y-calidad-de-los-servicios" title="REDES SOCIALES Y CARTA DE SERVICIOS">REDES SOCIALES Y CARTA DE SERVICIOS</a></li>
+						<!--<li><a class="mnu4_9" href="https://encuestas.aragon.es/index.php/118396/lang-es" title="ENCUESTA CALIDAD">ENCUESTA CALIDAD</a></li> -->
+						<li><a class="mnu4_10" href="https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=1189126024242" title="PRECIOS PÚBLICOS">PRECIOS PÚBLICOS</a></li>
+					</ul>							
+				</nav>
+				</div>
+			</div><div class="clear"></div>
+			
+				<div id="busqBannerZone">
+					<input id="cajaBusqBanner" name="q" value="" placeholder=" ICEARAGON - Buscador geogr&aacute;fico"  onkeyup="inputKeyUpSearch(event)"/>
+					<input type="submit" onclick="javascript:searchFromBanner()" value="" style="width:30px;height:31px;background:url(i/lupaBuscar.png) no-repeat; cursor: pointer;border: none;vertical-align:top;margin-top:14px;" />
+					<img title="Ayuda" alt="Ayuda" height="29" src="i/ayuda.png" onclick="$('#ayudaBus').fadeIn(500);" id="ayudaBuscador">
+				</div></li>
+			</ul>
+		</div>
+					<div id="ayudaBus" title="Ayuda del buscador" style="display:none;padding-left: 50px;">
+    <img class="d_d" src="i/close.png" id="cerrarAyudaBuscador" onclick="$('#ayudaBus').fadeOut(500);" alt="Cerrar" title="Cerrar">
+    <div class="overflow-x-auto"><table class="c-table"><caption class="font-bold mb-base text-left text-lg">Ejemplos de búsqueda<!----></caption><!----><thead><tr class="border-t border-b border-neutral-base"><th scope="col" class="align-top font-normal px-base py-sm text-left text-neutral-dark text-sm" colspan="4">Tipo<!----></th><!----><th scope="col" class="align-top font-normal px-base py-sm text-left text-neutral-dark text-sm" colspan="2">Tipo de búsqueda<!----></th><!----><th scope="col" class="align-top font-normal px-base py-sm text-left text-neutral-dark text-sm" colspan="2">Ejemplos de búsqueda<!----></th><!----><!----></tr></thead><!----><tbody><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4" rowspan="2">Unidades administrativas<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Municipio por INE<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">22001, 44001, 50067<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Localidad, municipio, comarca, nombre geográfico o topónimo<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Calatayud, Goriz, etc.<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4">Coordenadas<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Coordenadas<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2"> UTM30 ETRS89: 690000, 4500000 <br _ngcontent-ian-c104=""> UTM31 ETRS89: 308800, 4608000 (31) <br _ngcontent-ian-c104=""> UTM30 ED50: 690000, 4500000 (23030) <br _ngcontent-ian-c104=""> UTM31 ED50: 308800, 4608000 (23031) <br _ngcontent-ian-c104=""> Geográficas: 0º12'20'', 41º36'2''<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4" rowspan="3">Cuadrículas<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Cuadrícula UTM 10 Km<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">30TXK69<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Hoja 5.000<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">354-1-1<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Hoja 50.000<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">353<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4" rowspan="4">Parcelario y registros<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Parcela Catastro / SIGPAC<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2"> 440450450000200122 <br _ngcontent-ian-c104=""> 44-45-0-0-2-122 <!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Referencia catastral<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">50153A03000195<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Registro Vitícola Año 1994<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">223053050000300055<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Catastro o Derecho minero<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">silvia<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4" rowspan="2">Callejero<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Calle<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">paseo maria agustin o paseo maria agustin, zaragoza<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Portal callejero<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">paseo maria agustin 36 o paseo maria agustin 36, zaragoza<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4">Códigos postales<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Código postal<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">22001, 44001, 50002<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4" rowspan="3">Medio Ambiente<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Figura de protección ambiental<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">PORN108, ENP203, HM240266, ES2430032, Gallocanta, Parque Nacional de Ordesa y Monte Perdido<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Coto de caza<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Por matrícula o nombre de coto<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="2">Monte<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Por matrícula o nombre de monte<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4">Educación<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Educación<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Por nombre de instalación educativa (Marcos Frechín, Valdespartera III) o Zona educativa (Zaragoza 5)<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4">Sanidad<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Sanidad<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Por instalación sanitaria (Valdespartera, Hospital Universitario Miguel Servet), zona básica de salud o área de salud<!----></td><!----><!----><!----><!----></tr><tr class="border-t border-b border-neutral-base"><td class="px-base py-sm" colspan="4">Conceptos ICEARAGON<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Tema o producto<!----></td><!----><!----><!----><td class="px-base py-sm" colspan="2">Cartografía, Planos, Mapas, Catastro, PNOA, Paisajes, etc.<!----></td><!----><!----><!----><!----></tr><!----></tbody></table><!----></div>
+    </div><script>
+						window.clearTimeout(staticTimeout);
+					</script>
+				<p id="breadcrumb">ICEARAGON &gt; 	
+		SERVICIOS WEB</p>
+
+		<div id="texto-db" class="texto centro-cuadro">
+			<div class="centro_cuadro">
+<h1 class="titulo">SERVICIOS WEB</h1>
+<br/>
+<b>ACCESO AL DIRECTORIO DE SERVICIOS WEB DE icearagon:</b>
+<br><br>
+<a href="/directorio_ws.jsp" target="_blank"><img src="i/boton-ws.png" width="195" height="148" alt="Directorio de Servicios Web" title="Directorio de Servicios Web" /></a>
+<br/><br/>
+<b>INTRODUCCIÓN:</b>
+<br/><br/>
+Sección de la web dedicada a la difusión de la información geográfica de Aragón mediante Servicios Web <a href=" https://www.opengeospatial.org" target="_blank">OGC</a> (Open Geospatial Consortium),
+siguiendo las recomendaciones de la Directiva 2007/2/CE <a href="https://inspire.ec.europa.eu/" target="_blank">INSPIRE</a>. Está compuesta por páginas informativas detallando el listado de direcciones de
+acceso a los servicios web disponibles así como páginas específicas de cada uno de los servicios web desarrollados, formas de acceso y uso de los mismos a través de navegadores web (clientes ligeros) o clientes pesados
+ya sean de software libre o propietario.
+<br/><br/>
+El directorio de servicios web desplegados en icearagon es el siguiente agrupado por los diferentes tipos de <a href="/directorio_ws.jsp" target="_blank"> servicios</a> existentes.
+<div class="br_m"></div>
+</div></div>
+
+		<div class="body_tabs">
+    <ul class="secc_tabs" id="secc_tabs1">
+    <li id="tab0" class="tabContent i_i">
+        <div class="tabCabecera">
+            <div class="tabUnaLinea">
+                <div class="tabBoton">
+                    <img id="ab0" class="tabBotonImg" src="i/tabGoUp.png" alt="Abrir" />
+                </div>
+                MARCO LEGAL
+            </div>
+        </div>
+        <div class="tabBody oculto" id="mnu_tab0">
+            <ul>
+              <li><a href="http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=1243089822727&type=pdf">LEY 3/2022 LIGA</a></li>
+                <li><a href="http://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=853399225555">DECRETO 81/2015</a></li>
+              <li><a href="https://www.aragon.es/gobierno/igear/planes-y-estrategias">PIGAr 2025-2028</a></li>
+             <!--   <li><a href="https://icearagon.aragon.es/portal/info_pca.jsp">SEGUIMIENTO PIGAr 2025-2028</a></li> -->
+	      <li><a href="//icearagon.aragon.es/datosdescarga/descarga.php?file=documentacion/seguimiento/NCA.pdf">NORMA CARTOGRÁFICA</a></li>
+                <li><a href="//icearagon.aragon.es/datosdescarga/descarga.php?file=documentacion/seguimiento/NGA.pdf">NOMENCLÁTOR GEOGRÁFICO</a></li>
+                <li><a href="rca.jsp">REGISTRO CARTOGRÁFICO</a></li>
+                <li><a href=" https://www.boe.es/boe/dias/2010/07/06/pdfs/BOE-A-2010-10707.pdf">LEY 14/2010 LISIGE</a></li>
+                <li><a href="https://www.idee.es/seguimiento-e-informes">DIRECTIVA INSPIRE</a></li>
+              <li><a href="https://gestorsi.idee.es">SEGUIMIENTO INSPIRE</a></li>
+               <!--  <li><a href=" https://www.aragon.es/-/marco-normativo">OTRA NORMATIVA</a></li> -->
+            </ul>
+        </div>
+    </li>
+    <li id="tab1" class="tabContent i_i">
+        <div class="tabCabecera">
+            <div class="tabUnaODosLineas">
+                <div class="tabBoton">
+                    <img id="ab1" class="tabBotonImg" src="i/tabGoUp.png" alt="Abrir" />
+                </div>
+                GOBIERNO ABIERTO
+            </div>
+        </div>
+        <div class="tabBody oculto" id="mnu_tab1">
+            <ul>            
+                <li><a href="https://servicios.aragon.es/pcon/pcon-public/controlPrincipalPublico?accion=ACCION_SELECCIONAR_ORGANO&amp;idorgano=28">PERFIL DEL CONTRATANTE ABIERTO: DATOS.GOB.ES</a></li>
+                <li><a href="https://opendata.aragon.es/catalogo/mapas">ARAG&Oacute;N OPEN DATA</a></li>
+                <li><a href="https://transparencia.aragon.es/">GOBIERNO ARAG&Oacute;N TRANSPARENCIA</a></li>
+                 <li><a href="https://www.zaragoza.es/sede/portal/datos-abiertos/">AYUNTAMIENTO DE ZARAGOZA</a></li>
+              <li><a href="https://datos.gob.es/es/catalogo">GOBIERNO ABIERTO: DATOS.GOB.ES</a></li>
+            </ul>
+        </div>
+    </li><li id="tab2" class="tabContent i_i">
+		<div class="tabCabecera">
+			<div class="tabUnaODosLineas">
+				<div class="tabBoton">
+					<img id="ab2" class="tabBotonImg" src="i/tabGoUp.png" alt="Abrir" />
+				</div>
+				CANAL COMUNICACI&Oacute;N
+			</div>
+		</div>
+		<div class="tabBody oculto" id="mnu_tab2">
+			<ul>
+				<!--<li><a href="/">DOCUMENTACI&Oacute;N</a></li>-->
+				<li><a href="noticias.jsp">NOTICIAS</a></li>
+				<li><a href="avisos.jsp">AVISOS</a></li>
+				<li><a href="https://www.aragon.es/-/instituto-geografico-de-aragon-igear-documentacion">PUBLICACIONES</a></li>
+				<li><a href="http://www.idee.es/boletin-sobre-ides">BOLET&Iacute;N IDES</a></li>
+				<li><a href="https://twitter.com/IGEAR_Aragon">TWITTER @IGEAR_Aragon</a></li>
+				<li><a href="//icearagon.aragon.es/datosdescarga/descarga.php?file=documentacion/presentacion/idearagon.mpg">VIDEO DE PRESENTACION</a></li>
+				<li><a href="formacion.jsp">FORMACI&Oacute;N</a></li>
+				<li><a href="https://www.youtube.com/channel/UCZRttHQuDZEzFH82bmFhhhw" target="_blank">CANAL YOUTUBE</a></li>
+			</ul>
+		</div>
+	</li>
+	</ul>
+	<div class="clear visible-ms tamCero"></div>
+	<ul class="secc_tabs" id="secc_tabs2">
+	<li id="tab3" class="tabContent i_i">
+		<div class="tabCabecera">
+			<div class="tabDosLineas">
+				<div class="tabBoton">
+					<img id="ab3" class="tabBotonImg" src="i/tabGoUp.png" alt="Abrir" />
+				</div>
+				COLABORA CON ICEARAGON
+			</div>
+		</div>
+		<div class="tabBody oculto" id="mnu_tab3">
+			<ul>
+				<li><a href="ci_mm.jsp">EL MAPA DEL MES</a></li>
+				<li><a href="ci_im.jsp">LA IMAGEN DEL MES</a></li>
+				<li><a href="//icearagon.aragon.es/buscadorNombresGeograficos/">REVISA TOPÓNIMOS</a></li>
+				<li><a href="//icearagon.aragon.es/visor">NOTIFICA INCIDENCIAS EN MAPAS</a></li>
+				<li><a href="ig_for_all.jsp">GEOGRAFÍA PARA TODOS</a></li>
+				<li><a href="//icearagon.aragon.es/tab2map">HAZ TU MAPA EN LINEA</a></li>
+				<!--<li><a href="//icearagon.aragon.es/visorCGA">VISOR DEL COLEGIO DE GEOGRÁFOS</a></li>-->
+			</ul>
+		</div>
+	</li>
+	<li id="tab4" class="tabContent i_i">
+		<div class="tabCabecera">
+			<div class="tabUnaLinea">
+				<div class="tabBoton">
+					<img id="ab4" class="tabBotonImg" src="i/tabGoUp.png" alt="Abrir" />
+				</div>
+				RELACIONADOS
+			</div>
+		</div>
+		<div class="tabBody oculto" id="mnu_tab4">
+			<ul>
+				<li><a href=" https://www.geografos.org">COLEGIO DE GEÓGRAFOS</a></li>
+				<li><a href="http://igear.aragon.es">IGEAR</a></li>
+				<li><a href="http://www.zaragoza.es/ciudad/idezar">IDEZAR</a></li>
+				<li><a href="https://www.ign.es">IGN</a></li>
+				<li><a href="http://www.idee.es">IDEE</a></li>
+				<li><a href="http://www.idee.es/web/guest/estatal">IDE ESTATALES</a></li>
+				<li><a href="http://www.idee.es/web/guest/regional">IDE REGIONALES</a></li>
+				<li><a href="https://www.mitma.gob.es/recursos_mfom/comodin/recursos/plan-cartografico-nacional-2021-2024.pdf">PCN</a></li>
+				<li><a href="https://pnt.ign.es/">PNT</a></li>
+				<!--<li><a href="http://www.fundacionfadot.com">FADOT</a></li>-->
+			</ul>
+		</div>
+	</li>
+	</ul>
+	</div>
+	<div class="clear"></div>
+<footer>
+<div id="footer">
+	<ul id="footerZone">
+		<li class="logoGA_footer itemFooter"><div class="d_d">
+			<a href=" https://www.aragon.es" target="_blank"><img src="i/logo_gob_pie.png" width="93" height="20" alt="Gobierno de Arag&oacute;n" title="Gobierno de Arag&oacute;n" /></a>
+		</div></li>
+		<li class="itemFooter">&copy; Instituto Geogr&aacute;fico de Arag&oacute;n. Todos los derechos reservados</li>
+		<li class="itemFooter"><ul><li><a href="accesibilidad.jsp" title="ACCESIBILIDAD">ACCESIBILIDAD</a></li><li><a href="politica-privacidad.jsp" title="AVISO LEGAL: PROTECCI&Oacute;N DE DATOS">AVISO LEGAL. PROTECCI&Oacute;N DE DATOS</a></li><li><a href="mapa-web.jsp" title="MAPA WEB">MAPA WEB</a></li><li><a href="mailto:igear@aragon.es" title="CONTACTO">CONTACTO</a></li></ul></li>
+		<li class="itemFooter">Ed. Pignatelli. Paseo Mar&iacute;a Agust&iacute;n , 36 puerta 14 planta 3, 50071 Zaragoza. Tel. <a href="tel:+34976715605">+34 976 71 56 05</a></li>
+	</ul>
+</div>
+</footer></div>
+</div>
+<script>
+	activateMenuItem("2");
+	resaltaItemMenu("2", "0");
+</script>
+</body></html>
