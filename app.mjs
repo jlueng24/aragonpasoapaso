@@ -1,14 +1,14 @@
-import {STORAGE_KEY, DAILY_LIMIT_ENABLED, freshState, normalizeState, dailyUsage, dayKey, availableNeighbors, chooseOrigin, discover, practicePool} from './game.mjs';
+import {STORAGE_KEY, DAILY_LIMIT_ENABLED, freshState, normalizeState, dailyUsage, dayKey, availableNeighbors, chooseOrigin, discover, practicePool, expeditionPool, startNewExpedition, clearAllProgress} from './game.mjs';
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stripAccents = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const shuffle = list => { const out=[...list]; for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]];} return out; };
 let geography, content, municipalities, eligible, state, selected = null, viewport, session = null, lastFocus = null;
-let toastTimer, tipTimer, storageWarning = false, dragging = false, pointer = null;
+let toastTimer, tipTimer, storageWarning = false, dragging = false, pointer = null, collectionFilter = 'all';
 const map = $('#map'), dialog = $('#dialog');
 
-const BUILD_VERSION='20261018-4';
+const BUILD_VERSION='20261018-6';
 async function loadJson(path){const sep=path.includes('?')?'&':'?';const response=await fetch(`${path}${sep}v=${BUILD_VERSION}`,{cache:'no-store'});if(!response.ok)throw new Error(`No se pudo cargar ${path}`);return response.json();}
 function assetSrc(p,type){return p?.[type+'Data']||p?.[type]||'';}
 function place(id){ return {...municipalities.get(id),...content[id]}; }
@@ -16,7 +16,8 @@ function persist(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}
 function toast(message){clearTimeout(toastTimer);$('#toast').textContent=message;$('#toast').classList.add('show');toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),4800);}
 function tip(message){clearTimeout(tipTimer);$('#map-tip').textContent=message;$('#map-tip').classList.add('show');tipTimer=setTimeout(()=>$('#map-tip').classList.remove('show'),4200);}
 function remaining(){return DAILY_LIMIT_ENABLED?Math.max(0,state.limit-dailyUsage(state)):Infinity;}
-function owned(id){return !!state.discovered[id];}
+function owned(id){return !!(state.collection?.[id]||state.discovered?.[id]);}
+function inExpedition(id){return !!state.discovered[id];}
 function frontier(){return availableNeighbors(state,municipalities,eligible);}
 function status(id){return owned(id)?'discovered':(!state.originId||frontier().includes(id))?'available':'locked';}
 
@@ -27,7 +28,8 @@ const COMARCA_CLASS={
   'Maestrazgo':'maestrazgo'
 };
 function comarcaIds(name){return [...eligible].filter(id=>place(id).comarca===name);}
-function comarcaComplete(name){const ids=comarcaIds(name);return ids.length>0&&ids.every(owned);}
+function comarcaProgress(name){const ids=comarcaIds(name),done=ids.filter(owned).length;return {name,done,total:ids.length,percent:ids.length?Math.round(done*100/ids.length):0};}
+function comarcaComplete(name){const p=comarcaProgress(name);return p.total>0&&p.done===p.total;}
 function provinceComplete(name){const ids=geography.municipalities.filter(m=>m.province===name).map(m=>m.id);return ids.length>0&&ids.every(id=>eligible.has(id)&&owned(id));}
 function completedComarcaFor(id){const name=place(id).comarca;return FEATURED_COMARCAS.includes(name)&&comarcaComplete(name)?name:null;}
 
@@ -41,7 +43,7 @@ function fitIds(ids,padding=.28){
   if(width/height<ratio)width=height*ratio;else height=width/ratio;
   return [(x0+x1-width)/2,(y0+y1-height)/2,width,height];
 }
-function showZone(){setView(fitIds(state.originId?[...practicePool(state),...frontier()]:[...eligible],.24));}
+function showZone(){setView(fitIds(state.originId?[...expeditionPool(state),...frontier()]:[...eligible],.24));}
 function zoom(factor){const [x,y,w,h]=viewport;const nw=Math.max(35,Math.min(1900,w*factor)),nh=h*(nw/w);setView([x+(w-nw)/2,y+(h-nh)/2,nw,nh]);}
 function buildMap(){
   const defs=`<defs>
@@ -56,8 +58,8 @@ function renderMap(){
   const open=new Set(frontier());
   const terrain=$('#terrain'),paths=terrain.querySelectorAll?[...terrain.querySelectorAll('.municipality')]:[...terrain.children].filter(path=>path.dataset?.id);
   for(const path of paths){
-    const id=path.dataset.id,known=owned(id),ready=eligible.has(id)&&(!state.originId||open.has(id));
-    const comarca=municipalities.get(id)?.comarca,completed=known&&FEATURED_COMARCAS.includes(comarca)&&comarcaComplete(comarca);
+    const id=path.dataset.id,known=inExpedition(id),ready=eligible.has(id)&&(!state.originId||open.has(id));
+    const comarca=municipalities.get(id)?.comarca,completed=FEATURED_COMARCAS.includes(comarca)&&comarcaComplete(comarca);
     path.setAttribute('class',['municipality',eligible.has(id)?'pilot':'',known?'discovered':ready?'available':'locked',selected===id?'selected':'',completed?'comarca-complete':'',completed?'comarca-'+COMARCA_CLASS[comarca]:''].filter(Boolean).join(' '));
     path.querySelector('title').textContent=known?place(id).name:ready?'Municipio disponible para descubrir':'Territorio todavía sin explorar';
   }
@@ -83,9 +85,9 @@ function renderPins(){
   if(!state.originId){$('#pins').innerHTML='';return;}
   const unit=Math.max(viewport[2]/Math.max(map.clientWidth||850,350),viewport[3]/Math.max(map.clientHeight||700,330));
   const full=viewport[2]>650, labels=[];
-  const ids=full?[state.originId]:[...practicePool(state),...frontier()].sort((a,b)=>(b===selected)-(a===selected)||(b===state.originId)-(a===state.originId));
+  const ids=full?[state.originId]:[...expeditionPool(state),...frontier()].sort((a,b)=>(b===selected)-(a===selected)||(b===state.originId)-(a===state.originId));
   $('#pins').innerHTML=ids.map(id=>{
-    const p=place(id),[x,y]=p.point,known=owned(id),origin=state.originId===id;
+    const p=place(id),[x,y]=p.point,known=inExpedition(id),origin=state.originId===id;
     const size=unit*(full?14:15),labelSize=unit*12,labelY=y+size*2.1;
     const label=known?p.name:destinationLabel(id);
     const rect=[x-label.length*labelSize*.27,labelY-labelSize,x+label.length*labelSize*.27,labelY+labelSize*.3];
@@ -99,9 +101,9 @@ function renderPins(){
 function selectPlace(id){
   if(!state.originId)return;
   if(!eligible.has(id)){tip('Por ahora puedes explorar Bajo Aragón, Matarraña y Maestrazgo. Ampliaremos el resto de Aragón más adelante.');return;}
-  if(!owned(id)&&!frontier().includes(id)){tip('Descubre un municipio que comparta frontera con este para abrir una nueva ruta.');return;}
+  if(!inExpedition(id)&&!frontier().includes(id)){tip('Este municipio está en tu colección, pero no forma parte de la expedición actual. Puedes abrir su carta desde Mis cartas.');return;}
   selected=id;showPage('map');renderMap();
-  if(owned(id)){
+  if(inExpedition(id)){
     openDialog(`<div class="dialog-inner card-dialog"><p class="eyebrow">Tu colección</p><h2 id="dialog-title">${esc(place(id).name)}</h2>${card(id)}<button class="primary" data-action="review" data-id="${id}">Repasar este municipio</button></div>`);
   }else{
     openDialog(`<div class="dialog-inner"><p class="eyebrow">${esc(destinationLabel(id))}</p><h2 id="dialog-title">Territorio por descubrir</h2><div class="mystery-outline">${silhouette(id)}</div><p>4 pantallas · 3 preguntas · 1 nueva carta</p><button class="primary" data-action="explore" data-id="${id}">Descubrir este municipio →</button></div>`);
@@ -115,7 +117,7 @@ function card(id,origin=state.originId===id){
 
 function renderStart(){
   const start=$('#onboarding');
-  start.hidden=!!state.originId;$('#map-panel').hidden=!state.originId;
+  start.hidden=!!state.originId;$('#map-panel').hidden=!state.originId;$('#new-expedition').hidden=!state.originId;
   if(state.originId)return;
   // Keep the search field and caret intact during background refreshes.
   if($('#municipality-search'))return;
@@ -128,8 +130,14 @@ function originList(query){
  return ids.length?ids.slice(0,8).map(id=>`<button class="origin-result" data-action="origin" data-id="${id}"><span><strong>${esc(place(id).name)}</strong><small>${esc(place(id).comarca)}</small></span><span aria-hidden="true">→</span></button>`).join('')+(ids.length>8?'<p class="search-hint">Escribe alguna letra más para afinar la búsqueda.</p>':''):'<p class="search-hint">No encontramos ese municipio en Bajo Aragón, Matarraña o Maestrazgo.</p>';
 }
 function renderCollection(){
-  const ids=practicePool(state).sort((a,b)=>place(a).name.localeCompare(place(b).name,'es'));
-  $('#collection').innerHTML=`<p class="eyebrow">Tu colección</p><h1>Tus municipios.</h1><p class="collection-progress">${ids.length} de ${eligible.size} cartas de Bajo Aragón, Matarraña y Maestrazgo · ${ids.length} de 731 municipios de Aragón</p>${ids.length?`<div class="collection-grid">${ids.map(id=>`<button class="collection-item" data-action="view-card" data-id="${id}" aria-label="Abrir carta de ${esc(place(id).name)}">${card(id)}</button>`).join('')}</div><p class="subtle" style="margin-top:25px">Los futuros juegos de banderas utilizarán únicamente tus municipios descubiertos.</p>`:'<div class="empty"><span aria-hidden="true">✧</span><p class="intro">Toda colección empieza con un lugar.<br>Elige tu municipio y consigue tu primera carta.</p><button class="primary" data-action="map">Elegir mi punto de partida</button></div>'}`;
+  const all=practicePool(state).sort((a,b)=>place(a).name.localeCompare(place(b).name,'es'));
+  const favorites=all.filter(id=>state.favorites?.[id]);
+  const ids=collectionFilter==='favorites'?favorites:all;
+  const progress=FEATURED_COMARCAS.map(comarcaProgress);
+  const progressHtml=`<div class="comarca-progress-grid">${progress.map(p=>`<article class="comarca-progress-card ${p.percent===100?'complete':''}"><div><strong>${esc(p.name)}</strong><span>${p.done}/${p.total}</span></div><div class="progress-track"><i style="width:${p.percent}%"></i></div><small>${p.percent===100?'✓ Comarca completada':p.percent+'% descubierto'}</small></article>`).join('')}</div>`;
+  const controls=all.length?`<div class="collection-tools"><div class="collection-filters"><button class="filter-button ${collectionFilter==='all'?'active':''}" data-action="filter-all">Todas · ${all.length}</button><button class="filter-button ${collectionFilter==='favorites'?'active':''}" data-action="filter-favorites">★ Favoritas · ${favorites.length}</button></div><button class="primary review-challenge-button" data-action="practice-challenge" ${all.length<2?'disabled':''}>🧠 Reto de repaso</button></div>`:'';
+  const cards=ids.length?`<div class="collection-grid">${ids.map(id=>`<article class="collection-item-wrap"><button class="collection-item" data-action="view-card" data-id="${id}" aria-label="Abrir carta de ${esc(place(id).name)}">${card(id)}</button><button class="favorite-button ${state.favorites?.[id]?'active':''}" data-action="toggle-favorite" data-id="${id}" aria-label="${state.favorites?.[id]?'Quitar':'Añadir'} ${esc(place(id).name)} de favoritos" title="Favorito">★</button></article>`).join('')}</div>`:collectionFilter==='favorites'?'<div class="empty compact"><span aria-hidden="true">☆</span><p class="intro">Todavía no has marcado ningún municipio como favorito.</p></div>':'';
+  $('#collection').innerHTML=`<p class="eyebrow">Tu colección</p><h1>Tus municipios.</h1><p class="collection-progress">${all.length} de ${eligible.size} cartas de Bajo Aragón, Matarraña y Maestrazgo · ${all.length} de 731 municipios de Aragón</p>${progressHtml}${controls}${all.length?`${cards}<p class="subtle" style="margin-top:25px">Marca con ★ tus lugares preferidos o entra en el reto para comprobar cuánto recuerdas.</p>`:'<div class="empty"><span aria-hidden="true">✧</span><p class="intro">Toda colección empieza con un lugar.<br>Elige tu municipio y consigue tu primera carta.</p><button class="primary" data-action="map">Elegir mi punto de partida</button></div>'}`;
 }
 function renderAll(){renderStart();renderMap();renderCollection();}
 function showPage(page){$('#explorer').hidden=page!=='map';$('#collection').hidden=page!=='collection';$('#nav-map').classList.toggle('active',page==='map');$('#nav-cards').classList.toggle('active',page==='collection');if(page==='collection')renderCollection();else requestAnimationFrame(renderPins);}
@@ -200,6 +208,31 @@ function answer(index){
   $('#answer-feedback').innerHTML=`<div class="feedback ${correct?'':'wrong'}"><strong>${correct?'¡Bien recordado!':'Una pista para la próxima.'}</strong><br>${esc(q.explanation)}</div><button class="primary" style="margin-top:16px" data-action="${correct?'quiz-next':'quiz-retry'}">${correct?(session.question===2?'Terminar el reto':'Siguiente pregunta'):'Volver a mirar y reintentar'} →</button>${correct?'':'<p class="subtle" style="text-align:center">El intento no consume ningún descubrimiento.</p>'}`;
   $('#answer-feedback button').focus({preventScroll:true});
 }
+function startPracticeChallenge(){
+  const pool=shuffle(practicePool(state));
+  if(pool.length<2){toast('Descubre al menos dos municipios para empezar el reto de repaso.');return;}
+  const count=Math.min(5,pool.length),targets=pool.slice(0,count);
+  session={stage:'practice',question:0,correct:0,answered:false,questions:targets.map(id=>{const p=place(id);const options=shuffle(FEATURED_COMARCAS.map(label=>({id:label,label})));return {id,title:`¿A qué comarca pertenece ${p.name}?`,options,answer:p.comarca,explanation:`${p.name} pertenece a ${p.comarca}.`};})};
+  renderPracticeQuiz();
+}
+function renderPracticeQuiz(){
+  const q=session?.questions?.[session.question];if(!q)return;
+  openDialog(`<div class="dialog-inner practice-dialog"><p class="eyebrow">Reto de repaso · ${session.question+1} de ${session.questions.length}</p><div class="lesson-step">${session.questions.map((_,i)=>`<i class="${i<=session.question?'active':''}"></i>`).join('')}</div><h2 id="dialog-title">${esc(q.title)}</h2><p>Sin consumir descubrimientos. Solo para poner a prueba tu memoria.</p><div class="options">${q.options.map((o,i)=>`<button class="option" data-action="practice-answer" data-option="${i}"><span class="option-letter">${String.fromCharCode(65+i)}</span>${esc(o.label)}</button>`).join('')}</div><div id="answer-feedback" aria-live="polite"></div></div>`);
+}
+function practiceAnswer(index){
+  if(!session||session.stage!=='practice'||session.answered)return;const q=session.questions[session.question],option=q.options[index];if(!option)return;
+  session.answered=true;const correct=option.id===q.answer;if(correct)session.correct++;
+  document.querySelectorAll('.option').forEach((el,i)=>{el.disabled=true;if(q.options[i].id===q.answer)el.classList.add('correct');else if(i===index)el.classList.add('wrong');});
+  const last=session.question===session.questions.length-1;
+  $('#answer-feedback').innerHTML=`<div class="feedback ${correct?'':'wrong'}"><strong>${correct?'¡Correcto!':'Esta se nos ha escapado.'}</strong><br>${esc(q.explanation)}</div><button class="primary" style="margin-top:16px" data-action="practice-next">${last?'Ver resultado':'Siguiente'} →</button>`;
+}
+function practiceNext(){
+  if(!session||session.stage!=='practice')return;
+  if(session.question<session.questions.length-1){session.question++;session.answered=false;renderPracticeQuiz();return;}
+  const score=session.correct,total=session.questions.length;session=null;
+  openDialog(`<div class="dialog-inner success practice-result"><div class="practice-medal">${score===total?'🏆':score>=Math.ceil(total*.6)?'🥇':'🧭'}</div><p class="eyebrow">Reto completado</p><h2 id="dialog-title">${score} de ${total} correctas</h2><p>${score===total?'Perfecto. Te conoces ya muy bien estas comarcas.':score>=Math.ceil(total*.6)?'Muy bien. Un repaso más y lo clavas.':'Aquí hay territorio para volver a explorar.'}</p><div class="button-row"><button class="secondary" data-action="practice-challenge">Repetir reto</button><button class="primary" data-action="collection">Volver a mis cartas</button></div></div>`);
+}
+
 function finishQuiz(){
   const s=session;if(!s||s.correct!==3)return;
   if(s.review){session=null;showSuccess(s.id,true,false);return;}
@@ -209,10 +242,10 @@ function finishQuiz(){
 }
 function showSuccess(id,review,origin,completedComarca=null){
   const p=place(id);
-  openDialog(`<div class="dialog-inner success"><p class="success-tag">${origin?'AQUÍ EMPIEZA TU AVENTURA':review?'UN PUEBLO BIEN RECORDADO':'UN NUEVO LUGAR EN TU MAPA'}</p><div class="success-seal">${assetSrc(p,'shield')?symbol(p,'shield'):silhouette(id)}</div><h2 id="dialog-title">${esc(p.name)}</h2><p>${origin?'Tu primera carta ya es tuya. Desde aquí podrás explorar los municipios que comparten frontera con tu pueblo.':review?'Has repasado su identidad, su comarca y sus patronos. El repaso no consume descubrimientos.':'Has conseguido su carta y su territorio se ha iluminado. Tu recorrido por Aragón acaba de crecer.'}</p>${completedComarca?`<div class="comarca-celebration"><span aria-hidden="true">🎊</span><strong>¡${esc(completedComarca)} completado!</strong><small>Todos sus municipios quedan unidos por el color de la comarca.</small></div>`:''}<p><strong>${origin?'Carta de origen · gratuita':review?'3 de 3 respuestas correctas':'Nuevas fronteras desbloqueadas'}</strong></p>${origin?`<button class="secondary" data-action="review" data-id="${id}">Conocer mi municipio</button>`:''}<button class="primary" data-action="success-map">${origin?'Explorar mis alrededores':'Volver a mi mapa'} <span aria-hidden="true">→</span></button></div>`);
+  openDialog(`<div class="dialog-inner success"><p class="success-tag">${origin?'AQUÍ EMPIEZA TU AVENTURA':review?'UN PUEBLO BIEN RECORDADO':'UN NUEVO LUGAR EN TU MAPA'}</p><div class="success-seal">${assetSrc(p,'shield')?symbol(p,'shield'):silhouette(id)}</div><h2 id="dialog-title">${esc(p.name)}</h2><p>${origin?'Tu primera carta ya es tuya. Desde aquí podrás explorar los municipios que comparten frontera con tu pueblo.':review?'Has repasado su identidad, su comarca y sus patronos. El repaso no consume descubrimientos.':'Has conseguido su carta y su territorio se ha iluminado. Tu recorrido por Aragón acaba de crecer.'}</p>${completedComarca?`<div class="confetti-field" aria-hidden="true"><i>●</i><i>▲</i><i>◆</i><i>●</i><i>■</i><i>▲</i><i>◆</i><i>●</i></div><div class="comarca-celebration comarca-${COMARCA_CLASS[completedComarca]}"><span class="comarca-badge" aria-hidden="true">🏅</span><strong>¡${esc(completedComarca)} al 100%!</strong><small>${comarcaIds(completedComarca).length}/${comarcaIds(completedComarca).length} municipios · Insignia de comarca conseguida</small></div>`:''}<p><strong>${origin?'Carta de origen · gratuita':review?'3 de 3 respuestas correctas':'Nuevas fronteras desbloqueadas'}</strong></p>${origin?`<button class="secondary" data-action="review" data-id="${id}">Conocer mi municipio</button>`:''}<button class="primary" data-action="success-map">${origin?'Explorar mis alrededores':'Volver a mi mapa'} <span aria-hidden="true">→</span></button></div>`);
 }
 function settings(){
-  openDialog(`<div class="dialog-inner"><p class="eyebrow">Modo de prueba</p><h2 id="dialog-title">Explora sin límite diario.</h2><p>El límite de tres descubrimientos está pausado. Puedes recorrer los ${eligible.size} municipios de Bajo Aragón, Matarraña y Maestrazgo en una misma partida.</p><div class="separator"></div><p><strong>Tu progreso se guarda en este navegador.</strong></p><button class="text-button" data-action="ask-reset">Elegir otro origen y empezar desde cero</button></div>`);
+  openDialog(`<div class="dialog-inner"><p class="eyebrow">Tu aventura</p><h2 id="dialog-title">Explora a tu ritmo.</h2><p>Ahora puedes recorrer los ${eligible.size} municipios sin límite diario.</p><div class="separator"></div><p><strong>${practicePool(state).length} cartas guardadas en este navegador.</strong></p><button class="secondary" data-action="ask-new-expedition">↻ Nueva expedición</button><p class="subtle" style="margin-top:10px">Cambiarás de punto de partida y se reiniciará solo la ruta del mapa. Tu colección, comarcas completadas y cartas se conservarán.</p><button class="text-button danger-text" data-action="ask-reset-all">Borrar todo mi progreso</button></div>`);
 }
 async function sources(){
   openDialog(`<div class="dialog-inner"><p class="eyebrow">Datos y símbolos reales</p><h2 id="dialog-title">Fuentes y créditos.</h2><div class="source-list"><p>Mapa municipal: <a href="https://icearagon.aragon.es/portal/wfs.jsp" target="_blank" rel="noopener noreferrer">IGEAR · Gobierno de Aragón</a>. Consulta del 15 de octubre de 2026. Geometrías simplificadas para el juego; las vecindades se calculan con los límites originales.</p><h3>Datos de tus municipios</h3><p>Las fuentes de cada nuevo destino aparecen al descubrirlo.</p><ul>${Object.entries(content).filter(([id])=>owned(id)||session?.id===id).map(([id,p])=>`<li><strong>${esc(p.name)}</strong><br>${[...new Set([...(p.sources||[]),p.areaSource,p.populationSource,p.singularitySource,p.festivalSource,p.localHolidaysSource,p.symbolStatusSource].filter(Boolean))].map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(new URL(url).hostname.replace('www.',''))}</a>`).join(' · ')}</li>`).join('')}</ul><h3>Banderas y escudos</h3><div id="asset-credits">Cargando atribuciones…</div></div></div>`);
@@ -238,18 +271,27 @@ document.addEventListener('click',event=>{
   else if(action==='success-map'){closeDialog();selected=null;showPage('map');showZone();renderAll();}
   else if(action==='close')closeDialog();
   else if(action==='collection')showPage('collection');
+  else if(action==='filter-all'){collectionFilter='all';renderCollection();}
+  else if(action==='filter-favorites'){collectionFilter='favorites';renderCollection();}
+  else if(action==='toggle-favorite'){if(state.favorites?.[id])delete state.favorites[id];else{state.favorites=state.favorites||{};state.favorites[id]=true;}persist();renderCollection();}
+  else if(action==='practice-challenge')startPracticeChallenge();
+  else if(action==='practice-answer')practiceAnswer(Number(button.dataset.option));
+  else if(action==='practice-next')practiceNext();
   else if(action==='map'){showPage('map');selected=null;renderStart();renderMap();}
   else if(action==='locate'){if(dialog.open)closeDialog();selected=id;showPage('map');renderMap();setView(fitIds([id,...municipalities.get(id).neighbors],.1));if(window.innerWidth<700)map.scrollIntoView({behavior:'smooth',block:'center'});}
   else if(action==='view-card')openDialog(`<div class="dialog-inner card-dialog"><p class="eyebrow">Tu colección</p><h2 id="dialog-title">Un lugar descubierto.</h2>${card(id)}${miniMap(id)}<div class="button-row"><button class="secondary" data-action="locate" data-id="${id}">Ver en el mapa</button><button class="primary" data-action="review" data-id="${id}">Repasar</button></div></div>`);
   else if(action==='sources')sources();
-  else if(action==='ask-reset')openDialog(`<div class="dialog-inner"><h2 id="dialog-title">¿Volvemos al principio?</h2><p>Se borrará únicamente el progreso de esta prueba en este navegador. Podrás elegir otro municipio de origen.</p><div class="button-row"><button class="secondary" data-action="settings">Conservar mi progreso</button><button class="primary" data-action="reset">Empezar desde cero</button></div></div>`);
+  else if(action==='ask-new-expedition')openDialog(`<div class="dialog-inner"><p class="eyebrow">Nueva expedición</p><h2 id="dialog-title">¿Quieres cambiar de punto de partida?</h2><p>Se cerrará la ruta actual y volverás al buscador. <strong>Tus ${practicePool(state).length} cartas y todos tus logros se conservarán.</strong></p><div class="button-row"><button class="secondary" data-action="settings">Seguir aquí</button><button class="primary" data-action="new-expedition">Elegir otro territorio</button></div></div>`);
+  else if(action==='new-expedition'){state=startNewExpedition(state);selected=null;session=null;$('#onboarding').innerHTML='';persist();closeDialog();showPage('map');setView(geography.bounds);renderAll();toast('Tu colección sigue guardada. Elige el origen de tu nueva expedición.');}
+  else if(action==='ask-reset-all')openDialog(`<div class="dialog-inner"><p class="eyebrow">Borrar progreso</p><h2 id="dialog-title">¿Borrar toda tu colección?</h2><p>Esto sí eliminará tus cartas, comarcas completadas y la expedición actual de este navegador. No se puede deshacer.</p><div class="button-row"><button class="secondary" data-action="settings">Cancelar</button><button class="primary danger-button" data-action="reset-all">Borrar todo</button></div></div>`);
   else if(action==='settings')settings();
-  else if(action==='reset'){state=freshState();selected=null;$('#onboarding').innerHTML='';persist();closeDialog();showPage('map');setView(geography.bounds);renderAll();toast('Todo listo para una nueva aventura.');}
+  else if(action==='reset-all'){state=clearAllProgress();selected=null;session=null;$('#onboarding').innerHTML='';persist();closeDialog();showPage('map');setView(geography.bounds);renderAll();toast('Progreso borrado. Puedes empezar una aventura nueva.');}
 });
 document.addEventListener('input',event=>{if(event.target.id==='municipality-search')$('#origin-list').innerHTML=originList(event.target.value);});
 $('#nav-map').addEventListener('click',()=>state&&showPage('map'));
 $('#nav-cards').addEventListener('click',()=>state&&showPage('collection'));
 $('#settings').addEventListener('click',()=>state&&settings());
+$('#new-expedition').addEventListener('click',()=>state&&state.originId&&openDialog(`<div class="dialog-inner"><p class="eyebrow">Nueva expedición</p><h2 id="dialog-title">¿Quieres cambiar de punto de partida?</h2><p>Se cerrará la ruta actual y volverás al buscador. <strong>Tus ${practicePool(state).length} cartas y todos tus logros se conservarán.</strong></p><div class="button-row"><button class="secondary" data-action="close">Seguir aquí</button><button class="primary" data-action="new-expedition">Elegir otro territorio</button></div></div>`));
 $('#sources').addEventListener('click',()=>content&&sources());
 $('#close-dialog').addEventListener('click',closeDialog);
 dialog.addEventListener('cancel',event=>{event.preventDefault();closeDialog();});
