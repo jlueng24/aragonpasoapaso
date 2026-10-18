@@ -8,7 +8,7 @@ let geography, content, municipalities, eligible, state, selected = null, viewpo
 let toastTimer, tipTimer, storageWarning = false, dragging = false, pointer = null;
 const map = $('#map'), dialog = $('#dialog');
 
-const BUILD_VERSION='20261017-2';
+const BUILD_VERSION='20261018-4';
 async function loadJson(path){const sep=path.includes('?')?'&':'?';const response=await fetch(`${path}${sep}v=${BUILD_VERSION}`,{cache:'no-store'});if(!response.ok)throw new Error(`No se pudo cargar ${path}`);return response.json();}
 function assetSrc(p,type){return p?.[type+'Data']||p?.[type]||'';}
 function place(id){ return {...municipalities.get(id),...content[id]}; }
@@ -19,6 +19,17 @@ function remaining(){return DAILY_LIMIT_ENABLED?Math.max(0,state.limit-dailyUsag
 function owned(id){return !!state.discovered[id];}
 function frontier(){return availableNeighbors(state,municipalities,eligible);}
 function status(id){return owned(id)?'discovered':(!state.originId||frontier().includes(id))?'available':'locked';}
+
+const FEATURED_COMARCAS=['Bajo Aragón','Matarraña / Matarranya','Maestrazgo'];
+const COMARCA_CLASS={
+  'Bajo Aragón':'bajo-aragon',
+  'Matarraña / Matarranya':'matarrana',
+  'Maestrazgo':'maestrazgo'
+};
+function comarcaIds(name){return [...eligible].filter(id=>place(id).comarca===name);}
+function comarcaComplete(name){const ids=comarcaIds(name);return ids.length>0&&ids.every(owned);}
+function provinceComplete(name){const ids=geography.municipalities.filter(m=>m.province===name).map(m=>m.id);return ids.length>0&&ids.every(id=>eligible.has(id)&&owned(id));}
+function completedComarcaFor(id){const name=place(id).comarca;return FEATURED_COMARCAS.includes(name)&&comarcaComplete(name)?name:null;}
 
 function setView(box){viewport=[...box];map.setAttribute('viewBox',viewport.join(' '));renderPins();}
 function fitIds(ids,padding=.28){
@@ -33,16 +44,24 @@ function fitIds(ids,padding=.28){
 function showZone(){setView(fitIds(state.originId?[...practicePool(state),...frontier()]:[...eligible],.24));}
 function zoom(factor){const [x,y,w,h]=viewport;const nw=Math.max(35,Math.min(1900,w*factor)),nh=h*(nw/w);setView([x+(w-nw)/2,y+(h-nh)/2,nw,nh]);}
 function buildMap(){
-  $('#terrain').innerHTML=geography.municipalities.map(m=>`<path class="municipality" data-id="${m.id}" d="${m.path}"><title>Municipio por descubrir</title></path>`).join('');
-  $('#province-lines').innerHTML=geography.provinces.map(p=>`<path class="province-line" d="${p.path}"></path><text class="province-name" x="${p.point[0]}" y="${p.point[1]}">${esc(p.name)}</text>`).join('');
+  const defs=`<defs>
+    <linearGradient id="gradient-bajo-aragon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e8f82"/><stop offset="1" stop-color="#e2b542"/></linearGradient>
+    <linearGradient id="gradient-matarrana" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8f3345"/><stop offset="1" stop-color="#d7a94a"/></linearGradient>
+    <linearGradient id="gradient-maestrazgo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#477a4f"/><stop offset="1" stop-color="#b96f3e"/></linearGradient>
+  </defs>`;
+  $('#terrain').innerHTML=defs+geography.municipalities.map(m=>`<path class="municipality" data-id="${m.id}" data-comarca="${esc(m.comarca)}" d="${m.path}"><title>Municipio por descubrir</title></path>`).join('');
+  $('#province-lines').innerHTML=geography.provinces.map(p=>`<path class="province-line" data-province="${esc(p.name)}" d="${p.path}"></path><text class="province-name" x="${p.point[0]}" y="${p.point[1]}">${esc(p.name)}</text>`).join('');
 }
 function renderMap(){
   const open=new Set(frontier());
-  for(const path of $('#terrain').children){
+  const terrain=$('#terrain'),paths=terrain.querySelectorAll?[...terrain.querySelectorAll('.municipality')]:[...terrain.children].filter(path=>path.dataset?.id);
+  for(const path of paths){
     const id=path.dataset.id,known=owned(id),ready=eligible.has(id)&&(!state.originId||open.has(id));
-    path.setAttribute('class',['municipality',eligible.has(id)?'pilot':'',known?'discovered':ready?'available':'locked',selected===id?'selected':''].filter(Boolean).join(' '));
+    const comarca=municipalities.get(id)?.comarca,completed=known&&FEATURED_COMARCAS.includes(comarca)&&comarcaComplete(comarca);
+    path.setAttribute('class',['municipality',eligible.has(id)?'pilot':'',known?'discovered':ready?'available':'locked',selected===id?'selected':'',completed?'comarca-complete':'',completed?'comarca-'+COMARCA_CLASS[comarca]:''].filter(Boolean).join(' '));
     path.querySelector('title').textContent=known?place(id).name:ready?'Municipio disponible para descubrir':'Territorio todavía sin explorar';
   }
+  document.querySelectorAll('.province-line').forEach(path=>path.classList.toggle('province-complete',provinceComplete(path.dataset.province)));
   renderPins();
   $('#daily-badge').textContent=`${practicePool(state).length} / ${eligible.size} descubiertos · Sin límite diario`;
   $('#collection-count').textContent=practicePool(state).length;
@@ -53,7 +72,8 @@ function silhouette(id,cls='silhouette'){
  return `<svg class="${cls}" viewBox="${b[0]-pad} ${b[1]-pad} ${b[2]-b[0]+pad*2} ${b[3]-b[1]+pad*2}" aria-hidden="true"><path d="${p.path}"></path></svg>`;
 }
 function symbol(p,type,cls=''){
- const src=assetSrc(p,type);return src?`<img class="${cls}" src="${esc(src)}" alt="${type==='flag'?'Bandera':'Escudo'} de ${esc(p.name)}" loading="eager" decoding="async">`:`<span class="symbol-pending">${type==='flag'?'Bandera':'Escudo'}<small>Imagen pendiente de verificar</small></span>`;
+ const src=assetSrc(p,type),label=type==='flag'?'Bandera':'Escudo',status=p?.[type+'Status']||`No consta una imagen de ${label.toLowerCase()} suficientemente verificada para incorporarla al juego.`;
+ return src?`<img class="${cls}" src="${esc(src)}" alt="${label} de ${esc(p.name)}" loading="eager" decoding="async">`:`<span class="symbol-pending ${esc(cls)}"><b>${label}</b><small>${esc(status)}</small></span>`;
 }
 function number(value,digits=0){return Number.isFinite(value)?new Intl.NumberFormat('es-ES',{maximumFractionDigits:digits}).format(value):'—';}
 function factLink(url,label='Ver fuente'){return url?`<a class="fact-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`:'';}
@@ -78,7 +98,7 @@ function renderPins(){
 
 function selectPlace(id){
   if(!state.originId)return;
-  if(!eligible.has(id)){tip('Por ahora puedes explorar Bajo Aragón y Matarraña. Ampliaremos el resto de Aragón más adelante.');return;}
+  if(!eligible.has(id)){tip('Por ahora puedes explorar Bajo Aragón, Matarraña y Maestrazgo. Ampliaremos el resto de Aragón más adelante.');return;}
   if(!owned(id)&&!frontier().includes(id)){tip('Descubre un municipio que comparta frontera con este para abrir una nueva ruta.');return;}
   selected=id;showPage('map');renderMap();
   if(owned(id)){
@@ -90,7 +110,7 @@ function selectPlace(id){
 
 function card(id,origin=state.originId===id){
   const p=place(id);
-  return `<article class="card"><div class="card-face">${symbol(p,'flag','flag')}<div class="shield-stamp">${symbol(p,'shield')}</div></div><div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.comarca)} · ${esc(p.province)}</div><div class="card-geography">${silhouette(id)}<span><strong>${number(p.areaKm2,2)} km²</strong><small>Superficie municipal</small></span></div><div class="card-population"><strong>${number(p.population)}</strong> habitantes <span>· ${esc(p.populationYear||'Año pendiente')}</span></div><hr class="card-rule"><div class="patron-label">Patrón / patrona</div><div class="patron-name">${esc(p.patron||'Pendiente de contrastar')}</div><div class="patron-date">${esc(p.festivalLabel||'Celebración local')}<br>${esc(p.festival||'Fecha pendiente de contrastar')}</div>${p.singularity?`<div class="card-story"><span>Un detalle para recordar</span><p>${esc(typeof p.singularity==='string'?p.singularity:p.singularity.text)}</p></div>`:''}${origin?'<span class="origin-tag">Aquí empezó tu aventura</span>':''}</div></article>`;
+  return `<article class="card"><div class="card-face">${symbol(p,'flag','flag')}<div class="shield-stamp">${symbol(p,'shield')}</div></div><div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.comarca)} · ${esc(p.province)}</div><div class="card-geography">${silhouette(id)}<span><strong>${number(p.areaKm2,2)} km²</strong><small>Superficie municipal</small></span></div><div class="card-population"><strong>${number(p.population)}</strong> habitantes <span>· ${esc(p.populationYear||'Año pendiente')}</span></div><hr class="card-rule"><div class="patron-label">Fiestas y tradiciones</div><div class="patron-name">${esc(p.patron||'Celebración local documentada')}</div><div class="patron-date">${esc(p.festivalLabel||'Fiesta local')}<br>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</div>${p.singularity?`<div class="card-story"><span>Un detalle para recordar</span><p>${esc(typeof p.singularity==='string'?p.singularity:p.singularity.text)}</p></div>`:''}${origin?'<span class="origin-tag">Aquí empezó tu aventura</span>':''}</div></article>`;
 }
 
 function renderStart(){
@@ -99,17 +119,17 @@ function renderStart(){
   if(state.originId)return;
   // Keep the search field and caret intact during background refreshes.
   if($('#municipality-search'))return;
-  start.innerHTML=`<div class="start-card"><p class="eyebrow">Bajo Aragón · Matarraña</p><h1>¿Dónde empezamos?</h1><p>Busca tu municipio de origen y descubre los pueblos que lo rodean.</p><label for="municipality-search" class="search-label">Tu punto de partida</label><div class="search-wrap"><span aria-hidden="true">⌕</span><input id="municipality-search" type="search" placeholder="Escribe un municipio…" autocomplete="off" aria-controls="origin-list"></div><div id="origin-list" class="origin-results" aria-live="polite">${originList('')}</div><p class="start-note">${eligible.size} municipios · Cada descubrimiento abre nuevas rutas.</p></div>`;
+  start.innerHTML=`<div class="start-card"><p class="eyebrow">Bajo Aragón · Matarraña · Maestrazgo</p><h1>¿Dónde empezamos?</h1><p>Busca tu municipio de origen y descubre los pueblos que lo rodean.</p><label for="municipality-search" class="search-label">Tu punto de partida</label><div class="search-wrap"><span aria-hidden="true">⌕</span><input id="municipality-search" type="search" placeholder="Escribe un municipio…" autocomplete="off" aria-controls="origin-list"></div><div id="origin-list" class="origin-results" aria-live="polite">${originList('')}</div><p class="start-note">${eligible.size} municipios · Cada descubrimiento abre nuevas rutas.</p></div>`;
 }
 function originList(query){
  const normalized=stripAccents(query.trim());
  if(!normalized)return '<p class="search-hint">Por ejemplo, La Ginebrosa, Alcorisa o Valderrobres.</p>';
  const ids=[...eligible].filter(id=>stripAccents(place(id).name).includes(normalized)).sort((a,b)=>place(a).name.localeCompare(place(b).name,'es'));
- return ids.length?ids.slice(0,8).map(id=>`<button class="origin-result" data-action="origin" data-id="${id}"><span><strong>${esc(place(id).name)}</strong><small>${esc(place(id).comarca)}</small></span><span aria-hidden="true">→</span></button>`).join('')+(ids.length>8?'<p class="search-hint">Escribe alguna letra más para afinar la búsqueda.</p>':''):'<p class="search-hint">No encontramos ese municipio en Bajo Aragón o Matarraña.</p>';
+ return ids.length?ids.slice(0,8).map(id=>`<button class="origin-result" data-action="origin" data-id="${id}"><span><strong>${esc(place(id).name)}</strong><small>${esc(place(id).comarca)}</small></span><span aria-hidden="true">→</span></button>`).join('')+(ids.length>8?'<p class="search-hint">Escribe alguna letra más para afinar la búsqueda.</p>':''):'<p class="search-hint">No encontramos ese municipio en Bajo Aragón, Matarraña o Maestrazgo.</p>';
 }
 function renderCollection(){
   const ids=practicePool(state).sort((a,b)=>place(a).name.localeCompare(place(b).name,'es'));
-  $('#collection').innerHTML=`<p class="eyebrow">Tu colección</p><h1>Tus municipios.</h1><p class="collection-progress">${ids.length} de ${eligible.size} cartas de Bajo Aragón y Matarraña · ${ids.length} de 731 municipios de Aragón</p>${ids.length?`<div class="collection-grid">${ids.map(id=>`<button class="collection-item" data-action="view-card" data-id="${id}" aria-label="Abrir carta de ${esc(place(id).name)}">${card(id)}</button>`).join('')}</div><p class="subtle" style="margin-top:25px">Los futuros juegos de banderas utilizarán únicamente tus municipios descubiertos.</p>`:'<div class="empty"><span aria-hidden="true">✧</span><p class="intro">Toda colección empieza con un lugar.<br>Elige tu municipio y consigue tu primera carta.</p><button class="primary" data-action="map">Elegir mi punto de partida</button></div>'}`;
+  $('#collection').innerHTML=`<p class="eyebrow">Tu colección</p><h1>Tus municipios.</h1><p class="collection-progress">${ids.length} de ${eligible.size} cartas de Bajo Aragón, Matarraña y Maestrazgo · ${ids.length} de 731 municipios de Aragón</p>${ids.length?`<div class="collection-grid">${ids.map(id=>`<button class="collection-item" data-action="view-card" data-id="${id}" aria-label="Abrir carta de ${esc(place(id).name)}">${card(id)}</button>`).join('')}</div><p class="subtle" style="margin-top:25px">Los futuros juegos de banderas utilizarán únicamente tus municipios descubiertos.</p>`:'<div class="empty"><span aria-hidden="true">✧</span><p class="intro">Toda colección empieza con un lugar.<br>Elige tu municipio y consigue tu primera carta.</p><button class="primary" data-action="map">Elegir mi punto de partida</button></div>'}`;
 }
 function renderAll(){renderStart();renderMap();renderCollection();}
 function showPage(page){$('#explorer').hidden=page!=='map';$('#collection').hidden=page!=='collection';$('#nav-map').classList.toggle('active',page==='map');$('#nav-cards').classList.toggle('active',page==='collection');if(page==='collection')renderCollection();else requestAnimationFrame(renderPins);}
@@ -138,10 +158,10 @@ function renderLesson(){
     `${miniMap(session.id)}${stats}<div class="detail-pair"><span>${esc(p.comarca)}</span><span>${esc(p.province)}</span></div>${factLink(p.areaSource,'Cartografía y superficie · Gobierno de Aragón')}`,
     `<div class="lesson-visual">${symbol(p,'flag','lesson-flag')}${symbol(p,'shield','lesson-shield')}</div><div class="lesson-caption"><span>BANDERA</span><span>ESCUDO</span></div>`,
     `<div class="population-hero"><span>UN MUNICIPIO, MUCHAS HISTORIAS</span><strong>${number(p.population)}</strong><span>habitantes · ${esc(p.populationYear||'Año pendiente')}</span>${factLink(p.populationSource,p.populationSourceLabel||'Fuente de población')}</div>${p.singularity?`<div class="story-fact"><span>UN DETALLE PARA RECORDAR</span><p>${esc(typeof p.singularity==='string'?p.singularity:p.singularity.text)}</p>${factLink(p.singularitySource||p.singularity?.source)}</div>`:''}`,
-    `<div class="patron-visual"><span aria-hidden="true">✦</span><h3>${esc(p.patron||'Patronazgo pendiente de contrastar')}</h3><p>${esc(p.festivalLabel||'Celebración local')}<br><strong>${esc(p.festival||'Fecha pendiente de contrastar')}</strong></p></div>${factLink(p.festivalSource||p.sources?.[0],'Fuente de la celebración')}`
+    `<div class="patron-visual"><span class="festival-icon" aria-hidden="true">🎉</span><h3>${esc(p.patron||'Fiestas locales')}</h3><p>${esc(p.festivalLabel||'Celebración local')}<br><strong>${esc(p.festival||p.localHolidays||'Información festiva documentada')}</strong></p>${p.localHolidays&&p.festival!==p.localHolidays?`<div class="local-holidays"><span>Fiestas locales ${esc(p.localHolidaysYear||'')}</span><strong>${esc(p.localHolidays)}</strong></div>`:''}</div>${factLink(p.festivalSource||p.localHolidaysSource||p.sources?.[0],'Fuente de la celebración')}`
   ];
   const titles=['Aquí está '+p.name,'Sus símbolos','Conoce el pueblo','Su celebración'];
-  const text=['Fíjate en su forma y en el lugar que ocupa dentro de Aragón.',assetSrc(p,'flag')||assetSrc(p,'shield')?'Observa los símbolos que están documentados para este municipio.':'Todavía no hay símbolos municipales contrastados para mostrar. No usaremos imágenes inventadas.','Una cifra para situarte y un detalle para llevarte contigo.',p.patron||p.festival?'Conoce las celebraciones que hemos podido documentar.':'Seguimos contrastando las fiestas y el patronazgo de este municipio antes de mostrarlos como datos ciertos.'];
+  const text=['Fíjate en su forma y en el lugar que ocupa dentro de Aragón.',assetSrc(p,'flag')||assetSrc(p,'shield')?'Observa los símbolos oficiales documentados para este municipio.':'Aquí verás el estado oficial de sus símbolos. Si no constan en el registro del Gobierno de Aragón, lo indicamos expresamente.','Una cifra para situarte y un detalle para llevarte contigo.','Conoce una celebración documentada y, cuando están disponibles, sus fiestas locales oficiales.'];
   openDialog(`<div class="dialog-inner"><p class="eyebrow">${session.review?'Volver a conocer':'Conoce'} · ${esc(p.name)}</p><div class="lesson-step" aria-label="Paso ${step+1} de 4">${[0,1,2,3].map(i=>`<i class="${i<=step?'active':''}"></i>`).join('')}</div><h2 id="dialog-title">${esc(titles[step])}</h2><p>${esc(text[step])}</p>${visuals[step]}<div class="button-row">${step>0?'<button class="secondary" data-action="lesson-back">Atrás</button>':''}<button class="primary" data-action="lesson-next">${step===3?'Estoy listo para el reto':'Siguiente'} <span aria-hidden="true">→</span></button></div><p class="subtle" style="text-align:center">${step+1} / 4</p></div>`);
 }
 
@@ -185,17 +205,17 @@ function finishQuiz(){
   if(s.review){session=null;showSuccess(s.id,true,false);return;}
   const result=discover(state,s.id,municipalities,eligible,true);
   if(!result.ok){session=null;openDialog(`<div class="dialog-inner"><h2 id="dialog-title">Vuelve al mapa para continuar.</h2><p>${result.reason==='daily-limit'?'Has alcanzado el cupo de hoy. Puedes repasar tus cartas y volver a descubrir mañana.':'Este municipio ya no está disponible para este descubrimiento. Vuelve al mapa para continuar.'}</p><button class="primary" data-action="close">Volver al mapa</button></div>`);renderAll();return;}
-  state=result.state;persist();selected=s.id;session=null;renderAll();showSuccess(s.id,false,false);
+  state=result.state;persist();selected=s.id;session=null;renderAll();const completed=completedComarcaFor(s.id);showSuccess(s.id,false,false,completed);
 }
-function showSuccess(id,review,origin){
+function showSuccess(id,review,origin,completedComarca=null){
   const p=place(id);
-  openDialog(`<div class="dialog-inner success"><p class="success-tag">${origin?'AQUÍ EMPIEZA TU AVENTURA':review?'UN PUEBLO BIEN RECORDADO':'UN NUEVO LUGAR EN TU MAPA'}</p><div class="success-seal">${assetSrc(p,'shield')?symbol(p,'shield'):silhouette(id)}</div><h2 id="dialog-title">${esc(p.name)}</h2><p>${origin?'Tu primera carta ya es tuya. Desde aquí podrás explorar los municipios que comparten frontera con tu pueblo.':review?'Has repasado su identidad, su comarca y sus patronos. El repaso no consume descubrimientos.':'Has conseguido su carta y su territorio se ha iluminado. Tu recorrido por Aragón acaba de crecer.'}</p><p><strong>${origin?'Carta de origen · gratuita':review?'3 de 3 respuestas correctas':'Nuevas fronteras desbloqueadas'}</strong></p>${origin?`<button class="secondary" data-action="review" data-id="${id}">Conocer mi municipio</button>`:''}<button class="primary" data-action="success-map">${origin?'Explorar mis alrededores':'Volver a mi mapa'} <span aria-hidden="true">→</span></button></div>`);
+  openDialog(`<div class="dialog-inner success"><p class="success-tag">${origin?'AQUÍ EMPIEZA TU AVENTURA':review?'UN PUEBLO BIEN RECORDADO':'UN NUEVO LUGAR EN TU MAPA'}</p><div class="success-seal">${assetSrc(p,'shield')?symbol(p,'shield'):silhouette(id)}</div><h2 id="dialog-title">${esc(p.name)}</h2><p>${origin?'Tu primera carta ya es tuya. Desde aquí podrás explorar los municipios que comparten frontera con tu pueblo.':review?'Has repasado su identidad, su comarca y sus patronos. El repaso no consume descubrimientos.':'Has conseguido su carta y su territorio se ha iluminado. Tu recorrido por Aragón acaba de crecer.'}</p>${completedComarca?`<div class="comarca-celebration"><span aria-hidden="true">🎊</span><strong>¡${esc(completedComarca)} completado!</strong><small>Todos sus municipios quedan unidos por el color de la comarca.</small></div>`:''}<p><strong>${origin?'Carta de origen · gratuita':review?'3 de 3 respuestas correctas':'Nuevas fronteras desbloqueadas'}</strong></p>${origin?`<button class="secondary" data-action="review" data-id="${id}">Conocer mi municipio</button>`:''}<button class="primary" data-action="success-map">${origin?'Explorar mis alrededores':'Volver a mi mapa'} <span aria-hidden="true">→</span></button></div>`);
 }
 function settings(){
-  openDialog(`<div class="dialog-inner"><p class="eyebrow">Modo de prueba</p><h2 id="dialog-title">Explora sin límite diario.</h2><p>El límite de tres descubrimientos está pausado. Puedes recorrer los ${eligible.size} municipios de Bajo Aragón y Matarraña en una misma partida.</p><div class="separator"></div><p><strong>Tu progreso se guarda en este navegador.</strong></p><button class="text-button" data-action="ask-reset">Elegir otro origen y empezar desde cero</button></div>`);
+  openDialog(`<div class="dialog-inner"><p class="eyebrow">Modo de prueba</p><h2 id="dialog-title">Explora sin límite diario.</h2><p>El límite de tres descubrimientos está pausado. Puedes recorrer los ${eligible.size} municipios de Bajo Aragón, Matarraña y Maestrazgo en una misma partida.</p><div class="separator"></div><p><strong>Tu progreso se guarda en este navegador.</strong></p><button class="text-button" data-action="ask-reset">Elegir otro origen y empezar desde cero</button></div>`);
 }
 async function sources(){
-  openDialog(`<div class="dialog-inner"><p class="eyebrow">Datos y símbolos reales</p><h2 id="dialog-title">Fuentes y créditos.</h2><div class="source-list"><p>Mapa municipal: <a href="https://icearagon.aragon.es/portal/wfs.jsp" target="_blank" rel="noopener noreferrer">IGEAR · Gobierno de Aragón</a>. Consulta del 15 de octubre de 2026. Geometrías simplificadas para el juego; las vecindades se calculan con los límites originales.</p><h3>Datos de tus municipios</h3><p>Las fuentes de cada nuevo destino aparecen al descubrirlo.</p><ul>${Object.entries(content).filter(([id])=>owned(id)||session?.id===id).map(([id,p])=>`<li><strong>${esc(p.name)}</strong><br>${[...new Set([...(p.sources||[]),p.areaSource,p.populationSource,p.singularitySource].filter(Boolean))].map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(new URL(url).hostname.replace('www.',''))}</a>`).join(' · ')}</li>`).join('')}</ul><h3>Banderas y escudos</h3><div id="asset-credits">Cargando atribuciones…</div></div></div>`);
+  openDialog(`<div class="dialog-inner"><p class="eyebrow">Datos y símbolos reales</p><h2 id="dialog-title">Fuentes y créditos.</h2><div class="source-list"><p>Mapa municipal: <a href="https://icearagon.aragon.es/portal/wfs.jsp" target="_blank" rel="noopener noreferrer">IGEAR · Gobierno de Aragón</a>. Consulta del 15 de octubre de 2026. Geometrías simplificadas para el juego; las vecindades se calculan con los límites originales.</p><h3>Datos de tus municipios</h3><p>Las fuentes de cada nuevo destino aparecen al descubrirlo.</p><ul>${Object.entries(content).filter(([id])=>owned(id)||session?.id===id).map(([id,p])=>`<li><strong>${esc(p.name)}</strong><br>${[...new Set([...(p.sources||[]),p.areaSource,p.populationSource,p.singularitySource,p.festivalSource,p.localHolidaysSource,p.symbolStatusSource].filter(Boolean))].map((url,i)=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(new URL(url).hostname.replace('www.',''))}</a>`).join(' · ')}</li>`).join('')}</ul><h3>Banderas y escudos</h3><div id="asset-credits">Cargando atribuciones…</div></div></div>`);
   try{const credits=await loadJson('credits.json');if($('#asset-credits'))$('#asset-credits').innerHTML=credits.filter(c=>c.localFile==='assets/aragon-shield.png'||Object.keys(content).some(id=>(owned(id)||session?.id===id)&&[content[id].flag,content[id].shield].includes(c.localFile))).map(c=>`<p><a href="${esc(c.source)}" target="_blank" rel="noopener noreferrer"><strong>${esc(c.name)}</strong></a><br>${esc(c.author||'Autoría indicada en la fuente')} · <a href="${esc(c.licenseUrl)}" target="_blank" rel="noopener noreferrer">${esc(c.license)}</a><br>${esc(c.changes)}</p>`).join('');}catch{if($('#asset-credits'))$('#asset-credits').textContent='No se pudieron cargar las atribuciones. Vuelve a intentarlo.';}
 }
 
@@ -268,7 +288,7 @@ try{
   if(invalid.length)throw new Error(`Datos incompletos en ${invalid.map(([id])=>id).join(', ')}`);
   municipalities=new Map(geography.municipalities.map(m=>[m.id,m]));eligible=new Set(Object.keys(content));
   state=freshState();try{state=normalizeState(JSON.parse(localStorage.getItem(STORAGE_KEY)),municipalities,eligible);}catch{}
-  $('#pilot-count').textContent=`Bajo Aragón y Matarraña · ${eligible.size} municipios`;
+  $('#pilot-count').textContent=`Bajo Aragón · Matarraña · Maestrazgo · ${eligible.size} municipios`;
   buildMap();setView(state.originId?fitIds([...practicePool(state),...frontier()],.24):geography.bounds);renderAll();
   // Refresh the visible cup when the Madrid calendar day changes, including idle tabs.
   let observedDay=dayKey();setInterval(()=>{const today=dayKey();if(today!==observedDay){observedDay=today;renderAll();}},30000);
