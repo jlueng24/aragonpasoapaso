@@ -1,4 +1,4 @@
-import {STORAGE_KEY, DAILY_LIMIT_ENABLED, freshState, normalizeState, dailyUsage, dayKey, availableNeighbors, chooseOrigin, discover, practicePool, expeditionPool, startNewExpedition, clearAllProgress} from './game.mjs';
+import {STORAGE_KEY, DAILY_LIMIT_ENABLED, BASE_EDITION, editionKey, freshState, normalizeState, dailyUsage, dayKey, availableNeighbors, chooseOrigin, discover, practicePool, expeditionPool, startNewExpedition, clearAllProgress} from './game.mjs';
 
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -8,7 +8,7 @@ let geography, content, municipalities, eligible, state, selected = null, viewpo
 let toastTimer, tipTimer, storageWarning = false, dragging = false, pointer = null, collectionFilter = 'all';
 const map = $('#map'), dialog = $('#dialog');
 
-const BUILD_VERSION='20261018-6';
+const BUILD_VERSION='20261019-1';
 async function loadJson(path){const sep=path.includes('?')?'&':'?';const response=await fetch(`${path}${sep}v=${BUILD_VERSION}`,{cache:'no-store'});if(!response.ok)throw new Error(`No se pudo cargar ${path}`);return response.json();}
 function assetSrc(p,type){return p?.[type+'Data']||p?.[type]||'';}
 function place(id){ return {...municipalities.get(id),...content[id]}; }
@@ -21,6 +21,29 @@ function inExpedition(id){return !!state.discovered[id];}
 function frontier(){return availableNeighbors(state,municipalities,eligible);}
 function status(id){return owned(id)?'discovered':(!state.originId||frontier().includes(id))?'available':'locked';}
 
+const CARD_EDITIONS={
+  base:{id:'base',label:'Edición genérica',shortLabel:'Genérica',style:'generic',alwaysAvailable:true},
+  templar:{id:'templar',label:'Edición Templaria',shortLabel:'Templaria',style:'templar',alwaysAvailable:false},
+  tambor:{id:'tambor',label:'Ruta del Tambor y del Bombo',shortLabel:'Tambor y Bombo',style:'tambor',alwaysAvailable:false}
+};
+// Prepared for future events. Both events are intentionally inactive: every municipality starts with its generic card.
+const SPECIAL_EVENTS={
+  templar:{id:'templar',name:'Huellas del Temple',active:false,edition:'templar',eligibleIds:['44071'],note:'Castellote verificado. Otros municipios se incorporarán solo tras verificación histórica.'},
+  tambor:{id:'tambor',name:'Ruta del Tambor y del Bombo',active:false,edition:'tambor',eligibleIds:['44013','44014','44051'],note:'Dentro del ámbito jugable actual: Alcañiz, Alcorisa y Calanda. La Ruta oficial reúne nueve municipios.'}
+};
+function editionOwned(id,edition=BASE_EDITION){return edition===BASE_EDITION?owned(id):!!state.unlockedEditions?.[editionKey(id,edition)];}
+function editionFavorite(id,edition=BASE_EDITION){return !!state.favorites?.[editionKey(id,edition)];}
+function availableEditions(id){
+  const out=[CARD_EDITIONS.base];
+  for(const event of Object.values(SPECIAL_EVENTS)){
+    if(event.active&&event.eligibleIds.includes(id)&&editionOwned(id,event.edition))out.push(CARD_EDITIONS[event.edition]);
+  }
+  return out;
+}
+function specialEditionHints(id){
+  return Object.values(SPECIAL_EVENTS).filter(event=>event.eligibleIds.includes(id)).map(event=>({...CARD_EDITIONS[event.edition],event}));
+}
+
 const FEATURED_COMARCAS=['Bajo Aragón','Matarraña / Matarranya','Maestrazgo'];
 const COMARCA_CLASS={
   'Bajo Aragón':'bajo-aragon',
@@ -32,6 +55,20 @@ function comarcaProgress(name){const ids=comarcaIds(name),done=ids.filter(owned)
 function comarcaComplete(name){const p=comarcaProgress(name);return p.total>0&&p.done===p.total;}
 function provinceComplete(name){const ids=geography.municipalities.filter(m=>m.province===name).map(m=>m.id);return ids.length>0&&ids.every(id=>eligible.has(id)&&owned(id));}
 function completedComarcaFor(id){const name=place(id).comarca;return FEATURED_COMARCAS.includes(name)&&comarcaComplete(name)?name:null;}
+
+const ACHIEVEMENTS=[
+  {id:'first',icon:'🧭',title:'Primer paso',description:'Consigue tu primera carta.',test:()=>practicePool(state).length>=1},
+  {id:'ten',icon:'🗺️',title:'Explorador',description:'Descubre 10 municipios.',test:()=>practicePool(state).length>=10},
+  {id:'twentyfive',icon:'🥾',title:'Caminante de Aragón',description:'Descubre 25 municipios.',test:()=>practicePool(state).length>=25},
+  {id:'fifty',icon:'🏔️',title:'Gran explorador',description:'Descubre 50 municipios.',test:()=>practicePool(state).length>=50},
+  {id:'bajo',icon:'🏅',title:'Bajo Aragón completo',description:'Completa sus 20 municipios.',test:()=>comarcaComplete('Bajo Aragón')},
+  {id:'matarrana',icon:'🏅',title:'Matarraña completo',description:'Completa sus 18 municipios.',test:()=>comarcaComplete('Matarraña / Matarranya')},
+  {id:'maestrazgo',icon:'🏅',title:'Maestrazgo completo',description:'Completa sus 15 municipios.',test:()=>comarcaComplete('Maestrazgo')},
+  {id:'three',icon:'👑',title:'Tres comarcas',description:'Completa Bajo Aragón, Matarraña y Maestrazgo.',test:()=>FEATURED_COMARCAS.every(comarcaComplete)}
+];
+function achievementStatus(){return ACHIEVEMENTS.map(a=>({...a,unlocked:!!a.test()}));}
+function achievementHtml(){const list=achievementStatus(),unlocked=list.filter(a=>a.unlocked).length;return `<section class="achievements"><div class="achievements-head"><div><p class="eyebrow">Logros</p><h2>Tu camino por Aragón</h2></div><strong>${unlocked}/${list.length}</strong></div><div class="achievement-grid">${list.map(a=>`<article class="achievement ${a.unlocked?'unlocked':'locked'}"><span aria-hidden="true">${a.unlocked?a.icon:'◌'}</span><div><strong>${esc(a.title)}</strong><small>${esc(a.description)}</small></div></article>`).join('')}</div></section>`;}
+function mapComarcaStatus(){return FEATURED_COMARCAS.map(name=>{const p=comarcaProgress(name),left=p.total-p.done;return `<span class="map-comarca-pill comarca-${COMARCA_CLASS[name]} ${p.percent===100?'complete':''}"><b>${esc(name)}</b><i>${p.done}/${p.total}</i><small>${left===0?'completa':`faltan ${left}`}</small></span>`;}).join('');}
 
 function setView(box){viewport=[...box];map.setAttribute('viewBox',viewport.join(' '));renderPins();}
 function fitIds(ids,padding=.28){
@@ -60,12 +97,13 @@ function renderMap(){
   for(const path of paths){
     const id=path.dataset.id,known=inExpedition(id),ready=eligible.has(id)&&(!state.originId||open.has(id));
     const comarca=municipalities.get(id)?.comarca,completed=FEATURED_COMARCAS.includes(comarca)&&comarcaComplete(comarca);
-    path.setAttribute('class',['municipality',eligible.has(id)?'pilot':'',known?'discovered':ready?'available':'locked',selected===id?'selected':'',completed?'comarca-complete':'',completed?'comarca-'+COMARCA_CLASS[comarca]:''].filter(Boolean).join(' '));
+    path.setAttribute('class',['municipality',eligible.has(id)?'pilot':'',FEATURED_COMARCAS.includes(comarca)?'comarca-hint':'',FEATURED_COMARCAS.includes(comarca)?'comarca-'+COMARCA_CLASS[comarca]:'',known?'discovered':ready?'available':'locked',selected===id?'selected':'',completed?'comarca-complete':''].filter(Boolean).join(' '));
     path.querySelector('title').textContent=known?place(id).name:ready?'Municipio disponible para descubrir':'Territorio todavía sin explorar';
   }
   document.querySelectorAll('.province-line').forEach(path=>path.classList.toggle('province-complete',provinceComplete(path.dataset.province)));
   renderPins();
   $('#daily-badge').textContent=`${practicePool(state).length} / ${eligible.size} descubiertos · Sin límite diario`;
+  if($('#map-comarca-status'))$('#map-comarca-status').innerHTML=mapComarcaStatus();
   $('#collection-count').textContent=practicePool(state).length;
 }
 function destinationLabel(id){return `Destino ${String(frontier().indexOf(id)+1).padStart(2,'0')}`;}
@@ -110,9 +148,10 @@ function selectPlace(id){
   }
 }
 
-function card(id,origin=state.originId===id){
-  const p=place(id);
-  return `<article class="card"><div class="card-face">${symbol(p,'flag','flag')}<div class="shield-stamp">${symbol(p,'shield')}</div></div><div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.comarca)} · ${esc(p.province)}</div><div class="card-geography">${silhouette(id)}<span><strong>${number(p.areaKm2,2)} km²</strong><small>Superficie municipal</small></span></div><div class="card-population"><strong>${number(p.population)}</strong> habitantes <span>· ${esc(p.populationYear||'Año pendiente')}</span></div><hr class="card-rule"><div class="patron-label">Fiestas y tradiciones</div><div class="patron-name">${esc(p.patron||'Celebración local documentada')}</div><div class="patron-date">${esc(p.festivalLabel||'Fiesta local')}<br>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</div>${p.singularity?`<div class="card-story"><span>Un detalle para recordar</span><p>${esc(typeof p.singularity==='string'?p.singularity:p.singularity.text)}</p></div>`:''}${origin?'<span class="origin-tag">Aquí empezó tu aventura</span>':''}</div></article>`;
+function card(id,origin=state.originId===id,edition=BASE_EDITION){
+  const p=place(id),ed=CARD_EDITIONS[edition]||CARD_EDITIONS.base,fav=editionFavorite(id,edition);
+  const special=edition!==BASE_EDITION;
+  return `<article class="card card-edition-${esc(ed.style)}" data-edition="${esc(edition)}"><div class="card-face"><span class="edition-chip ${special?'special':''}">${esc(ed.shortLabel)}</span><button class="card-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} ${esc(p.name)} · ${esc(ed.shortLabel)} como favorita" title="Favorita">${fav?'★':'☆'}</button>${symbol(p,'flag','flag')}<div class="shield-stamp">${symbol(p,'shield')}</div></div><div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.comarca)} · ${esc(p.province)}</div><div class="card-geography">${silhouette(id)}<span><strong>${number(p.areaKm2,2)} km²</strong><small>Superficie municipal</small></span></div><div class="card-population"><strong>${number(p.population)}</strong> habitantes <span>· ${esc(p.populationYear||'Año pendiente')}</span></div><hr class="card-rule"><div class="patron-label">Fiestas y tradiciones</div><div class="patron-name">${esc(p.patron||'Celebración local documentada')}</div><div class="patron-date">${esc(p.festivalLabel||'Fiesta local')}<br>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</div>${p.singularity?`<div class="card-story"><span>Un detalle para recordar</span><p>${esc(typeof p.singularity==='string'?p.singularity:p.singularity.text)}</p></div>`:''}${origin?'<span class="origin-tag">Aquí empezó tu aventura</span>':''}</div></article>`;
 }
 
 function renderStart(){
@@ -131,13 +170,15 @@ function originList(query){
 }
 function renderCollection(){
   const all=practicePool(state).sort((a,b)=>place(a).name.localeCompare(place(b).name,'es'));
-  const favorites=all.filter(id=>state.favorites?.[id]);
-  const ids=collectionFilter==='favorites'?favorites:all;
+  const favoriteCards=[];
+  for(const id of all)for(const ed of availableEditions(id))if(editionFavorite(id,ed.id))favoriteCards.push({id,edition:ed.id});
+  const entries=collectionFilter==='favorites'?favoriteCards:all.map(id=>({id,edition:BASE_EDITION}));
   const progress=FEATURED_COMARCAS.map(comarcaProgress);
   const progressHtml=`<div class="comarca-progress-grid">${progress.map(p=>`<article class="comarca-progress-card ${p.percent===100?'complete':''}"><div><strong>${esc(p.name)}</strong><span>${p.done}/${p.total}</span></div><div class="progress-track"><i style="width:${p.percent}%"></i></div><small>${p.percent===100?'✓ Comarca completada':p.percent+'% descubierto'}</small></article>`).join('')}</div>`;
-  const controls=all.length?`<div class="collection-tools"><div class="collection-filters"><button class="filter-button ${collectionFilter==='all'?'active':''}" data-action="filter-all">Todas · ${all.length}</button><button class="filter-button ${collectionFilter==='favorites'?'active':''}" data-action="filter-favorites">★ Favoritas · ${favorites.length}</button></div><button class="primary review-challenge-button" data-action="practice-challenge" ${all.length<2?'disabled':''}>🧠 Reto de repaso</button></div>`:'';
-  const cards=ids.length?`<div class="collection-grid">${ids.map(id=>`<article class="collection-item-wrap"><button class="collection-item" data-action="view-card" data-id="${id}" aria-label="Abrir carta de ${esc(place(id).name)}">${card(id)}</button><button class="favorite-button ${state.favorites?.[id]?'active':''}" data-action="toggle-favorite" data-id="${id}" aria-label="${state.favorites?.[id]?'Quitar':'Añadir'} ${esc(place(id).name)} de favoritos" title="Favorito">★</button></article>`).join('')}</div>`:collectionFilter==='favorites'?'<div class="empty compact"><span aria-hidden="true">☆</span><p class="intro">Todavía no has marcado ningún municipio como favorito.</p></div>':'';
-  $('#collection').innerHTML=`<p class="eyebrow">Tu colección</p><h1>Tus municipios.</h1><p class="collection-progress">${all.length} de ${eligible.size} cartas de Bajo Aragón, Matarraña y Maestrazgo · ${all.length} de 731 municipios de Aragón</p>${progressHtml}${controls}${all.length?`${cards}<p class="subtle" style="margin-top:25px">Marca con ★ tus lugares preferidos o entra en el reto para comprobar cuánto recuerdas.</p>`:'<div class="empty"><span aria-hidden="true">✧</span><p class="intro">Toda colección empieza con un lugar.<br>Elige tu municipio y consigue tu primera carta.</p><button class="primary" data-action="map">Elegir mi punto de partida</button></div>'}`;
+  const controls=all.length?`<div class="collection-tools"><div class="collection-filters"><button class="filter-button ${collectionFilter==='all'?'active':''}" data-action="filter-all">Genéricas · ${all.length}</button><button class="filter-button ${collectionFilter==='favorites'?'active':''}" data-action="filter-favorites">★ Favoritas · ${favoriteCards.length}</button></div><button class="primary review-challenge-button" data-action="practice-challenge" ${all.length<2?'disabled':''}>🧠 Reto de repaso</button></div>`:'';
+  const cards=entries.length?`<div class="collection-grid">${entries.map(({id,edition})=>`<article class="collection-item-wrap">${card(id,false,edition)}<button class="collection-open" data-action="view-card" data-id="${id}" data-edition="${edition}" aria-label="Abrir carta ${esc(CARD_EDITIONS[edition].shortLabel)} de ${esc(place(id).name)}">Abrir carta</button></article>`).join('')}</div>`:collectionFilter==='favorites'?'<div class="empty compact"><span aria-hidden="true">☆</span><p class="intro">Todavía no has marcado ninguna edición de carta como favorita.</p></div>':'';
+  const dormant=Object.values(SPECIAL_EVENTS).map(e=>`<article class="event-preview locked"><span>🔒</span><div><strong>${esc(e.name)}</strong><small>Evento preparado · todavía no activo</small></div></article>`).join('');
+  $('#collection').innerHTML=`<p class="eyebrow">Tu colección</p><h1>Tus municipios.</h1><p class="collection-progress">${all.length} de ${eligible.size} cartas genéricas · ${all.length} de 731 municipios de Aragón</p>${progressHtml}${achievementHtml()}${controls}${all.length?`${cards}<section class="future-editions"><p class="eyebrow">Ediciones especiales</p><h2>Eventos preparados</h2><p class="subtle">Las cartas especiales serán ediciones adicionales. No sustituyen a tu carta genérica y ahora mismo permanecen bloqueadas.</p><div class="event-preview-grid">${dormant}</div></section><p class="subtle" style="margin-top:25px">Cada edición tiene su propio ☆/★. Las cartas especiales aparecerán aquí cuando un evento las desbloquee.</p>`:'<div class="empty"><span aria-hidden="true">✧</span><p class="intro">Toda colección empieza con un lugar.<br>Elige tu municipio y consigue tu primera carta.</p><button class="primary" data-action="map">Elegir mi punto de partida</button></div>'}`;
 }
 function renderAll(){renderStart();renderMap();renderCollection();}
 function showPage(page){$('#explorer').hidden=page!=='map';$('#collection').hidden=page!=='collection';$('#nav-map').classList.toggle('active',page==='map');$('#nav-cards').classList.toggle('active',page==='collection');if(page==='collection')renderCollection();else requestAnimationFrame(renderPins);}
@@ -273,13 +314,13 @@ document.addEventListener('click',event=>{
   else if(action==='collection')showPage('collection');
   else if(action==='filter-all'){collectionFilter='all';renderCollection();}
   else if(action==='filter-favorites'){collectionFilter='favorites';renderCollection();}
-  else if(action==='toggle-favorite'){if(state.favorites?.[id])delete state.favorites[id];else{state.favorites=state.favorites||{};state.favorites[id]=true;}persist();renderCollection();}
+  else if(action==='toggle-favorite'||action==='toggle-edition-favorite'){const edition=button.dataset.edition||BASE_EDITION,key=editionKey(id,edition);state.favorites=state.favorites||{};if(state.favorites[key])delete state.favorites[key];else state.favorites[key]=true;persist();if(dialog.open&&action==='toggle-edition-favorite'){button.classList.toggle('active',!!state.favorites[key]);button.textContent=state.favorites[key]?'★':'☆';button.setAttribute('aria-label',`${state.favorites[key]?'Quitar':'Marcar'} ${place(id).name} · ${CARD_EDITIONS[edition]?.shortLabel||'Genérica'} como favorita`);}renderCollection();}
   else if(action==='practice-challenge')startPracticeChallenge();
   else if(action==='practice-answer')practiceAnswer(Number(button.dataset.option));
   else if(action==='practice-next')practiceNext();
   else if(action==='map'){showPage('map');selected=null;renderStart();renderMap();}
   else if(action==='locate'){if(dialog.open)closeDialog();selected=id;showPage('map');renderMap();setView(fitIds([id,...municipalities.get(id).neighbors],.1));if(window.innerWidth<700)map.scrollIntoView({behavior:'smooth',block:'center'});}
-  else if(action==='view-card')openDialog(`<div class="dialog-inner card-dialog"><p class="eyebrow">Tu colección</p><h2 id="dialog-title">Un lugar descubierto.</h2>${card(id)}${miniMap(id)}<div class="button-row"><button class="secondary" data-action="locate" data-id="${id}">Ver en el mapa</button><button class="primary" data-action="review" data-id="${id}">Repasar</button></div></div>`);
+  else if(action==='view-card'){const edition=button.dataset.edition||BASE_EDITION;openDialog(`<div class="dialog-inner card-dialog"><p class="eyebrow">Tu colección · ${esc(CARD_EDITIONS[edition]?.label||'Edición genérica')}</p><h2 id="dialog-title">${esc(place(id).name)}</h2>${card(id,false,edition)}${specialEditionHints(id).length?`<div class="locked-editions"><strong>Ediciones especiales vinculadas</strong>${specialEditionHints(id).map(x=>`<span>🔒 ${esc(x.label)} · evento no activo</span>`).join('')}</div>`:''}${miniMap(id)}<div class="button-row"><button class="secondary" data-action="locate" data-id="${id}">Ver en el mapa</button><button class="primary" data-action="review" data-id="${id}">Repasar</button></div></div>`);}
   else if(action==='sources')sources();
   else if(action==='ask-new-expedition')openDialog(`<div class="dialog-inner"><p class="eyebrow">Nueva expedición</p><h2 id="dialog-title">¿Quieres cambiar de punto de partida?</h2><p>Se cerrará la ruta actual y volverás al buscador. <strong>Tus ${practicePool(state).length} cartas y todos tus logros se conservarán.</strong></p><div class="button-row"><button class="secondary" data-action="settings">Seguir aquí</button><button class="primary" data-action="new-expedition">Elegir otro territorio</button></div></div>`);
   else if(action==='new-expedition'){state=startNewExpedition(state);selected=null;session=null;$('#onboarding').innerHTML='';persist();closeDialog();showPage('map');setView(geography.bounds);renderAll();toast('Tu colección sigue guardada. Elige el origen de tu nueva expedición.');}
