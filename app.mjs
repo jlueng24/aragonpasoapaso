@@ -8,7 +8,7 @@ let geography, content, photoCatalog = {}, municipalities, eligible, state, sele
 let toastTimer, tipTimer, storageWarning = false, dragging = false, pointer = null, collectionFilter = 'all';
 const map = $('#map'), dialog = $('#dialog');
 
-const BUILD_VERSION='20261019-BA-PHOTO-2';
+const BUILD_VERSION='20261019-BA-CARD-3';
 async function loadJson(path){const sep=path.includes('?')?'&':'?';const response=await fetch(`${path}${sep}v=${BUILD_VERSION}`,{cache:'no-store'});if(!response.ok)throw new Error(`No se pudo cargar ${path}`);return response.json();}
 function assetSrc(p,type){return p?.[type+'Data']||p?.[type]||'';}
 function photoEntry(id){return photoCatalog?.[id]||null;}
@@ -148,7 +148,7 @@ function selectPlace(id){
   if(!inExpedition(id)&&!frontier().includes(id)){tip('Este municipio está en tu colección, pero no forma parte de la expedición actual. Puedes abrir su carta desde Mis cartas.');return;}
   selected=id;showPage('map');renderMap();
   if(inExpedition(id)){
-    openDialog(`<div class="dialog-inner card-dialog"><p class="eyebrow">Tu colección</p><h2 id="dialog-title">${esc(place(id).name)}</h2>${card(id)}<button class="primary" data-action="review" data-id="${id}">Repasar este municipio</button></div>`);
+    openDialog(`<div class="dialog-inner card-dialog"><p class="eyebrow" id="dialog-title">Tu colección · ${esc(place(id).name)}</p>${card(id)}<button class="primary" data-action="review" data-id="${id}">Repasar este municipio</button></div>`);
   }else{
     openDialog(`<div class="dialog-inner"><p class="eyebrow">${esc(destinationLabel(id))}</p><h2 id="dialog-title">Territorio por descubrir</h2><div class="mystery-outline">${silhouette(id)}</div><p>4 pantallas · 3 preguntas · 1 nueva carta</p><button class="primary" data-action="explore" data-id="${id}">Descubrir este municipio →</button></div>`);
   }
@@ -157,14 +157,35 @@ function selectPlace(id){
 function card(id,origin=state.originId===id,edition=BASE_EDITION){
   const p=place(id),ed=CARD_EDITIONS[edition]||CARD_EDITIONS.base,fav=editionFavorite(id,edition);
   const special=edition!==BASE_EDITION;
-  const photo=photoUrl(id),hasPhoto=!!photo&&p.comarca==='Bajo Aragón',singularity=singularityText(p);
+  const modernBase=edition===BASE_EDITION&&p.comarca==='Bajo Aragón';
+  const photo=photoUrl(id),photoInfo=photoEntry(id),singularity=singularityText(p);
   const editionChip=special?`<span class="edition-chip special">${esc(ed.shortLabel)}</span>`:'';
-  const hero = hasPhoto
-    ? `<div class="card-hero"><img class="card-photo" src="${esc(photo)}" alt="Fotografía real de ${esc(p.name)}" loading="lazy" decoding="async"><div class="card-hero-overlay"></div>${editionChip}<button class="card-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} ${esc(p.name)}${special?` · ${esc(ed.shortLabel)}`:''} como favorita" title="Favorita">${fav?'★':'☆'}</button><div class="card-top-meta"><span class="card-comarca-chip">${esc(p.comarca)}</span>${origin?'<span class="origin-tag hero-origin-tag">Aquí empezó tu aventura</span>':''}</div><div class="card-hero-text"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.province)}</div><div class="card-photo-credit">Foto real · ${esc(photoCredit(id))}</div></div></div>`
-    : `<div class="card-face">${editionChip}<button class="card-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} ${esc(p.name)}${special?` · ${esc(ed.shortLabel)}`:''} como favorita" title="Favorita">${fav?'★':'☆'}</button>${symbol(p,'flag','flag')}<div class="shield-stamp">${symbol(p,'shield')}</div></div>`;
-  return `<article class="card card-modern card-edition-${esc(ed.style)}" data-edition="${esc(edition)}">${hero}<div class="card-body modern"><div class="card-stats"><div class="card-stat"><strong>${number(p.population)}</strong><small>habitantes · ${esc(p.populationYear||'')}</small></div><div class="card-stat"><strong>${number(p.areaKm2,2)} km²</strong><small>superficie municipal</small></div></div><div class="card-symbol-row">${symbolMini(p,'shield')}${symbolMini(p,'flag')}</div><div class="card-section modern-section"><span class="section-title">Fiestas y tradiciones</span><strong>${esc(p.patron||'Celebración local documentada')}</strong><p>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</p></div>${singularity?`<div class="card-section modern-section story"><span class="section-title">Un detalle para recordar</span><p>${esc(excerpt(singularity,150))}</p></div>`:''}</div></article>`;
+  if(modernBase){
+    const heroPhoto=photo?`<img class="card-photo" src="${esc(photo)}" alt="Fotografía real de ${esc(p.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
+    const credit=photoInfo?`<a class="card-photo-credit" href="${esc(photoInfo.sourceUrl||'')}" target="_blank" rel="noopener noreferrer">Foto: ${esc(photoInfo.author||'autor indicado en la fuente')} · ${esc(photoInfo.license||'licencia indicada en la fuente')}</a>`:'';
+    return `<article class="card card-modern card-photo-model card-edition-${esc(ed.style)}" data-edition="${esc(edition)}">
+      <div class="card-hero">
+        <div class="card-photo-fallback">${silhouette(id,'card-hero-silhouette')}<span>${esc(p.name)}</span></div>
+        ${heroPhoto}
+        <div class="card-hero-overlay"></div>
+        ${editionChip}
+        <button class="card-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} ${esc(p.name)} como favorita" title="Favorita">${fav?'★':'☆'}</button>
+        <div class="card-top-meta"><span class="card-comarca-chip">${esc(p.comarca)}</span>${origin?'<span class="origin-tag hero-origin-tag">Aquí empezó tu aventura</span>':''}</div>
+        <div class="card-hero-text"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.province)}</div>${credit}</div>
+      </div>
+      <div class="card-body modern">
+        <div class="card-stats">
+          <div class="card-stat"><strong>${number(p.population)}</strong><small>habitantes · ${esc(p.populationYear||'')}</small></div>
+          <div class="card-stat"><strong>${number(p.areaKm2,2)} km²</strong><small>superficie municipal</small></div>
+        </div>
+        <div class="card-symbol-row">${symbolMini(p,'shield')}${symbolMini(p,'flag')}</div>
+        <div class="card-section modern-section"><span class="section-title">Fiestas y tradiciones</span><strong>${esc(p.patron||'Celebración local documentada')}</strong><p>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</p></div>
+        ${singularity?`<div class="card-section modern-section story"><span class="section-title">Un detalle para recordar</span><p>${esc(excerpt(singularity,150))}</p></div>`:''}
+      </div>
+    </article>`;
+  }
+  return `<article class="card card-edition-${esc(ed.style)}" data-edition="${esc(edition)}"><div class="card-face">${editionChip}<button class="card-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} ${esc(p.name)} como favorita" title="Favorita">${fav?'★':'☆'}</button>${symbol(p,'flag','flag')}<div class="shield-stamp">${symbol(p,'shield')}</div></div><div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.comarca)} · ${esc(p.province)}</div><div class="card-geography">${silhouette(id)}<span><strong>${number(p.areaKm2,2)} km²</strong><small>Superficie municipal</small></span></div><div class="card-population"><strong>${number(p.population)}</strong> habitantes <span>· ${esc(p.populationYear||'Año pendiente')}</span></div><hr class="card-rule"><div class="patron-label">Fiestas y tradiciones</div><div class="patron-name">${esc(p.patron||'Celebración local documentada')}</div><div class="patron-date">${esc(p.festivalLabel||'Fiesta local')}<br>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</div>${singularity?`<div class="card-story"><span>Un detalle para recordar</span><p>${esc(excerpt(singularity,150))}</p></div>`:''}${origin?'<span class="origin-tag">Aquí empezó tu aventura</span>':''}</div></article>`;
 }
-
 function renderStart(){
   const start=$('#onboarding');
   start.hidden=!!state.originId;$('#map-panel').hidden=!state.originId;$('#new-expedition').hidden=!state.originId;
