@@ -162,3 +162,14 @@
   .collection-grid .card-modern .card-stats{grid-template-columns:1fr}
   .collection-grid .card-modern .card-symbol-row{grid-template-columns:1fr 1fr}
 }
+
+
+/* 2026-10-19 BA-CARD-3 · robust photographic card */
+.card-photo-model .card-hero{position:relative;isolation:isolate;overflow:hidden;min-height:270px;background:linear-gradient(145deg,#dcecf4,#eef5f8)}
+.card-photo-model .card-photo-fallback{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(145deg,#d6e9ef,#edf4f7);color:#416477;font-weight:800}
+.card-photo-model .card-hero-silhouette{width:105px;height:115px;fill:#7faeb9;opacity:.55}
+.card-photo-model .card-photo-fallback span{font-size:13px;letter-spacing:.8px;text-transform:uppercase;opacity:.75}
+.card-photo-model .card-photo{z-index:1}.card-photo-model .card-hero-overlay{z-index:2}.card-photo-model .card-top-meta,.card-photo-model .card-hero-text,.card-photo-model .card-favorite,.card-photo-model .edition-chip{z-index:3}
+.card-photo-model .card-photo-credit{display:inline-block;margin-top:8px;color:rgba(255,255,255,.82);font-size:9px;text-decoration:none;line-height:1.35}.card-photo-model .card-photo-credit:hover{text-decoration:underline;color:#fff}
+.card-photo-model .card-symbol-row{margin-top:2px}.card-photo-model .modern-section strong{font-weight:800}.card-photo-model .story p{margin-top:0}
+.card-dialog>.card-photo-model{max-width:360px}.collection-grid .card-photo-model{height:100%}
