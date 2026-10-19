@@ -33,24 +33,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Clemente y San Sebastián",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44147",
-      "name": "Mazaleón",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Ayuntamiento de Mazaleón, comarca Matarraña, Teruel.jpg",
-      "subject": "Ayuntamiento de Mazaleón",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento_de_Mazale%C3%B3n,_comarca_Matarra%C3%B1a,_Teruel.jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44040": {
     "name": "Berge",
@@ -85,24 +68,7 @@
     "symbolVerifiedAt": "2026-10-18",
     "shield": null,
     "flag": null,
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44040",
-      "name": "Berge",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "44556 Berge, Teruel, Spain - panoramio.jpg",
-      "subject": "Vista de Berge",
-      "author": "jnerin",
-      "license": "CC BY-SA 3.0",
-      "dimensions": "1152×1728",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:44556_Berge,_Teruel,_Spain_-_panoramio.jpg",
-      "notes": "Vertical, útil para carta."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44051": {
     "name": "Calanda",
@@ -136,24 +102,7 @@
     "flag": null,
     "festivalSource": "https://visitbajoaragon.com/es/municipios/calanda",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44051",
-      "name": "Calanda",
-      "comarca": "Bajo Aragón",
-      "status": "provisional",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Calanda, Teruel, Aragón.jpg",
-      "subject": "Vista de Calanda",
-      "author": "Wikimedia Commons contributor",
-      "license": "Creative Commons (ver ficha Commons antes de descarga)",
-      "dimensions": "3008×2000",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calanda,_Teruel,_Arag%C3%B3n.jpg",
-      "notes": "Candidata real localizada; falta cerrar autor/licencia exactos antes de incorporarla físicamente."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44013": {
     "name": "Alcañiz",
@@ -188,24 +137,7 @@
     "shield": null,
     "flag": null,
     "patron": "Virgen de Pueyos y Santo Ángel Custodio",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44013",
-      "name": "Alcañiz",
-      "comarca": "Bajo Aragón",
-      "status": "provisional",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Alcañiz - panorámica 01.jpg",
-      "subject": "Panorámica de Alcañiz",
-      "author": "Zarateman",
-      "license": "CC0 1.0",
-      "dimensions": "2034×458",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alca%C3%B1iz_-_panor%C3%A1mica_01.jpg",
-      "notes": "Real y libre, pero demasiado panorámica para carta vertical; buscar sustituta 4:3 antes del diseño final."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44178": {
     "name": "Las Parras de Castellote",
@@ -240,24 +172,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44178",
-      "name": "Las Parras de Castellote",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Localidad de Las Parras de Castellote, Teruel.jpg",
-      "subject": "Vista de la localidad",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Localidad_de_Las_Parras_de_Castellote,_Teruel.jpg",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44061": {
     "name": "La Cañada de Verich",
@@ -292,24 +207,7 @@
     "flag": null,
     "festivalSource": "https://visitbajoaragon.com/es/municipios/la-canada-de-verich",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44061",
-      "name": "La Cañada de Verich",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Calle estrecha de la Cañada de Verich (Bajo Aragón).jpg",
-      "subject": "Panorámica urbana",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calle_estrecha_de_la_Ca%C3%B1ada_de_Verich_(Bajo_Arag%C3%B3n).jpg",
-      "notes": "La descripción de Commons identifica la vista urbana de La Cañada de Verich."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44241": {
     "name": "Valdealgorfa",
@@ -345,24 +243,7 @@
     "symbolVerifiedAt": "2026-10-18",
     "shield": null,
     "flag": null,
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44241",
-      "name": "Valdealgorfa",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Valdealgorfa, Teruel, Aragón.jpg",
-      "subject": "Vista de Valdealgorfa",
-      "author": "Willtron",
-      "license": "CC BY-SA 3.0",
-      "dimensions": "2792×1887",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valdealgorfa,_Teruel,_Arag%C3%B3n.jpg",
-      "notes": "Vista representativa."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44225": {
     "name": "Torre del Compte",
@@ -398,24 +279,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Bartolomé y San Ramón",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44225",
-      "name": "Torre del Compte",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Torre del Compte (Teruel, España).jpg",
-      "subject": "Vista de Torre del Compte",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Torre_del_Compte_(Teruel,_Espa%C3%B1a).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44068": {
     "name": "Castelserás",
@@ -450,24 +314,7 @@
     "symbolVerifiedAt": "2026-10-18",
     "shield": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Escudo_de_Castelser%C3%A1s.svg",
     "flag": null,
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44068",
-      "name": "Castelserás",
-      "comarca": "Bajo Aragón",
-      "status": "provisional",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Castelserás (21003570332).jpg",
-      "subject": "Castelserás y puente sobre el Guadalope",
-      "author": "Wikimedia/Flickr contributor",
-      "license": "Creative Commons (ver ficha Commons antes de descarga)",
-      "dimensions": "3888×2592",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Castelser%C3%A1s_(21003570332).jpg",
-      "notes": "Muy representativa; cerrar atribución exacta al descargar."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44245": {
     "name": "Valdeltormo",
@@ -503,24 +350,7 @@
     "shield": null,
     "flag": null,
     "patron": "Virgen de la Asunción y San Roque",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44245",
-      "name": "Valdeltormo",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Ayuntamiento de Valdeltormo (Teruel).jpg",
-      "subject": "Ayuntamiento y entorno",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento_de_Valdeltormo_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44107": {
     "name": "Foz-Calanda",
@@ -556,24 +386,7 @@
     "flagStatus": "Bandera oficial verificado en el registro de símbolos locales del Gobierno de Aragón.",
     "festivalSource": "https://visitbajoaragon.com/es/municipios/foz-calanda",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44107",
-      "name": "Foz-Calanda",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Ayuntamiento del municipio de Foz-Calanda (Teruel).jpg",
-      "subject": "Ayuntamiento y entorno urbano",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento_del_municipio_de_Foz-Calanda_(Teruel).jpg",
-      "notes": "No es panorámica completa, pero representa claramente el municipio."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44146": {
     "name": "La Mata de los Olmos",
@@ -608,24 +421,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44146",
-      "name": "La Mata de los Olmos",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Ayuntamiento de la Mata de los Olmos (Teruel).jpg",
-      "subject": "Ayuntamiento y casco urbano",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento_de_la_Mata_de_los_Olmos_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44260": {
     "name": "Villarluengo",
@@ -661,24 +457,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44260",
-      "name": "Villarluengo",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Municipio de Villarluengo (Teruel).jpg",
-      "subject": "Vista de Villarluengo",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Municipio_de_Villarluengo_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44044": {
     "name": "Bordón",
@@ -714,24 +493,7 @@
     "shield": null,
     "flag": null,
     "patron": "Virgen de la Araña",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44044",
-      "name": "Bordón",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Iglesia de la Virgen de la Carrasca (Bordón, Teruel).jpg",
-      "subject": "Iglesia y entorno de Bordón",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_la_Virgen_de_la_Carrasca_(Bord%C3%B3n,_Teruel).jpg",
-      "notes": "Representa el principal hito del municipio; buscar panorámica si aparece una mejor."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44014": {
     "name": "Alcorisa",
@@ -767,24 +529,7 @@
     "flagStatus": "Bandera oficial verificado en el registro de símbolos locales del Gobierno de Aragón.",
     "festivalSource": "https://visitbajoaragon.com/es/municipios/alcorisa",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44014",
-      "name": "Alcorisa",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Panorámica urbana, municipio de Alcorisa, comarca Bajo Aragón (Teruel).jpg",
-      "subject": "Panorámica urbana",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_urbana,_municipio_de_Alcorisa,_comarca_Bajo_Arag%C3%B3n_(Teruel).jpg",
-      "notes": "Muy buena resolución y encuadre."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44114": {
     "name": "Fuentespalda",
@@ -820,24 +565,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Salvador",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44114",
-      "name": "Fuentespalda",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Fuentespalda, Comarca Matarraña.jpg",
-      "subject": "Vista de Fuentespalda",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fuentespalda,_Comarca_Matarra%C3%B1a.jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44021": {
     "name": "Allepuz",
@@ -872,24 +600,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44021",
-      "name": "Allepuz",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Allepuz Teruel.jpg",
-      "subject": "Vista de Allepuz",
-      "author": "Doalex",
-      "license": "CC BY-SA 3.0 / GFDL",
-      "dimensions": "1600×1200",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Allepuz_Teruel.jpg",
-      "notes": "Resolución suficiente."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44183": {
     "name": "Pitarque",
@@ -925,24 +636,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44183",
-      "name": "Pitarque",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Vista de Pitarque (Aragón).jpg",
-      "subject": "Vista de Pitarque",
-      "author": "Juan Carlos",
-      "license": "CC BY-SA 2.0",
-      "dimensions": "3456×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Pitarque_(Arag%C3%B3n).jpg",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44194": {
     "name": "Ráfales",
@@ -978,24 +672,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44194",
-      "name": "Ráfales",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Plaza Mayor, municipio de Ráfales (Teruel).jpg",
-      "subject": "Plaza Mayor",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plaza_Mayor,_municipio_de_R%C3%A1fales_(Teruel).jpg",
-      "notes": "Muy representativa del conjunto histórico."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44126": {
     "name": "La Iglesuela del Cid",
@@ -1031,24 +708,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44126",
-      "name": "La Iglesuela del Cid",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "La Iglesuela del Cid, provincia de Teruel, Aragón, España, 2026.jpg",
-      "subject": "Vista de La Iglesuela del Cid",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Iglesuela_del_Cid,_provincia_de_Teruel,_Arag%C3%B3n,_Espa%C3%B1a,_2026.jpg",
-      "notes": "Fotografía reciente y alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44141": {
     "name": "Lledó",
@@ -1084,24 +744,7 @@
     "shield": null,
     "flag": null,
     "patron": "Asunción de Nuestra Señora y San Hipólito",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44141",
-      "name": "Lledó",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Calle San Roque, municipio de Lledó, comarca Matarraña, Teruel, Aragón.jpg",
-      "subject": "Calle San Roque, Lledó",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calle_San_Roque,_municipio_de_Lled%C3%B3,_comarca_Matarra%C3%B1a,_Teruel,_Arag%C3%B3n.jpg",
-      "notes": "Representativa y alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44088": {
     "name": "La Cuba",
@@ -1137,24 +780,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44088",
-      "name": "La Cuba",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "La Cuba (Teruel).jpg",
-      "subject": "Vista de La Cuba",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "4819×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Cuba_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44038": {
     "name": "Belmonte de San José",
@@ -1189,24 +815,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Cosme y San Damián",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44038",
-      "name": "Belmonte de San José",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Municipio de Belmonte de San José y Bellmunt de Mesquí (Teruel).jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Municipio_de_Belmonte_de_San_Jos%C3%A9_y_Bellmunt_de_Mesqu%C3%AD_(Teruel).jpg",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44108": {
     "name": "La Fresneda",
@@ -1242,24 +851,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Bartolomé y San Felicísimo",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44108",
-      "name": "La Fresneda",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Carrer Major de La Freixneda.jpg",
-      "subject": "Calle Mayor y casco histórico",
-      "author": "sergis blog / Wikimedia Commons",
-      "license": "CC BY 2.0",
-      "dimensions": "3008×2000",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carrer_Major_de_La_Freixneda.jpg",
-      "notes": "Muy identificativa, aunque es una vista urbana interior."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44077": {
     "name": "La Cerollera",
@@ -1295,24 +887,7 @@
     "flagStatus": "Bandera oficial verificado en el registro de símbolos locales del Gobierno de Aragón.",
     "festivalSource": "https://visitbajoaragon.com/es/municipios/la-cerollera",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44077",
-      "name": "La Cerollera",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "La Cerollera, Comarca del Bajo Aragón, Teruel.jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Cerollera,_Comarca_del_Bajo_Arag%C3%B3n,_Teruel.jpg",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44049": {
     "name": "Calaceite",
@@ -1348,24 +923,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Roque",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44049",
-      "name": "Calaceite",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Panorámica urbana de Calaceite (Teruel, Aragón).jpg",
-      "subject": "Panorámica urbana",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_urbana_de_Calaceite_(Teruel,_Arag%C3%B3n).jpg",
-      "notes": "Muy adecuada."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44230": {
     "name": "Torrevelilla",
@@ -1402,24 +960,7 @@
     "flagStatus": "Bandera oficial verificado en el registro de símbolos locales del Gobierno de Aragón.",
     "festivalSource": "https://visitbajoaragon.com/es/municipios/torrevelilla",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44230",
-      "name": "Torrevelilla",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Municipio de Torrevelilla (Teruel).jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Municipio_de_Torrevelilla_(Teruel).jpg",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44145": {
     "name": "Mas de las Matas",
@@ -1456,24 +997,7 @@
     "shieldStatus": "Escudo oficial verificado en el registro de símbolos locales del Gobierno de Aragón.",
     "flag": null,
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44145",
-      "name": "Mas de las Matas",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Municipio de Mas de las Matas (España).jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Municipio_de_Mas_de_las_Matas_(Espa%C3%B1a).jpg",
-      "notes": "Candidata panorámica de alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44059": {
     "name": "Cantavieja",
@@ -1509,24 +1033,7 @@
     "shield": null,
     "flag": null,
     "patron": "Santa Vicenta y Virgen del Loreto",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44059",
-      "name": "Cantavieja",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Vista de Cantavieja. Teruel.jpg",
-      "subject": "Vista desde el paseo de Buenavista",
-      "author": "José Luis Filpo Cabana",
-      "license": "CC BY 3.0",
-      "dimensions": "2736×2736",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Cantavieja._Teruel.jpg",
-      "notes": "Formato cuadrado, muy aprovechable."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44086": {
     "name": "Cretas",
@@ -1562,24 +1069,7 @@
     "shield": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Escudo_de_Cretas_(Teruel).svg",
     "flag": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bandera_de_Cretas_(Teruel).svg",
     "patron": "San Roque",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44086",
-      "name": "Cretas",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Municipio de Cretas (Teruel).jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Municipio_de_Cretas_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44149": {
     "name": "Mirambel",
@@ -1615,24 +1105,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44149",
-      "name": "Mirambel",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Mirambel (Teruel).jpg",
-      "subject": "Vista de Mirambel y muralla",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mirambel_(Teruel).jpg",
-      "notes": "Muy adecuada."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44179": {
     "name": "Peñarroya de Tastavins",
@@ -1668,24 +1141,7 @@
     "shield": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Escudo_de_Pe%C3%B1arroya_de_Tastavins.svg",
     "flag": null,
     "patron": "Santa María la Mayor y Virgen de la Fuente",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44179",
-      "name": "Peñarroya de Tastavins",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Las Rocas de Masmut, Peñarroya de Tastavins.jpg",
-      "subject": "Rocas del Masmut",
-      "author": "Angela Llop",
-      "license": "CC BY-SA 2.0",
-      "dimensions": "5474×3639",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Las_Rocas_de_Masmut,_Pe%C3%B1arroya_de_Tastavins.jpg",
-      "notes": "Icono natural del municipio; no es vista del casco urbano."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44037": {
     "name": "Beceite",
@@ -1721,24 +1177,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Bartolomé y San Eutropio",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44037",
-      "name": "Beceite",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Beceite, Teruel (Spain).JPG",
-      "subject": "Vista de Beceite",
-      "author": "Jome",
-      "license": "CC BY-SA 3.0 ES",
-      "dimensions": "3648×2056",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beceite,_Teruel_(Spain).JPG",
-      "notes": "Vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44105": {
     "name": "Fórnoles",
@@ -1774,24 +1213,7 @@
     "shield": null,
     "flag": null,
     "patron": "Virgen de Montserrat",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44105",
-      "name": "Fórnoles",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Fórnoles, Teruel.jpg",
-      "subject": "Vista de Fórnoles",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:F%C3%B3rnoles,_Teruel.jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44173": {
     "name": "Los Olmos",
@@ -1826,24 +1248,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44173",
-      "name": "Los Olmos",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Pórticos del Ayuntamiento de Los Olmos, Teruel.jpg",
-      "subject": "Ayuntamiento de Los Olmos",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:P%C3%B3rticos_del_Ayuntamiento_de_Los_Olmos,_Teruel.jpg",
-      "notes": "Alta resolución; más arquitectónica que panorámica."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44027": {
     "name": "Arens de Lledó",
@@ -1879,24 +1284,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Hipólito (Sant Pol) y Virgen del Refugio",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44027",
-      "name": "Arens de Lledó",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "20251107 170609 Arens de Lledó tejados.jpg",
-      "subject": "Vista general y tejados",
-      "author": "Leo Cadio Otro",
-      "license": "CC0 1.0",
-      "dimensions": "4000×3000",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:20251107_170609_Arens_de_Lled%C3%B3_tejados.jpg",
-      "notes": "Alta resolución, CC0."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44187": {
     "name": "La Portellada",
@@ -1932,24 +1320,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Cosme y San Damián; San Miguel",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44187",
-      "name": "La Portellada",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "La Portellada (Teruel).jpg",
-      "subject": "Vista de La Portellada",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Portellada_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44150": {
     "name": "Miravete de la Sierra",
@@ -1985,24 +1356,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44150",
-      "name": "Miravete de la Sierra",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Miravete de la Sierra, Maestrazgo (Teruel).jpg",
-      "subject": "Vista de Miravete de la Sierra",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miravete_de_la_Sierra,_Maestrazgo_(Teruel).jpg",
-      "notes": "Vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44071": {
     "name": "Castellote",
@@ -2038,24 +1392,7 @@
     "shield": null,
     "flag": null,
     "patron": "Virgen del Agua",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44071",
-      "name": "Castellote",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Vista general de Castellote, Teruel, Aragón.jpg",
-      "subject": "Vista general de Castellote",
-      "author": "sergis blog",
-      "license": "CC BY 2.0",
-      "dimensions": "3008×2000",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_general_de_Castellote,_Teruel,_Arag%C3%B3n.jpg",
-      "notes": "La carta genérica usa el pueblo; el castillo se reserva para edición templaria."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44221": {
     "name": "Torrecilla de Alcañiz",
@@ -2090,24 +1427,7 @@
     "symbolVerifiedAt": "2026-10-18",
     "shield": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Escudo_de_Torrecilla_de_Alca%C3%B1iz_(Teruel).svg",
     "flag": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bandera_de_Torrecilla_de_Alca%C3%B1iz.svg",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44221",
-      "name": "Torrecilla de Alcañiz",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Casa Consistorial de Torrecilla de Alcañiz, municipio de la comarca Bajo Aragón (Teruel).jpg",
-      "subject": "Casa consistorial y entorno",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Casa_Consistorial_de_Torrecilla_de_Alca%C3%B1iz,_municipio_de_la_comarca_Bajo_Arag%C3%B3n_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44212": {
     "name": "Seno",
@@ -2142,24 +1462,7 @@
     "shield": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Escudo_de_Seno_(Teruel).svg",
     "flag": null,
     "patron": "San Valero; San Roque y Santa Elena",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44212",
-      "name": "Seno",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Villa de Seno (Teruel).JPG",
-      "subject": "Vista de Seno",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Villa_de_Seno_(Teruel).JPG",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44223": {
     "name": "Torre de Arcas",
@@ -2194,24 +1497,7 @@
     "flag": null,
     "festivalSource": "https://matarranyaturismo.es/torre-de-arcas-horno-de-pan",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44223",
-      "name": "Torre de Arcas",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Municipio de Torre de Arcas (Teruel).jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Municipio_de_Torre_de_Arcas_(Teruel).jpg",
-      "notes": "Alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44154": {
     "name": "Monroyo",
@@ -2247,24 +1533,7 @@
     "shield": null,
     "flag": null,
     "patron": "Virgen de la Asunción y San Roque",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44154",
-      "name": "Monroyo",
-      "comarca": "Matarraña / Matarranya",
-      "status": "provisional",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Vista de la población de Monroyo. - panoramio.jpg",
-      "subject": "Vista general de Monroyo",
-      "author": "Allpe",
-      "license": "CC BY 3.0",
-      "dimensions": "601×452",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_la_poblaci%C3%B3n_de_Monroyo._-_panoramio.jpg",
-      "notes": "Licencia clara pero resolución baja; buscar reemplazo de mayor resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44262": {
     "name": "Villarroya de los Pinares",
@@ -2299,24 +1568,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44262",
-      "name": "Villarroya de los Pinares",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Villarroya de los Pinares, Teruel.jpg",
-      "subject": "Vista de Villarroya de los Pinares",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Villarroya_de_los_Pinares,_Teruel.jpg",
-      "notes": "Vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44246": {
     "name": "Valderrobres",
@@ -2353,24 +1605,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44246",
-      "name": "Valderrobres",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Valderrobres, Teruel (Spain).JPG",
-      "subject": "Vista de Valderrobres",
-      "author": "Jome",
-      "license": "CC BY-SA 3.0 ES",
-      "dimensions": "2727×1537",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valderrobres,_Teruel_(Spain).JPG",
-      "notes": "Muy reconocible."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44106": {
     "name": "Fortanete",
@@ -2406,24 +1641,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44106",
-      "name": "Fortanete",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Fortanete (Teruel).jpg",
-      "subject": "Vista de Fortanete",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fortanete_(Teruel).jpg",
-      "notes": "Vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44118": {
     "name": "La Ginebrosa",
@@ -2461,24 +1679,7 @@
     "flagStatus": "Bandera oficial verificado en el registro de símbolos locales del Gobierno de Aragón.",
     "festivalSource": "https://www.la-ginebrosa.es/ayuntamiento/",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44118",
-      "name": "La Ginebrosa",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "La Ginebrosa municipio del Bajo Aragón (Teruel).jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Ginebrosa_municipio_del_Bajo_Arag%C3%B3n_(Teruel).jpg",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44151": {
     "name": "Molinos",
@@ -2514,24 +1715,7 @@
     "shield": null,
     "flag": null,
     "patron": "Virgen de las Nieves",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44151",
-      "name": "Molinos",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "44556 Molinos, Teruel, Spain - panoramio - jnerin.jpg",
-      "subject": "Vista de Molinos",
-      "author": "jnerin",
-      "license": "CC BY-SA 3.0",
-      "dimensions": "1728×1152",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:44556_Molinos,_Teruel,_Spain_-_panoramio_-_jnerin.jpg",
-      "notes": "Resolución suficiente; existe panorámica aún más ancha como alternativa."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44247": {
     "name": "Valjunquera",
@@ -2567,24 +1751,7 @@
     "shield": null,
     "flag": null,
     "patron": "Santa Teresa de Jesús y San Miguel Arcángel",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44247",
-      "name": "Valjunquera",
-      "comarca": "Matarraña / Matarranya",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Municipio Valjunquera, comarca Matarraña.jpg",
-      "subject": "Vista de Valjunquera",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY 4.0",
-      "dimensions": "5184×3888",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Municipio_Valjunquera,_comarca_Matarra%C3%B1a.jpg",
-      "notes": "Panorámica de alta resolución."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44004": {
     "name": "Aguaviva",
@@ -2620,24 +1787,7 @@
     "flagStatus": "Bandera oficial verificado en el registro de símbolos locales del Gobierno de Aragón.",
     "festivalSource": "https://visitbajoaragon.com/es/municipios/aguaviva",
     "culturalReview": "Ficha cultural revisada: población, superficie, singularidad, celebraciones y estado de símbolos contrastados; sin símbolos inventados.",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44004",
-      "name": "Aguaviva",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Aguaviva municipio de la Comarca del Bajo Aragón (Teruel).jpg",
-      "subject": "Vista del municipio",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aguaviva_municipio_de_la_Comarca_del_Bajo_Arag%C3%B3n_(Teruel).jpg",
-      "notes": "Buena vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44080": {
     "name": "La Codoñera",
@@ -2672,24 +1822,7 @@
     "shield": null,
     "flag": null,
     "patron": "San Cosme y San Damián",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44080",
-      "name": "La Codoñera",
-      "comarca": "Bajo Aragón",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "La Codoñera Teruel-01.jpg",
-      "subject": "Vista urbana",
-      "author": "Javitrom 2018",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "2353×3264",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Codo%C3%B1era_Teruel-01.jpg",
-      "notes": "Formato vertical ideal para carta."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44060": {
     "name": "Cañada de Benatanduz",
@@ -2725,24 +1858,7 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44060",
-      "name": "Cañada de Benatanduz",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Panorámica del municipio de la Cañada de Benatanduz.jpg",
-      "subject": "Panorámica de Cañada de Benatanduz",
-      "author": "Juan Emilio Prades Bel",
-      "license": "CC BY-SA 4.0",
-      "dimensions": "3072×2304",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_del_municipio_de_la_Ca%C3%B1ada_de_Benatanduz.jpg",
-      "notes": "Vista general."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   },
   "44236": {
     "name": "Tronchón",
@@ -2778,23 +1894,6 @@
     "localHolidaysYear": 2026,
     "localHolidays": "No constan fiestas locales comunicadas para 2026 en las resoluciones del BOA consultadas.",
     "localHolidaysSource": "https://www.aragon.es/es/trabajo-y-relaciones-laborales/calendario-laboral",
-    "culturalVerifiedAt": "2026-10-18",
-    "photoCandidate": {
-      "municipalityId": "44236",
-      "name": "Tronchón",
-      "comarca": "Maestrazgo",
-      "status": "approved",
-      "purpose": "generic-card-primary",
-      "realPhoto": true,
-      "aiGenerated": false,
-      "fileName": "Tronx.jpg",
-      "subject": "Vista de Tronchón",
-      "author": "Emiliocm",
-      "license": "CC BY-SA 3.0",
-      "dimensions": "1366×768",
-      "source": "Wikimedia Commons",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tronx.jpg",
-      "notes": "Resolución aceptable, algo justa para recortes fuertes."
-    }
+    "culturalVerifiedAt": "2026-10-18"
   }
 }
