@@ -1,0 +1,226 @@
+TAP version 13
+# Subtest: 53 fichas con singularidad y fuente HTTPS
+ok 1 - 53 fichas con singularidad y fuente HTTPS
+  ---
+  duration_ms: 1.3229
+  type: 'test'
+  ...
+# Subtest: las celebraciones sin patronazgo explícito conservan fuente documental
+ok 2 - las celebraciones sin patronazgo explícito conservan fuente documental
+  ---
+  duration_ms: 0.25261
+  type: 'test'
+  ...
+# Subtest: three launch comarcas are complete in the playable catalogue
+ok 3 - three launch comarcas are complete in the playable catalogue
+  ---
+  duration_ms: 13.878794
+  type: 'test'
+  ...
+# Subtest: La Cañada de Verich explicitly explains its heraldic status
+ok 4 - La Cañada de Verich explicitly explains its heraldic status
+  ---
+  duration_ms: 6.921045
+  type: 'test'
+  ...
+# Subtest: celebration uses confetti and completion visuals are present
+ok 5 - celebration uses confetti and completion visuals are present
+  ---
+  duration_ms: 0.759603
+  type: 'test'
+  ...
+# Subtest: las 53 fichas de lanzamiento están completas en todos los campos culturales
+ok 6 - las 53 fichas de lanzamiento están completas en todos los campos culturales
+  ---
+  duration_ms: 0.793014
+  type: 'test'
+  ...
+# Subtest: verified heraldry uses deploy-safe embedded files or verified Wikimedia URLs
+ok 7 - verified heraldry uses deploy-safe embedded files or verified Wikimedia URLs
+  ---
+  duration_ms: 1.477854
+  type: 'test'
+  ...
+# Subtest: every municipality has the core facts that previously appeared blank
+ok 8 - every municipality has the core facts that previously appeared blank
+  ---
+  duration_ms: 0.311809
+  type: 'test'
+  ...
+# Subtest: symbol status is explicit for all 53 municipalities
+ok 9 - symbol status is explicit for all 53 municipalities
+  ---
+  duration_ms: 0.600824
+  type: 'test'
+  ...
+# Subtest: free origin is the sole unlocked card and cannot be changed for another free card
+ok 10 - free origin is the sole unlocked card and cannot be changed for another free card
+  ---
+  duration_ms: 19.745753
+  type: 'test'
+  ...
+# Subtest: real municipal borders determine available exploration; distant places cannot be skipped to
+ok 11 - real municipal borders determine available exploration; distant places cannot be skipped to
+  ---
+  duration_ms: 0.628816
+  type: 'test'
+  ...
+# Subtest: failed and repeated attempts do not consume allowance
+ok 12 - failed and repeated attempts do not consume allowance
+  ---
+  duration_ms: 0.679813
+  type: 'test'
+  ...
+# Subtest: unlimited discovery remains enabled for testing, including across day boundaries
+ok 13 - unlimited discovery remains enabled for testing, including across day boundaries
+  ---
+  duration_ms: 0.719002
+  type: 'test'
+  ...
+# Subtest: midnight is based on Spain peninsular time, including summer and winter
+ok 14 - midnight is based on Spain peninsular time, including summer and winter
+  ---
+  duration_ms: 0.684029
+  type: 'test'
+  ...
+# Subtest: restored progress preserves cards and quota, and removes unknown IDs
+ok 15 - restored progress preserves cards and quota, and removes unknown IDs
+  ---
+  duration_ms: 0.942478
+  type: 'test'
+  ...
+# Subtest: all pilot municipalities are reachable from each possible origin
+ok 16 - all pilot municipalities are reachable from each possible origin
+  ---
+  duration_ms: 379.98031
+  type: 'test'
+  ...
+# Subtest: new expedition resets only the current route and preserves the permanent collection
+ok 17 - new expedition resets only the current route and preserves the permanent collection
+  ---
+  duration_ms: 0.689077
+  type: 'test'
+  ...
+# Subtest: version 1 saves migrate without losing discovered cards
+ok 18 - version 1 saves migrate without losing discovered cards
+  ---
+  duration_ms: 0.489407
+  type: 'test'
+  ...
+# Subtest: cartography has 731 unique municipalities and symmetric real shared-edge adjacency
+ok 19 - cartography has 731 unique municipalities and symmetric real shared-edge adjacency
+  ---
+  duration_ms: 2.662236
+  type: 'test'
+  ...
+# Subtest: version 3 municipality favorites migrate to base-edition favorites and survive new expeditions
+ok 20 - version 3 municipality favorites migrate to base-edition favorites and survive new expeditions
+  ---
+  duration_ms: 0.501264
+  type: 'test'
+  ...
+# Subtest: version 4 stores favorites independently by card edition
+ok 21 - version 4 stores favorites independently by card edition
+  ---
+  duration_ms: 0.294724
+  type: 'test'
+  ...
+# Subtest: undiscovered municipalities never reveal names or heraldry on map
+ok 22 - undiscovered municipalities never reveal names or heraldry on map
+  ---
+  duration_ms: 28.418273
+  type: 'test'
+  ...
+# Subtest: all 53 destinations render four lesson screens and offer 2–4 unambiguous answers
+ok 23 - all 53 destinations render four lesson screens and offer 2–4 unambiguous answers
+  ---
+  duration_ms: 189.248612
+  type: 'test'
+  ...
+# Subtest: newly acquired territory opens routes beyond the origin; card collection persists
+ok 24 - newly acquired territory opens routes beyond the origin; card collection persists
+  ---
+  duration_ms: 18.95299
+  type: 'test'
+  ...
+# Subtest: all content matches the official area and INE population records; image files exist and carry credits
+ok 25 - all content matches the official area and INE population records; image files exist and carry credits
+  ---
+  duration_ms: 2.154362
+  type: 'test'
+  ...
+# Subtest: all 53 quizzes remain capped and unambiguous after collecting all 53 municipalities
+ok 26 - all 53 quizzes remain capped and unambiguous after collecting all 53 municipalities
+  ---
+  duration_ms: 109.531296
+  type: 'test'
+  ...
+# Subtest: missing flags and shields fall back to genuine outlines rather than fictional imagery
+ok 27 - missing flags and shields fall back to genuine outlines rather than fictional imagery
+  ---
+  duration_ms: 1.622241
+  type: 'test'
+  ...
+# Subtest: map pins and collection hide all undiscovered destination names, even with many frontier towns
+ok 28 - map pins and collection hide all undiscovered destination names, even with many frontier towns
+  ---
+  duration_ms: 17.129686
+  type: 'test'
+  ...
+# Subtest: collection shows comarca progress, favorites and review challenge controls without leaking inactive events
+ok 29 - collection shows comarca progress, favorites and review challenge controls without leaking inactive events
+  ---
+  duration_ms: 4.122023
+  type: 'test'
+  ...
+# Subtest: practice challenge contains at most three comarca answers and never changes discovery state
+ok 30 - practice challenge contains at most three comarca answers and never changes discovery state
+  ---
+  duration_ms: 1.702021
+  type: 'test'
+  ...
+# Subtest: map subtly marks all three comarca footprints without revealing locked municipality names
+ok 31 - map subtly marks all three comarca footprints without revealing locked municipality names
+  ---
+  duration_ms: 6.895627
+  type: 'test'
+  ...
+# Subtest: collection renders milestone and comarca achievements from permanent progress
+ok 32 - collection renders milestone and comarca achievements from permanent progress
+  ---
+  duration_ms: 7.750362
+  type: 'test'
+  ...
+# Subtest: special card events are prepared internally but completely hidden while inactive
+ok 33 - special card events are prepared internally but completely hidden while inactive
+  ---
+  duration_ms: 3.165233
+  type: 'test'
+  ...
+# Subtest: favorite control is rendered on every generic card edition
+ok 34 - favorite control is rendered on every generic card edition
+  ---
+  duration_ms: 5.47581
+  type: 'test'
+  ...
+# Subtest: Bajo Aragón base cards use the real-photo design and hide the generic edition badge
+ok 35 - Bajo Aragón base cards use the real-photo design and hide the generic edition badge
+  ---
+  duration_ms: 2.382154
+  type: 'test'
+  ...
+# Subtest: deployment busts browser cache for app and styles in the photo-card release
+ok 36 - deployment busts browser cache for app and styles in the photo-card release
+  ---
+  duration_ms: 0.44494
+  type: 'test'
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 586.417442
