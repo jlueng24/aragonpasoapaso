@@ -8,7 +8,7 @@ let geography, content, photoCatalog = {}, municipalities, eligible, state, sele
 let toastTimer, tipTimer, storageWarning = false, dragging = false, pointer = null, collectionFilter = 'all';
 const map = $('#map'), dialog = $('#dialog');
 
-const BUILD_VERSION='20261019-BA-CARD-3';
+const BUILD_VERSION='20261019-GINEBROSA-CARD-1';
 async function loadJson(path){const sep=path.includes('?')?'&':'?';const response=await fetch(`${path}${sep}v=${BUILD_VERSION}`,{cache:'no-store'});if(!response.ok)throw new Error(`No se pudo cargar ${path}`);return response.json();}
 function assetSrc(p,type){return p?.[type+'Data']||p?.[type]||'';}
 function photoEntry(id){return photoCatalog?.[id]||null;}
@@ -157,33 +157,50 @@ function selectPlace(id){
 function card(id,origin=state.originId===id,edition=BASE_EDITION){
   const p=place(id),ed=CARD_EDITIONS[edition]||CARD_EDITIONS.base,fav=editionFavorite(id,edition);
   const special=edition!==BASE_EDITION;
-  const modernBase=edition===BASE_EDITION&&p.comarca==='Bajo Aragón';
-  const photo=photoUrl(id),photoInfo=photoEntry(id),singularity=singularityText(p);
-  const editionChip=special?`<span class="edition-chip special">${esc(ed.shortLabel)}</span>`:'';
-  if(modernBase){
-    const heroPhoto=photo?`<img class="card-photo" src="${esc(photo)}" alt="Fotografía real de ${esc(p.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`:'';
-    const credit=photoInfo?`<a class="card-photo-credit" href="${esc(photoInfo.sourceUrl||'')}" target="_blank" rel="noopener noreferrer">Foto: ${esc(photoInfo.author||'autor indicado en la fuente')} · ${esc(photoInfo.license||'licencia indicada en la fuente')}</a>`:'';
-    return `<article class="card card-modern card-photo-model card-edition-${esc(ed.style)}" data-edition="${esc(edition)}">
-      <div class="card-hero">
-        <div class="card-photo-fallback">${silhouette(id,'card-hero-silhouette')}<span>${esc(p.name)}</span></div>
-        ${heroPhoto}
-        <div class="card-hero-overlay"></div>
-        ${editionChip}
-        <button class="card-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} ${esc(p.name)} como favorita" title="Favorita">${fav?'★':'☆'}</button>
-        <div class="card-top-meta"><span class="card-comarca-chip">${esc(p.comarca)}</span>${origin?'<span class="origin-tag hero-origin-tag">Aquí empezó tu aventura</span>':''}</div>
-        <div class="card-hero-text"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.province)}</div>${credit}</div>
-      </div>
-      <div class="card-body modern">
-        <div class="card-stats">
-          <div class="card-stat"><strong>${number(p.population)}</strong><small>habitantes · ${esc(p.populationYear||'')}</small></div>
-          <div class="card-stat"><strong>${number(p.areaKm2,2)} km²</strong><small>superficie municipal</small></div>
+  const singularity=singularityText(p);
+
+  // Primera carta piloto: La Ginebrosa. Foto REAL, no generada por IA.
+  if(id==='44118' && edition===BASE_EDITION){
+    const realPhoto='https://commons.wikimedia.org/wiki/Special:Redirect/file/La%20Ginebrosa%20municipio%20del%20Bajo%20Arag%C3%B3n%20%28Teruel%29.jpg';
+    const photoSource='https://commons.wikimedia.org/wiki/File:La_Ginebrosa_municipio_del_Bajo_Arag%C3%B3n_(Teruel).jpg';
+    return `<article class="card ginebrosa-card" data-edition="${esc(edition)}">
+      <div class="ginebrosa-hero">
+        <img class="ginebrosa-photo" src="${realPhoto}" alt="Fotografía real de La Ginebrosa, Teruel" loading="eager" decoding="async" referrerpolicy="no-referrer">
+        <div class="ginebrosa-shade"></div>
+        <div class="ginebrosa-badges">
+          <span class="ginebrosa-province">Teruel</span>
+          <span class="ginebrosa-comarca">Bajo Aragón</span>
         </div>
-        <div class="card-symbol-row">${symbolMini(p,'shield')}${symbolMini(p,'flag')}</div>
-        <div class="card-section modern-section"><span class="section-title">Fiestas y tradiciones</span><strong>${esc(p.patron||'Celebración local documentada')}</strong><p>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</p></div>
-        ${singularity?`<div class="card-section modern-section story"><span class="section-title">Un detalle para recordar</span><p>${esc(excerpt(singularity,150))}</p></div>`:''}
+        <button class="card-favorite ginebrosa-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} La Ginebrosa como favorita" title="Favorita">${fav?'★':'☆'}</button>
+        <div class="ginebrosa-title">
+          <h3>La Ginebrosa</h3>
+          <p>Historia y tradición en el Bajo Aragón</p>
+        </div>
+        <div class="ginebrosa-stats">
+          <div><span class="g-icon">👥</span><strong>${number(p.population)}</strong><small>habitantes</small></div>
+          <div><span class="g-icon">▰</span><strong>${number(p.areaKm2,2)}</strong><small>km²</small></div>
+        </div>
+      </div>
+      <div class="ginebrosa-body">
+        <section class="ginebrosa-panel info">
+          <span class="ginebrosa-panel-icon">i</span>
+          <div><h4>Información</h4><p>${esc(singularity||'Municipio del Bajo Aragón, en la provincia de Teruel.')}</p></div>
+        </section>
+        <section class="ginebrosa-panel fiestas">
+          <span class="ginebrosa-panel-icon">🎉</span>
+          <div><h4>Fiestas</h4><strong>${esc(p.patron||'Fiestas locales')}</strong><p>${esc(p.festival||p.localHolidays||'Celebraciones locales documentadas')}</p></div>
+        </section>
+        <section class="ginebrosa-panel curiosidades">
+          <span class="ginebrosa-panel-icon">💡</span>
+          <div><h4>Curiosidades</h4><ul><li>Su término municipal tiene ${number(p.areaKm2,2)} km².</li><li>En ${esc(p.populationYear||'2025')} cuenta con ${number(p.population)} habitantes.</li></ul></div>
+        </section>
+        <a class="ginebrosa-photo-credit" href="${photoSource}" target="_blank" rel="noopener noreferrer">Fotografía real · Juan Emilio Prades Bel · CC BY-SA 4.0 ↗</a>
+        ${origin?'<span class="origin-tag">Aquí empezó tu aventura</span>':''}
       </div>
     </article>`;
   }
+
+  const editionChip=special?`<span class="edition-chip special">${esc(ed.shortLabel)}</span>`:'';
   return `<article class="card card-edition-${esc(ed.style)}" data-edition="${esc(edition)}"><div class="card-face">${editionChip}<button class="card-favorite ${fav?'active':''}" data-action="toggle-edition-favorite" data-id="${id}" data-edition="${esc(edition)}" aria-label="${fav?'Quitar':'Marcar'} ${esc(p.name)} como favorita" title="Favorita">${fav?'★':'☆'}</button>${symbol(p,'flag','flag')}<div class="shield-stamp">${symbol(p,'shield')}</div></div><div class="card-body"><h3 class="card-name">${esc(p.name)}</h3><div class="card-place">${esc(p.comarca)} · ${esc(p.province)}</div><div class="card-geography">${silhouette(id)}<span><strong>${number(p.areaKm2,2)} km²</strong><small>Superficie municipal</small></span></div><div class="card-population"><strong>${number(p.population)}</strong> habitantes <span>· ${esc(p.populationYear||'Año pendiente')}</span></div><hr class="card-rule"><div class="patron-label">Fiestas y tradiciones</div><div class="patron-name">${esc(p.patron||'Celebración local documentada')}</div><div class="patron-date">${esc(p.festivalLabel||'Fiesta local')}<br>${esc(p.festival||p.localHolidays||'Consulta la fuente local')}</div>${singularity?`<div class="card-story"><span>Un detalle para recordar</span><p>${esc(excerpt(singularity,150))}</p></div>`:''}${origin?'<span class="origin-tag">Aquí empezó tu aventura</span>':''}</div></article>`;
 }
 function renderStart(){
